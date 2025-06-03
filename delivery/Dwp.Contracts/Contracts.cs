@@ -5,7 +5,7 @@ namespace Delivery.Web.Pdv.Contracts
 {
     public class PedidoRequest
     {
-        public Guid pedidoId = Guid.NewGuid();
+        public Guid pedidoId;
         [Required]
         public string nomePedido { get; set; }
         [Required]
@@ -15,16 +15,5 @@ namespace Delivery.Web.Pdv.Contracts
         [Range(1, 18)]
         public int quantidadePedido { get; set; }
         public PedidoRequest() => nomePedido = ""; /* para iniciar a string */
-
     }
-
-    public class PedidoResponse
-    {
-        
-
-
-
-    }
-
-   
 }

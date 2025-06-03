@@ -1,28 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
 using Delivery.Web.Pdv.Contracts;
-using Delivery.Web.Pdv.AppService;
-using Microsoft.AspNetCore.Mvc.Routing;
+using Delivery.Web.Pdv.Helper;
+
 
 namespace delivery.Controllers
 {
     [ApiController]
-    [Route("deliveryWPDV/[controller]")]
+    [Route("delwpdv/[controller]")]
     public class ControllerClass : ControllerBase
     {
         [HttpPost]
-        public IActionResult Request(PedidoRequest pedidoR)
+        public IActionResult PostPedido([FromBody] PedidoRequest Ppedido)
         {
-
-
-
-
-
-
-            return BadRequest();
+            if(DwpHelper.IsValidAll(Ppedido) == DwpHelper.BigBoolean.False)
+                return BadRequest();
+            return Ok(200);
         }
 
-
-
-
+        [HttpGet("{id}")]
+        public IActionResult GetPedido([FromQuery] PedidoRequest Gpedido)
+        {
+            if (DwpHelper.IsValidAll(Gpedido) == DwpHelper.BigBoolean.False)
+                return BadRequest(400);
+            return Ok(200);
+        }
     }
 }
