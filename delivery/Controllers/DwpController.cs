@@ -7,19 +7,22 @@ namespace delivery.Controllers
 {
     [ApiController]
     [Route("deliveryWPDV/[controller]")]
-    
-    public class PedidoFromJson : ControllerBase
+    public class ControllerClass : ControllerBase
     {
         [HttpPost]
-        public IActionResult PostPedido([FromBody] PedidoDto pedido)
-        {
-            if (!ModelState.IsValid) return BadRequest();
-            return Ok();
-        }
-        [HttpGet]
-        public IActionResult GetPedido([FromHeader] PedidoDto pedido)
+        public IActionResult Request(PedidoRequest pedidoR)
         {
 
+
+
+
+
+
+            return BadRequest();
         }
+
+
+
+
     }
 }

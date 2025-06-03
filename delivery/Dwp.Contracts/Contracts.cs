@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace Delivery.Web.Pdv.Contracts
 {
-    
-    public class PedidoDto
+    public class PedidoRequest
     {
         public Guid pedidoId = Guid.NewGuid();
         [Required]
@@ -16,7 +14,17 @@ namespace Delivery.Web.Pdv.Contracts
         [Required]
         [Range(1, 18)]
         public int quantidadePedido { get; set; }
-        PedidoDto() => nomePedido = ""; /* para iniciar a string */
+        public PedidoRequest() => nomePedido = ""; /* para iniciar a string */
 
     }
+
+    public class PedidoResponse
+    {
+        
+
+
+
+    }
+
+   
 }
