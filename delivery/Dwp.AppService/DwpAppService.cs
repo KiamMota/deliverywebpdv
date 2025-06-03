@@ -1,14 +1,13 @@
-﻿namespace Delivery.Web.Pdv.AppService;
+﻿using System.ComponentModel.DataAnnotations;
+using Delivery.Web.Pdv.Core.Entity;
+using Delivery.Web.Pdv.Repository;
 
-using Delivery.Web.Pdv.Contracts;
-using Microsoft.AspNetCore.Mvc;
 
-public class PedidoManagement
+namespace Delivery.Web.Pdv.AppService
 { 
 
 
 
 
-
-
+    
 }

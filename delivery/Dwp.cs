@@ -1,12 +1,14 @@
-using delivery.Dwp.Repository;
-using Delivery.Web.Pdv.Contracts;
+using Delivery.Web.Pdv.AppService;
+using Delivery.Web.Pdv.Repository;
+using Delivery.Web.Pdv.Core;
+using Delivery.Web.Pdv.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<IPedidoDto, PedidoDto>();
+builder.Services.AddScoped<IRepository, DwpRepository>();
 
 var app = builder.Build();
 
