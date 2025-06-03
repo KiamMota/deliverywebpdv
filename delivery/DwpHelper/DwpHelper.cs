@@ -4,15 +4,13 @@ namespace Delivery.Web.Pdv.Helper
 {
     public class DwpHelper
     {
-
-
         public enum BigBoolean : short
         {
             Error = -1,
             False, True
         }
 
-        public static BigBoolean IsValidAll(Object obj)
+        public static BigBoolean ObjIsValidAll(Object obj)
         {
             var context = new ValidationContext(obj);            
             List<ValidationResult> validation = new();

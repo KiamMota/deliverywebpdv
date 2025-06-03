@@ -1,11 +1,26 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-
 namespace Delivery.Web.Pdv.Contracts
 {
-    public class PedidoRequest
+    public abstract class PedidoRequestBase
     {
-        public Guid pedidoId;
+        [Required]
+        long idPedido { get; set; }
+    }
+    public interface IPedidoDto
+    {
+        [Required]
+        public string nomePedido { get; set; }
+        [Required]
+        [Range(1, 9999)]
+        public decimal valorPedido { get; set; }
+        [Required]
+        [Range(1, 18)]
+        public int quantidadePedido { get; set; }
+    }
+
+    public class PedidoDto : PedidoRequestBase, IPedidoDto 
+    {
         [Required]
         public string nomePedido { get; set; }
         [Required]
@@ -14,6 +29,6 @@ namespace Delivery.Web.Pdv.Contracts
         [Required]
         [Range(1, 18)]
         public int quantidadePedido { get; set; }
-        public PedidoRequest() => nomePedido = ""; /* para iniciar a string */
+        public PedidoDto() => nomePedido = ""; /* para iniciar a string */
     }
 }

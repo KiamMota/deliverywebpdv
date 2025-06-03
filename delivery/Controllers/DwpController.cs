@@ -10,7 +10,7 @@ namespace delivery.Controllers
     public class ControllerClass : ControllerBase
     {
         [HttpPost]
-        public IActionResult PostPedido([FromBody] PedidoRequest Ppedido)
+        public IActionResult PostPedido([FromBody] PedidoDto Ppedido)
         {
             if(DwpHelper.IsValidAll(Ppedido) == DwpHelper.BigBoolean.False)
                 return BadRequest();
@@ -18,10 +18,8 @@ namespace delivery.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPedido([FromQuery] PedidoRequest Gpedido)
+        public IActionResult GetPedido([FromQuery] int id)
         {
-            if (DwpHelper.IsValidAll(Gpedido) == DwpHelper.BigBoolean.False)
-                return BadRequest(400);
             return Ok(200);
         }
     }
