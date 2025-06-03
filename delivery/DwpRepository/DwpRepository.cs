@@ -16,15 +16,12 @@ namespace Delivery.Web.Pdv.Repository
     {
         public DwpRepository() 
         {
-
-
-
+            
         }
 
         public IActionResult CreatePedido(Pedido pedido)
         {
 
-            return BadRequest();
         }
         public Pedido ReturnPedido(int id)
         {

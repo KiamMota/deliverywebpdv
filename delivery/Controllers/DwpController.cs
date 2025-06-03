@@ -8,21 +8,28 @@ namespace delivery.Controllers
 {
     [ApiController]
     [Route("dwpapi/[controller]")]
+
     public class ControllerClass : ControllerBase
     {
+        private readonly IAppService _appService = new AppService();
+
+        public ControllerClass(IAppService ap)
+        {
+            _appService = ap;
+        } 
+
         [HttpPost]
         public IActionResult PostPedido([FromBody] PedidoDto pedidodto)
         {
             if(DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False)
                 return BadRequest();
-            AppService.ParaPedido(pedidodto);
+            
             return Ok();
         }
 
         [HttpGet("{id}")]
         public IActionResult GetPedido([FromQuery] int id)
         {
-            //todo
             return Ok(200);
         }
     }
