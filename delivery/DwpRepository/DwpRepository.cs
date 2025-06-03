@@ -1,4 +1,6 @@
 ﻿using Delivery.Web.Pdv.AppService;
+using Delivery.Web.Pdv.Core.Entity;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delivery.Web.Pdv.Repository
@@ -21,18 +23,16 @@ namespace Delivery.Web.Pdv.Repository
 
         public IActionResult CreatePedido(Pedido pedido)
         {
-            
-            
 
-
+            return BadRequest();
         }
         public Pedido ReturnPedido(int id)
         {
-
+            
         }
         public IActionResult QueryResult(int id)
         {
-
+            return BadRequest();
         }
 
     }
