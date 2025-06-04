@@ -3,6 +3,7 @@ using Delivery.Web.Pdv.Core;
 using Delivery.Web.Pdv.Helper;
 using Delivery.Web.Pdv.Repository;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.InMemory;
 
 var builder = WebApplication.CreateBuilder(args);
 
