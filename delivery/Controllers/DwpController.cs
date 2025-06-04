@@ -3,7 +3,6 @@ using Delivery.Web.Pdv.Helper;
 using Delivery.Web.Pdv.Contracts;
 using Delivery.Web.Pdv.AppService;
 
-
 namespace delivery.Controllers
 {
     [ApiController]
@@ -21,16 +20,21 @@ namespace delivery.Controllers
         [HttpPost]
         public IActionResult PostPedido([FromBody] PedidoDto pedidodto)
         {
-            if(DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False)
+            if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False)
                 return BadRequest();
-            
-            return Ok();
+            else
+                if (_appService.CriarPedido(pedidodto))
+                 return Ok();
+            else return BadRequest();
         }
 
         [HttpGet("{id}")]
         public IActionResult GetPedido([FromQuery] int id)
         {
-            return Ok(200);
+            if(id < 0) return BadRequest();
+            PedidoDto pedido = _appService.EntregarPedido(id);
+            if(pedido == null) return NotFound();
+            else return Ok(pedido);
         }
     }
 }

@@ -1,40 +1,38 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Delivery.Web.Pdv.Contracts;
-using Delivery.Web.Pdv.Core.Entity;
+﻿using Delivery.Web.Pdv.Contracts;
+using Delivery.Web.Pdv.Core;
 using Delivery.Web.Pdv.Helper;
-using Microsoft.AspNetCore.Hosting.Builder;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Delivery.Web.Pdv.Repository;
 using Microsoft.AspNetCore.Mvc;
-
-
-
+using System.Diagnostics.Eventing.Reader;
 
 namespace Delivery.Web.Pdv.AppService
 { 
     public interface IAppService
     {
         public bool CriarPedido(PedidoDto dto);
-        public bool EntregarPedido(PedidoDto dto);
+        public PedidoDto? EntregarPedido(int id);
     }
 
     public class AppService : IAppService
     {
-        private IValidacao _validation = new Validacao();        
+        private IValidacao  _validation = new Validacao();
+        private IRepository _repo = new Repository.Repository();
         public bool CriarPedido(PedidoDto dto)
         {
-            var pedidoCriar = _validation.ToPedido(dto);
-            /* todo: sistema do banco*/
-            return (dto is null) ? false : true;
-
+            Pedido pedidoCriar = _validation.ToPedido(dto);
+            if (pedidoCriar is null) return false;
+            else
+                return _repo.SalvarPedido(pedidoCriar);
         }
-
-        public bool EntregarPedido(PedidoDto dto)
+        public PedidoDto EntregarPedido(int id)
         {
-            var pedidoEntregar = _validation.ToPedido(dto);
-            return (dto is null) ? false : true;
-
+            var pedidoEntregar = _repo.EntregarPedido(id);
+            if (pedidoEntregar == null)
+            {
+                return null;
+            }
+            return pedidoEntregar;
         }
-
 
     }
 }

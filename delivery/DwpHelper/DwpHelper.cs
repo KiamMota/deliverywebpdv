@@ -1,6 +1,6 @@
 ﻿using Delivery.Web.Pdv.AppService;
 using Delivery.Web.Pdv.Contracts;
-using Delivery.Web.Pdv.Core.Entity;
+using Delivery.Web.Pdv.Core;
 using System.ComponentModel.DataAnnotations;
 
 namespace Delivery.Web.Pdv.Helper
@@ -43,12 +43,8 @@ namespace Delivery.Web.Pdv.Helper
             {
                 case true:
                     return BigBoolean.True;
-                    break;
                 case false:
-                    return BigBoolean.False;
-                default:
-                    return BigBoolean.Error;
-                    break;
+                    return BigBoolean.False;   
             }
         }
         

@@ -10,11 +10,11 @@
   },
   "profiles": {
     "http": {
-      "commandName": "Project",
+      "commandName": "DeliveryWebApi",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "applicationUrl": "http://localhost:5123",
+      "launchUrl": "DeliveryWebPDV",
+      "applicationUrl": "http://localhost:7192",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -23,12 +23,12 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "applicationUrl": "https://localhost:7245;http://localhost:5123",
+      "launchUrl": "DeliveryWebPDV",
+      "applicationUrl": "https://localhost:7192;http://localhost:5192",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
+  },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,

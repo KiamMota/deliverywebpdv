@@ -1,7 +1,7 @@
 using Delivery.Web.Pdv.AppService;
 using Delivery.Web.Pdv.Core;
-using Delivery.Web.Pdv.Core.Entity;
 using Delivery.Web.Pdv.Helper;
+using Delivery.Web.Pdv.Repository;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IAppService, AppService>();
+builder.Services.AddScoped<IRepository, Repository>();
 
 var app = builder.Build();
 

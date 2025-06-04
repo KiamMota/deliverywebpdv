@@ -1,12 +1,16 @@
 ﻿using Delivery.Web.Pdv.Contracts;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Delivery.Web.Pdv.Core.Entity
+namespace Delivery.Web.Pdv.Core
 {
-
     public class Pedido
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         [Required]
+
         public string nomePedido { get; set; }
         [Required]
         public decimal valorPedido { get; set; }
@@ -21,7 +25,6 @@ namespace Delivery.Web.Pdv.Core.Entity
         public Pedido? ToPedido(PedidoDto dto);
         public PedidoDto? ToDto(Pedido pedido);
     }
-
 
     public class Validacao : IValidacao
     {
