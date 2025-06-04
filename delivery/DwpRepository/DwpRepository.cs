@@ -1,36 +1,52 @@
 ﻿using Delivery.Web.Pdv.Core;
 using Delivery.Web.Pdv.Contracts;
+using Delivery.Web.Pdv.Database;
+
+using Microsoft.EntityFrameworkCore;
 
 namespace Delivery.Web.Pdv.Repository
 {
     public interface IRepository
     {
-        public bool SalvarPedido(Pedido pedido);
-        public PedidoDto? EntregarPedido(int id);
-        public bool AtualizarPedido(int id);
-        public bool DeletarPedido(int id);
+        public int SalvarPedido(Pedido pedido);
+        public int EntregarPedido(Pedido pedido);
+        public int AtualizarPedido(Pedido pedido);
+        public int DeletarPedido(Pedido pedido);
     
     }
 
     public class Repository : IRepository
     {
-      
-        public bool SalvarPedido(Pedido pedido)
+        private readonly Database.Database _context;
+        private Core.IValidacao _validacao = new Validacao();
+        public Repository(Database.Database context)
         {
-            return false;
+            _context = context;
         }
-        public PedidoDto? EntregarPedido(int id)
+        public int SalvarPedido(Pedido pedido)
         {
-            /* todo lógica do banco */
-            return new PedidoDto();
+            _context.Pedidos.Add(pedido);
+            _context.SaveChanges();
+            return pedido.Id;
         }
-        public bool AtualizarPedido(int id)
+        public int EntregarPedido(Pedido pedido)
         {
-            return false;
+            _context.Pedidos.Find(pedido.Id);
+            _context.SaveChanges();
+            return pedido.Id;
+
         }
-        public bool DeletarPedido(int id)
+        public int AtualizarPedido(Pedido pedido)
         {
-            return false;
+            _context.Pedidos.Update(pedido);
+            _context.SaveChanges();
+            return pedido.Id;
+        }
+        public int DeletarPedido(Pedido pedido)
+        {
+            _context.Pedidos.Remove(pedido);
+            return (_context.SaveChanges() > 0) ? 1 : 0;
+            
         }
     }
 }

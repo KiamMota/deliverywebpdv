@@ -22,19 +22,15 @@ namespace delivery.Controllers
         {
             if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False)
                 return BadRequest();
-            else
-                if (_appService.CriarPedido(pedidodto))
-                 return Ok();
-            else return BadRequest();
+            _appService.CriarPedido(pedidodto);
+            return BadRequest();
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPedido([FromQuery] int id)
+        public IActionResult GetPedido([FromQuery] PedidoDto pedidodto)
         {
-            if(id < 0) return BadRequest();
-            PedidoDto pedido = _appService.EntregarPedido(id);
-            if(pedido == null) return NotFound();
-            else return Ok(pedido);
+            if(pedidodto.idPedido < 0) return BadRequest();
+            return Ok(_appService.EntregarPedido(pedidodto));
         }
     }
 }
