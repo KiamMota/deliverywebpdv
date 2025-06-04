@@ -40,11 +40,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idPedido",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
         "Name": "nomePedido",
         "Type": "System.String",
         "IsRequired": false

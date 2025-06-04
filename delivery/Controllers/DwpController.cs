@@ -28,14 +28,12 @@ namespace delivery.Controllers
         [HttpGet("{id}")]
         public IActionResult GetPedido([FromQuery] PedidoDto pedidodto)
         {
-            if(pedidodto.idPedido < 0) return BadRequest();
             return Ok(_appService.EntregarPedido(pedidodto));
         }
 
         [HttpPut]
         public IActionResult PutPedido(PedidoDto pedidodto)
         {
-            if (pedidodto.idPedido < 0) return BadRequest();
             return Ok(_appService.EntregarPedido(pedidodto));
         }
     }
