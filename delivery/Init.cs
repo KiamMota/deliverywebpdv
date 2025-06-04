@@ -11,8 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<Database>(options =>
     options.UseInMemoryDatabase("DbOfPedidos"));
-builder.Services.AddScoped<IAppService, AppService>();
 builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddScoped<IAppService, AppService>();
 
 var app = builder.Build();
 

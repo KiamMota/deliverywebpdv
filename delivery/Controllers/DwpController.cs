@@ -10,8 +10,7 @@ namespace delivery.Controllers
 
     public class ControllerClass : ControllerBase
     {
-        private readonly IAppService _appService = new AppService();
-
+        private readonly IAppService _appService;
         public ControllerClass(IAppService ap)
         {
             _appService = ap;
@@ -30,6 +29,13 @@ namespace delivery.Controllers
         public IActionResult GetPedido([FromQuery] PedidoDto pedidodto)
         {
             if(pedidodto.idPedido < 0) return BadRequest();
+            return Ok(_appService.EntregarPedido(pedidodto));
+        }
+
+        [HttpPut]
+        public IActionResult PutPedido(PedidoDto pedidodto)
+        {
+            if (pedidodto.idPedido < 0) return BadRequest();
             return Ok(_appService.EntregarPedido(pedidodto));
         }
     }
