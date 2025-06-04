@@ -51,25 +51,6 @@ namespace Delivery.Web.Pdv.Helper
                     break;
             }
         }
-        public static Pedido ParaPedido(PedidoDto dto)
-        {
-            return new Pedido
-            {
-                nomePedido = dto.nomePedido,
-                valorPedido = dto.valorPedido,
-                quantidadePedido = dto.quantidadePedido
-            };
-        }
-
-        public static PedidoDto ParaPedidoDto(Pedido pedido)
-        {
-            return new PedidoDto
-            {
-                nomePedido = pedido.nomePedido,
-                valorPedido = pedido.valorPedido,
-                quantidadePedido = pedido.quantidadePedido
-            };
-        }
-
+        
     }
 }

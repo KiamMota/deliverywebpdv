@@ -1,15 +1,59 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Delivery.Web.Pdv.Contracts;
+using System.ComponentModel.DataAnnotations;
 
 namespace Delivery.Web.Pdv.Core.Entity
 {
-        
-        public class Pedido
-        {      
-            public string nomePedido { get; set; }
-            public decimal valorPedido { get; set; }
-            public int quantidadePedido { get; set; }
-            public Pedido() => nomePedido = ""; /* para iniciar a string */
+
+    public class Pedido
+    {
+        [Required]
+        public string nomePedido { get; set; }
+        [Required]
+        public decimal valorPedido { get; set; }
+        [Required]
+        [Range(1, 99)]
+        public int quantidadePedido { get; set; }
+        public Pedido() => nomePedido = ""; /* para iniciar a string */
+    }
+
+    internal interface IValidacao
+    {
+        public Pedido? ToPedido(PedidoDto dto);
+        public PedidoDto? ToDto(Pedido pedido);
+    }
+
+
+    public class Validacao : IValidacao
+    {
+        public Pedido? ToPedido(PedidoDto dto)
+        {
+            if(dto is null) return null;
+            else
+            {
+                Pedido pedidoDomain = new Pedido();
+                pedidoDomain.nomePedido = dto.nomePedido;
+                pedidoDomain.valorPedido = dto.valorPedido;
+                pedidoDomain.quantidadePedido = dto.quantidadePedido;
+                return pedidoDomain;
+            }
         }
+        public PedidoDto? ToDto(Pedido pedido)
+        {
+            if (pedido is null) return null;
+            else
+            {
+                PedidoDto pedidoDto = new PedidoDto();
+                pedidoDto.nomePedido       = pedido.nomePedido;
+                pedidoDto.valorPedido      = pedido.valorPedido;
+                pedidoDto.quantidadePedido = pedido.quantidadePedido;
+                return pedidoDto;
+            }
+        }
+    }
+
+    
+
+
 
 
 }
