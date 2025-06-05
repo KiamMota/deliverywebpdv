@@ -1,7 +1,6 @@
 using Delivery.Web.Pdv.AppService;
 using Delivery.Web.Pdv.Contracts;
 using Delivery.Web.Pdv.Helper;
-using Delivery.Web.Pdv.Infra;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
@@ -9,11 +8,10 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 namespace delivery.Controllers
 {
     [ApiController]
-    [Route("pedidos")]
+    [Route("dwp/pedidos")]
 
     public class ControllerClass : ControllerBase
     {
-        private Log log = Log.Instance;
         private readonly IAppService _appService;
         public ControllerClass(IAppService ap)
         {
@@ -24,24 +22,24 @@ namespace delivery.Controllers
         public IActionResult PostPedido([FromBody] PedidoDto pedidodto)
         {
             if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False) return BadRequest();
-            return Ok(_appService.EntregarPedido(pedidodto));
+            return Ok(_appService.CriarPedido(pedidodto));
+            Console.WriteLine("mandado post");
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPedido(int id)
+        public ActionResult<PedidoDto> GetPedido(int id)
         {
-            var pedidoDto = _appService.EntregarPedido(pedido);
-            return Ok(pedidoDto);
+            return Ok(_appService.EntregarPedidoById(id));
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult PutPedido(PedidoDto pedidodto)
         {
             if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
-            return Ok(_appService.EntregarPedido(pedidodto));
+            return Ok(_appService.AtualizarPedido(pedidodto));
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeletePedido(PedidoDto pedidodto) {
             if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
             return Ok(_appService.RemoverPedido(pedidodto));

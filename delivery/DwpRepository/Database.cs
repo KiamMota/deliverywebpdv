@@ -1,4 +1,4 @@
-﻿using Delivery.Web.Pdv.Core;
+﻿using Delivery.Web.Pdv.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Delivery.Web.Pdv.Database

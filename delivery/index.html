@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delivery App Mock</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; display: flex; gap: 20px; }
+  main { flex: 1; }
+  h1 { margin-bottom: 20px; }
+  form, table { background: #fff; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+  input, button { padding: 8px; margin-right: 10px; font-size: 1rem; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eee; }
+  .msg { padding: 10px; margin-bottom: 20px; border-radius: 4px; display: none; }
+  .msg.success { background: #d4edda; color: #155724; }
+  .msg.error { background: #f8d7da; color: #721c24; }
+  button { cursor: pointer; }
+  .actions button { margin-right: 5px; }
+  #console {
+    width: 300px;
+    background: #222;
+    color: #eee;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 5px;
+    height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+  #console h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<main>
+<h1>App Delivery Mock</h1>
+
+<form id="addEditForm">
+  <input type="hidden" id="Id" />
+  <input type="text" id="nomePedido" placeholder="Nome do pedido" required />
+  <input type="number" id="quantidadePedido" placeholder="Quantidade" min="1" required />
+  <input type="number" id="valorPedido" placeholder="Valor (R$)" step="0.01" min="0" required />
+  <button type="submit">Adicionar / Alterar</button>
+</form>
+
+<label for="urlEndpoint">URL do servidor:</label>
+<input type="url" id="urlEndpoint" placeholder="https://exemplo.com/api" style="width: 300px;" />
+
+<button id="sendDataBtn">Enviar dados</button>
+
+<div class="msg" id="message"></div>
+
+<table id="ordersTable">
+  <thead>
+    <tr>
+      <th>Id</th><th>Nome do pedido</th><th>Quantidade</th><th>Valor (R$)</th><th>Ações</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</main>
+
+<aside id="console">
+  <h2>Console do Servidor / Sistema</h2>
+  <div id="consoleOutput"></div>
+</aside>
+
+<script>
+(() => {
+  let pedidos = [];
+  let currentId = 1;
+
+  const form = document.getElementById('addEditForm');
+  const idInput = document.getElementById('Id');
+  const nomeInput = document.getElementById('nomePedido');
+  const quantidadeInput = document.getElementById('quantidadePedido');
+  const valorInput = document.getElementById('valorPedido');
+  const ordersTableBody = document.querySelector('#ordersTable tbody');
+  const messageBox = document.getElementById('message');
+  const urlEndpointInput = document.getElementById('urlEndpoint');
+  const sendDataBtn = document.getElementById('sendDataBtn');
+  const consoleOutput = document.getElementById('consoleOutput');
+
+  function render() {
+    ordersTableBody.innerHTML = '';
+    pedidos.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${p.Id}</td>
+        <td>${p.nomePedido}</td>
+        <td>${p.quantidadePedido}</td>
+        <td>${p.valorPedido.toFixed(2)}</td>
+        <td class="actions">
+          <button data-id="${p.Id}" class="editBtn">Editar</button>
+          <button data-id="${p.Id}" class="removeBtn">Remover</button>
+        </td>`;
+      ordersTableBody.appendChild(tr);
+    });
+  }
+
+  function showMessage(text, success = true) {
+    messageBox.textContent = text;
+    messageBox.className = 'msg ' + (success ? 'success' : 'error');
+    messageBox.style.display = 'block';
+    setTimeout(() => messageBox.style.display = 'none', 3000);
+  }
+
+  function logConsole(text) {
+    const time = new Date().toLocaleTimeString();
+    consoleOutput.textContent += `[${time}] ${text}\n`;
+    consoleOutput.scrollTop = consoleOutput.scrollHeight;
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const Id = idInput.value ? parseInt(idInput.value, 10) : null;
+    const nomePedido = nomeInput.value.trim();
+    const quantidadePedido = parseInt(quantidadeInput.value, 10);
+    const valorPedido = parseFloat(valorInput.value);
+
+    if (!nomePedido || quantidadePedido < 1 || valorPedido < 0) return;
+
+    if (Id) {
+      const idx = pedidos.findIndex(p => p.Id === Id);
+      if (idx > -1) {
+        pedidos[idx] = { Id, nomePedido, quantidadePedido, valorPedido };
+        showMessage('Pedido alterado');
+        logConsole(`Pedido alterado: Id=${Id}`);
+      }
+    } else {
+      pedidos.push({ Id: currentId++, nomePedido, quantidadePedido, valorPedido });
+      showMessage('Pedido adicionado');
+      logConsole(`Pedido adicionado: Nome="${nomePedido}"`);
+    }
+
+    form.reset();
+    idInput.value = '';
+    render();
+  });
+
+  ordersTableBody.addEventListener('click', e => {
+    if (e.target.classList.contains('editBtn')) {
+      const Id = parseInt(e.target.dataset.id, 10);
+      const pedido = pedidos.find(p => p.Id === Id);
+      if (pedido) {
+        idInput.value = pedido.Id;
+        nomeInput.value = pedido.nomePedido;
+        quantidadeInput.value = pedido.quantidadePedido;
+        valorInput.value = pedido.valorPedido;
+        logConsole(`Editando pedido Id=${Id}`);
+      }
+    }
+
+    if (e.target.classList.contains('removeBtn')) {
+      const Id = parseInt(e.target.dataset.id, 10);
+      pedidos = pedidos.filter(p => p.Id !== Id);
+      showMessage('Pedido removido');
+      logConsole(`Pedido removido: Id=${Id}`);
+      if (idInput.value == Id) form.reset();
+      render();
+    }
+  });
+
+  sendDataBtn.addEventListener('click', () => {
+    const url = urlEndpointInput.value.trim();
+    if (!url) {
+      showMessage('Informe a URL do servidor', false);
+      logConsole('Erro: URL do servidor não informada');
+      return;
+    }
+    if (pedidos.length === 0) {
+      showMessage('Nenhum pedido para enviar', false);
+      logConsole('Erro: Nenhum pedido para enviar');
+      return;
+    }
+    logConsole(`Enviando dados para: ${url}`);
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(pedidos),
+    })
+    .then(async res => {
+      const text = await res.text();
+      if (res.ok) {
+        showMessage('Enviado');
+        logConsole(`Resposta do servidor (sucesso): ${text}`);
+      } else {
+        showMessage('Erro no envio', false);
+        logConsole(`Resposta do servidor (erro): ${text}`);
+      }
+    })
+    .catch(err => {
+      showMessage('Erro no envio', false);
+      logConsole(`Erro na requisição: ${err.message}`);
+    });
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

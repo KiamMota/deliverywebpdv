@@ -1,4 +1,4 @@
-﻿using Delivery.Web.Pdv.Core;
+﻿using Delivery.Web.Pdv.Domain;
 using Delivery.Web.Pdv.Contracts;
 using Delivery.Web.Pdv.Database;
 
@@ -9,7 +9,6 @@ namespace Delivery.Web.Pdv.Repository
     public interface IRepository
     {
         public int SalvarPedido(Pedido pedido);
-        public int EntregarPedido(Pedido pedido);
         public Pedido? EntregarPedidoById(int id);
         public int AtualizarPedido(Pedido pedido);
         public int DeletarPedido(Pedido pedido);
@@ -18,7 +17,7 @@ namespace Delivery.Web.Pdv.Repository
     public class Repository : IRepository
     {
         private readonly Database.Database _context;
-        private Core.IValidacao _validacao = new Validacao();
+        private Dto2O dto = new Dto2O();
         public Repository(Database.Database context)
         {
             _context = context;
@@ -29,19 +28,10 @@ namespace Delivery.Web.Pdv.Repository
             _context.SaveChanges();
             return pedido.Id;
         }
-        public int EntregarPedido(Pedido pedido)
-        {
-            _context.Pedidos.Find(pedido.Id);
-            _context.SaveChanges();
-            return pedido.Id;
-
-        }
 
         public Pedido? EntregarPedidoById(int id)
         {
-            _context.Pedidos.Find(id);
-            var pedido = _context.Pedidos.Find(id);
-            return pedido;
+            return _context.Pedidos.Find(id);
         }
         public int AtualizarPedido(Pedido pedido)
         {

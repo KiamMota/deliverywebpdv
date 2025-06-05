@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Delivery.Web.Pdv.Core
+namespace Delivery.Web.Pdv.Domain
 {
     public class Pedido
     {
@@ -20,13 +20,13 @@ namespace Delivery.Web.Pdv.Core
         public Pedido() => nomePedido = ""; /* para iniciar a string */
     }
 
-    internal interface IValidacao
+    internal interface IDto2O
     {
         public Pedido? ToPedido(PedidoDto dto);
         public PedidoDto? ToDto(Pedido pedido);
     }
 
-    public class Validacao : IValidacao
+    public class Dto2O : IDto2O
     {
         public Pedido? ToPedido(PedidoDto dto)
         {

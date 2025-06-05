@@ -1,6 +1,6 @@
 ﻿using Delivery.Web.Pdv.AppService;
 using Delivery.Web.Pdv.Contracts;
-using Delivery.Web.Pdv.Core;
+using Delivery.Web.Pdv.Domain;
 using System.ComponentModel.DataAnnotations;
 
 namespace Delivery.Web.Pdv.Helper
