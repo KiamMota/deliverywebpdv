@@ -2,7 +2,7 @@
   {
     "ContainingType": "delivery.Controllers.ControllerClass",
     "Method": "PostPedido",
-    "RelativePath": "dwpapi/ControllerClass",
+    "RelativePath": "pedidos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "delivery.Controllers.ControllerClass",
     "Method": "PutPedido",
-    "RelativePath": "dwpapi/ControllerClass",
+    "RelativePath": "pedidos",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -33,26 +33,32 @@
   },
   {
     "ContainingType": "delivery.Controllers.ControllerClass",
+    "Method": "DeletePedido",
+    "RelativePath": "pedidos",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedidodto",
+        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "delivery.Controllers.ControllerClass",
     "Method": "GetPedido",
-    "RelativePath": "dwpapi/ControllerClass/{id}",
+    "RelativePath": "pedidos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nomePedido",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "valorPedido",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "quantidadePedido",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "pedidodto",
+        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
+        "IsRequired": true
       },
       {
         "Name": "id",

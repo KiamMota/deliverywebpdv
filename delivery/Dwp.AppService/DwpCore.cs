@@ -33,11 +33,11 @@ namespace Delivery.Web.Pdv.Core
             if(dto is null) return null;
             else
             {
-                Pedido pedidoDomain = new Pedido();
-                pedidoDomain.nomePedido = dto.nomePedido;
-                pedidoDomain.valorPedido = dto.valorPedido;
-                pedidoDomain.quantidadePedido = dto.quantidadePedido;
-                return pedidoDomain;
+                Pedido realPedido = new Pedido();
+                realPedido.nomePedido = dto.nomePedido;
+                realPedido.valorPedido = dto.valorPedido;
+                realPedido.quantidadePedido = dto.quantidadePedido;
+                return realPedido;
             }
         }
         public PedidoDto? ToDto(Pedido pedido)

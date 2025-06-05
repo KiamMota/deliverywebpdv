@@ -10,11 +10,11 @@ namespace Delivery.Web.Pdv.Repository
     {
         public int SalvarPedido(Pedido pedido);
         public int EntregarPedido(Pedido pedido);
+        public Pedido? EntregarPedidoById(int id);
         public int AtualizarPedido(Pedido pedido);
         public int DeletarPedido(Pedido pedido);
     
     }
-
     public class Repository : IRepository
     {
         private readonly Database.Database _context;
@@ -36,6 +36,13 @@ namespace Delivery.Web.Pdv.Repository
             return pedido.Id;
 
         }
+
+        public Pedido? EntregarPedidoById(int id)
+        {
+            _context.Pedidos.Find(id);
+            var pedido = _context.Pedidos.Find(id);
+            return pedido;
+        }
         public int AtualizarPedido(Pedido pedido)
         {
             _context.Pedidos.Update(pedido);
@@ -46,7 +53,6 @@ namespace Delivery.Web.Pdv.Repository
         {
             _context.Pedidos.Remove(pedido);
             return (_context.SaveChanges() > 0) ? 1 : 0;
-            
         }
     }
 }

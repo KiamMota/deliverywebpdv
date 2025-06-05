@@ -1,17 +1,14 @@
 ﻿using Delivery.Web.Pdv.Contracts;
 using Delivery.Web.Pdv.Core;
-using Delivery.Web.Pdv.Helper;
 using Delivery.Web.Pdv.Repository;
-using Delivery.Web.Pdv.Database;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics.Eventing.Reader;
 
 namespace Delivery.Web.Pdv.AppService
 { 
     public interface IAppService
     {
         public int CriarPedido(PedidoDto dto);
-        public int EntregarPedido(PedidoDto pedido);
+        public PedidoDto? EntregarPedido(int id);
+        public PedidoDto? EntregarPedidoById(int id);
         public int AtualizarPedido(PedidoDto pedido);
         public int RemoverPedido(PedidoDto pedido);
     }
@@ -37,6 +34,13 @@ namespace Delivery.Web.Pdv.AppService
             if (pedidoEntregar is null) return -1;
             return _repo.EntregarPedido(pedidoEntregar);
         }
+
+        public PedidoDto? EntregarPedidoById(int id){ 
+        {
+                if (id == 0) { return null; }
+                var pedido = new Pedido();
+                pedido = _validation.ToDto(pedido);  
+        }
         public int AtualizarPedido(PedidoDto pedido)
         {
             Pedido pedidoAtualizar = _validation.ToPedido(pedido);
@@ -50,8 +54,5 @@ namespace Delivery.Web.Pdv.AppService
             return _repo.DeletarPedido(pedidoRemover);
 
         }
-
-
-
     }
 }

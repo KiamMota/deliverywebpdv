@@ -1,15 +1,19 @@
-using Microsoft.AspNetCore.Mvc;
-using Delivery.Web.Pdv.Helper;
-using Delivery.Web.Pdv.Contracts;
 using Delivery.Web.Pdv.AppService;
+using Delivery.Web.Pdv.Contracts;
+using Delivery.Web.Pdv.Helper;
+using Delivery.Web.Pdv.Infra;
+using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
+
 
 namespace delivery.Controllers
 {
     [ApiController]
-    [Route("dwpapi/[controller]")]
+    [Route("pedidos")]
 
     public class ControllerClass : ControllerBase
     {
+        private Log log = Log.Instance;
         private readonly IAppService _appService;
         public ControllerClass(IAppService ap)
         {
@@ -19,22 +23,28 @@ namespace delivery.Controllers
         [HttpPost]
         public IActionResult PostPedido([FromBody] PedidoDto pedidodto)
         {
-            if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False)
-                return BadRequest();
-            _appService.CriarPedido(pedidodto);
-            return BadRequest();
+            if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False) return BadRequest();
+            return Ok(_appService.EntregarPedido(pedidodto));
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPedido([FromQuery] PedidoDto pedidodto)
+        public IActionResult GetPedido(int id)
         {
-            return Ok(_appService.EntregarPedido(pedidodto));
+            var pedidoDto = _appService.EntregarPedido(pedido);
+            return Ok(pedidoDto);
         }
 
         [HttpPut]
         public IActionResult PutPedido(PedidoDto pedidodto)
         {
+            if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
             return Ok(_appService.EntregarPedido(pedidodto));
+        }
+
+        [HttpDelete]
+        public IActionResult DeletePedido(PedidoDto pedidodto) {
+            if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
+            return Ok(_appService.RemoverPedido(pedidodto));
         }
     }
 }
