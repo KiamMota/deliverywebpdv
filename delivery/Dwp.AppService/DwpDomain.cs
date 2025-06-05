@@ -20,7 +20,7 @@ namespace Delivery.Web.Pdv.Domain
         public Pedido() => nomePedido = ""; /* para iniciar a string */
     }
 
-    internal interface IDto2O
+    public interface IDto2O
     {
         public Pedido? ToPedido(PedidoDto dto);
         public PedidoDto? ToDto(Pedido pedido);

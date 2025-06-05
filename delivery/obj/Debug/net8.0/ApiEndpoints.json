@@ -43,20 +43,15 @@
   },
   {
     "ContainingType": "delivery.Controllers.ControllerClass",
-    "Method": "PutPedido",
+    "Method": "PutPedidoById",
     "RelativePath": "dwp/pedidos/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pedidodto",
-        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
-        "IsRequired": true
-      },
-      {
         "Name": "id",
-        "Type": "",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -71,13 +66,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pedidodto",
-        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
-        "IsRequired": true
-      },
-      {
         "Name": "id",
-        "Type": "",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

@@ -15,7 +15,7 @@ namespace delivery.Controllers
         private readonly IAppService _appService;
         public ControllerClass(IAppService ap)
         {
-            _appService = ap;
+            _appService = ap ?? throw new ArgumentNullException(nameof(ap));
         } 
 
         [HttpPost]
@@ -23,7 +23,7 @@ namespace delivery.Controllers
         {
             if (DwpHelper.ObjIsValidAll(pedidodto) is DwpHelper.BigBoolean.False) return BadRequest();
             return Ok(_appService.CriarPedido(pedidodto));
-            Console.WriteLine("mandado post");
+
         }
 
         [HttpGet("{id}")]
@@ -33,16 +33,16 @@ namespace delivery.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult PutPedido(PedidoDto pedidodto)
+        public IActionResult PutPedidoById(int id)
         {
-            if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
-            return Ok(_appService.AtualizarPedido(pedidodto));
+            if(id <= 0) return BadRequest();
+            return Ok(_appService.AtualizarPedido(id));
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeletePedido(PedidoDto pedidodto) {
-            if (DwpHelper.ObjIsValidAll(pedidodto) == DwpHelper.BigBoolean.False) { return BadRequest(); }
-            return Ok(_appService.RemoverPedido(pedidodto));
+        public IActionResult DeletePedido(int id) {
+            if (id <= 0) return BadRequest();
+            return Ok(_appService.RemoverPedido(id));
         }
     }
 }

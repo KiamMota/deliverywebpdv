@@ -183,7 +183,7 @@
     fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(pedidos),
+      body: JSON.stringify(orders[orders.length - 1]),
     })
     .then(async res => {
       const text = await res.text();
