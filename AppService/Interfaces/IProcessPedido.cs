@@ -5,9 +5,13 @@ namespace AppService.Interfaces
 {
     public interface IProcessPedido
     {
-        PedidoResponse SalvarPedido(PedidoRequest pedido);
+        /* retorna o id */
+        int SalvarPedido(PedidoRequest pedido);
+        /* retorna o objeto */
         PedidoResponse PegarPedidoById(int id);
-        PedidoResponse AlterarPedidoById(int id);
+        /* predicate */
+        bool AlterarPedidoById(int id);
+        /* predicate */
         bool RemoverPedidoById(int id);
     }
 }

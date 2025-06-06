@@ -1,4 +1,7 @@
-﻿using Domain.Core.Entities;
+﻿
+using Contracts.Request;
+using AppService;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -9,15 +12,16 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
+        
         [HttpGet]
-        [Route("{id}")] //api/pessoas/12
+        [Route("{id}")] 
         public IActionResult Get(int id)
         {
-            return Ok("");
+            return Ok();  
         }
 
         [HttpGet]
-        [Route("porcpf/{cpf}")] //api/pessoas/12
+        [Route("porcpf/{cpf}")]
         public IActionResult GetByCpf(string cpf)
         {
             return Ok("");
@@ -38,14 +42,14 @@ namespace Api.Delivery.Controllers
         }
 
         [HttpPost] //api/pedido
-        public IActionResult Post(Pedido obj)
+        public IActionResult Post(PedidoRequest obj)
         {
             return Ok();
         }
 
         [HttpPost] //api/pedido/person
         [Route("person")]
-        public IActionResult PostPerson(Pedido obj)
+        public IActionResult PostPerson(PedidoRequest obj)
         {
             return Ok();
         }
@@ -53,7 +57,7 @@ namespace Api.Delivery.Controllers
         //editar
         [HttpPut] //api/pedido/12
         [Route("{id}")]
-        public IActionResult put([FromRoute] int id,  [FromBody] Pedido obj)
+        public IActionResult put([FromRoute] int id,  [FromBody] PedidoRequest obj)
         {
             return Ok();
         }

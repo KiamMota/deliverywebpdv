@@ -3,48 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2E71AD-F7D6-46A4-9FE8-F591FD912411}|Log\\Infra.Log.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\log\\logsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2E71AD-F7D6-46A4-9FE8-F591FD912411}|Log\\Infra.Log.csproj|solutionrelative:log\\logsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\helpers\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\helpers\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\entities\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +70,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogSystem.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Log\\LogSystem.cs",
+              "RelativeDocumentMoniker": "Log\\LogSystem.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Log\\LogSystem.cs",
+              "RelativeToolTip": "Log\\LogSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:08:32.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Database.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Database.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Database.cs",
+              "RelativeToolTip": "Infra.Data\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:03:34.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "delivery\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "delivery\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:42:51.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DwpHelper.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Helpers\\DwpHelper.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Helpers\\DwpHelper.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Helpers\\DwpHelper.cs",
+              "RelativeToolTip": "Domain.Core\\Helpers\\DwpHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:48:05.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "PedidoResponse.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Response\\PedidoResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\Response\\PedidoResponse.cs",
@@ -71,20 +139,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IProcessPedido.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\Interfaces\\IProcessPedido.cs",
               "RelativeDocumentMoniker": "AppService\\Interfaces\\IProcessPedido.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\Interfaces\\IProcessPedido.cs",
               "RelativeToolTip": "AppService\\Interfaces\\IProcessPedido.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T19:13:07.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "IPedido.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\Entities\\IPedido.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\Entities\\IPedido.cs",
@@ -97,20 +165,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Domain.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Domain.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Entities\\Domain.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Domain.cs",
               "RelativeToolTip": "Domain.Core\\Entities\\Domain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T17:13:52.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "PedidoBase.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Base\\PedidoBase.cs",
               "RelativeDocumentMoniker": "Contracts\\Base\\PedidoBase.cs",
@@ -123,52 +191,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "PedidoRequest.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Request\\PedidoRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\Request\\PedidoRequest.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Request\\PedidoRequest.cs",
               "RelativeToolTip": "Contracts\\Request\\PedidoRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T18:48:47.233Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Pedido.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Entities\\Pedido.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Pedido.cs",
               "RelativeToolTip": "Domain.Core\\Entities\\Pedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T18:40:26.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "IPedidoValidation.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
               "RelativeToolTip": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T18:08:55.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Infra.Data",
+              "DocumentIndex": 4,
+              "Title": "Infra.Data.csproj",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
               "RelativeDocumentMoniker": "Infra.Data\\Infra.Data.csproj",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
               "RelativeToolTip": "Infra.Data\\Infra.Data.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-06-06T17:17:43.117Z",
               "EditorCaption": ""
@@ -179,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Builder.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Builder.cs",
               "RelativeDocumentMoniker": "delivery\\Builder.cs",
@@ -198,13 +266,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AppService.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\AppService.cs",
               "RelativeDocumentMoniker": "AppService\\AppService.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\AppService.cs",
               "RelativeToolTip": "AppService\\AppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T18:48:22.09Z",
               "EditorCaption": ""
