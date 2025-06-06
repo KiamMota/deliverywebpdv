@@ -17,7 +17,6 @@ namespace delivery.Controllers
         {
             _appService = ap ?? throw new ArgumentNullException(nameof(ap));
         } 
-
         [HttpPost]
         public IActionResult PostPedido([FromBody] PedidoDto pedidodto)
         {
