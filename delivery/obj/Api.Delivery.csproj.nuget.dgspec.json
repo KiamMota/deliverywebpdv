@@ -196,6 +196,12 @@
               },
               "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Contracts.csproj": {
                 "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Contracts.csproj"
+              },
+              "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
+              },
+              "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj"
               }
             }
           }

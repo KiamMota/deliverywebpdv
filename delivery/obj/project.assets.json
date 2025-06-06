@@ -684,6 +684,8 @@
     "net8.0": [
       "AppService >= 1.0.0",
       "Contracts >= 1.0.0",
+      "Domain.Core >= 1.0.0",
+      "Infra.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.5"
     ]
   },
@@ -730,6 +732,12 @@
             },
             "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Contracts.csproj"
+            },
+            "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+              "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
+            },
+            "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj"
             }
           }
         }

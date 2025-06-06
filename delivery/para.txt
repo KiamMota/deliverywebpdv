@@ -1,6 +1,0 @@
-{"nomePedido": "Salada", "valorPedido": 19.99, "quantidadePedido": 50}
-
-curl -X POST https://localhost:7192/DeliveryWebPDV/pedidos^
- -H "Content-Type: application/json"^
- -d "{\"nomePedido\": \"Salada\", \"valorPedido\": 19.99, \"quantidadePedido\": 50}"^
- -k

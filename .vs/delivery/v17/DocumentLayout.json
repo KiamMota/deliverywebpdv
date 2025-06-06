@@ -3,64 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\controllers\\dwpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\controllers\\dwpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwprepository\\dwprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwprepository\\dwprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwpcontracts\\dwpcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwpcontracts\\dwpcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwphelper\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwphelper\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwp.appservice\\dwpappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwp.appservice\\dwpappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwp.appservice\\dwpdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwp.appservice\\dwpdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\dwprepository\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\dwprepository\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\infra\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\infra\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\domain.core\\entities\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\logsystem.log||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\logsystem.log||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\delivery.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\delivery.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\delivery\\delivery.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\delivery.csproj|solutionrelative:delivery\\delivery.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\projetos\\deliverywebpdv\\infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,203 +54,159 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PedidoResponse.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Response\\PedidoResponse.cs",
+              "RelativeDocumentMoniker": "Contracts\\Response\\PedidoResponse.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Response\\PedidoResponse.cs",
+              "RelativeToolTip": "Contracts\\Response\\PedidoResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:31:49.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IProcessPedido.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\Interfaces\\IProcessPedido.cs",
+              "RelativeDocumentMoniker": "AppService\\Interfaces\\IProcessPedido.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\Interfaces\\IProcessPedido.cs",
+              "RelativeToolTip": "AppService\\Interfaces\\IProcessPedido.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:13:07.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPedido.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\Entities\\IPedido.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\Entities\\IPedido.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\Entities\\IPedido.cs",
+              "RelativeToolTip": "Domain.Core\\Interfaces\\Entities\\IPedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:42:24.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Domain.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Domain.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Entities\\Domain.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Domain.cs",
+              "RelativeToolTip": "Domain.Core\\Entities\\Domain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:13:52.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PedidoBase.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Base\\PedidoBase.cs",
+              "RelativeDocumentMoniker": "Contracts\\Base\\PedidoBase.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Base\\PedidoBase.cs",
+              "RelativeToolTip": "Contracts\\Base\\PedidoBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:49:19.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidoRequest.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Request\\PedidoRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\Request\\PedidoRequest.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Contracts\\Request\\PedidoRequest.cs",
+              "RelativeToolTip": "Contracts\\Request\\PedidoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:48:47.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Pedido.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Entities\\Pedido.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Entities\\Pedido.cs",
+              "RelativeToolTip": "Domain.Core\\Entities\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:40:26.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPedidoValidation.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "RelativeToolTip": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:08:55.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Infra.Data",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
+              "RelativeDocumentMoniker": "Infra.Data\\Infra.Data.csproj",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
+              "RelativeToolTip": "Infra.Data\\Infra.Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-06T17:17:43.117Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\index.html",
-              "RelativeDocumentMoniker": "delivery\\index.html",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\index.html",
-              "RelativeToolTip": "delivery\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-05T18:56:28.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "logsystem.LOG",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\logsystem.LOG",
-              "RelativeDocumentMoniker": "delivery\\logsystem.LOG",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\logsystem.LOG",
-              "RelativeToolTip": "delivery\\logsystem.LOG",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-05T17:03:10.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Log.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Infra\\Log.cs",
-              "RelativeDocumentMoniker": "delivery\\Infra\\Log.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Infra\\Log.cs",
-              "RelativeToolTip": "delivery\\Infra\\Log.cs",
+              "DocumentIndex": 5,
+              "Title": "Builder.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Builder.cs",
+              "RelativeDocumentMoniker": "delivery\\Builder.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Builder.cs",
+              "RelativeToolTip": "delivery\\Builder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T16:16:04.407Z",
+              "WhenOpened": "2025-06-06T18:53:01.62Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpRepository\\Database.cs",
-              "RelativeDocumentMoniker": "delivery\\DwpRepository\\Database.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpRepository\\Database.cs",
-              "RelativeToolTip": "delivery\\DwpRepository\\Database.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:53:17.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "delivery\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Properties\\launchSettings.json",
-              "RelativeToolTip": "delivery\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAQAAAAAAAAAAADwvykAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-04T17:13:18.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "delivery.http",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\delivery.http",
-              "RelativeDocumentMoniker": "delivery\\delivery.http",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\delivery.http",
-              "RelativeToolTip": "delivery\\delivery.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-06-04T17:01:39.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DwpContracts.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpContracts\\DwpContracts.cs",
-              "RelativeDocumentMoniker": "delivery\\DwpContracts\\DwpContracts.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpContracts\\DwpContracts.cs",
-              "RelativeToolTip": "delivery\\DwpContracts\\DwpContracts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T19:37:26.844Z",
-              "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DwpRepository.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpRepository\\DwpRepository.cs",
-              "RelativeDocumentMoniker": "delivery\\DwpRepository\\DwpRepository.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpRepository\\DwpRepository.cs",
-              "RelativeToolTip": "delivery\\DwpRepository\\DwpRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Title": "AppService.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\AppService.cs",
+              "RelativeDocumentMoniker": "AppService\\AppService.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\AppService\\AppService.cs",
+              "RelativeToolTip": "AppService\\AppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T18:50:09.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\appsettings.json",
-              "RelativeDocumentMoniker": "delivery\\appsettings.json",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\appsettings.json",
-              "RelativeToolTip": "delivery\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-03T18:37:34.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DwpDomain.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Dwp.AppService\\DwpDomain.cs",
-              "RelativeDocumentMoniker": "delivery\\Dwp.AppService\\DwpDomain.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Dwp.AppService\\DwpDomain.cs",
-              "RelativeToolTip": "delivery\\Dwp.AppService\\DwpDomain.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T18:12:03.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Init.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Init.cs",
-              "RelativeDocumentMoniker": "delivery\\Init.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Init.cs",
-              "RelativeToolTip": "delivery\\Init.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T17:57:20.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DwpHelper.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpHelper\\DwpHelper.cs",
-              "RelativeDocumentMoniker": "delivery\\DwpHelper\\DwpHelper.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\DwpHelper\\DwpHelper.cs",
-              "RelativeToolTip": "delivery\\DwpHelper\\DwpHelper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC0AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T16:34:02.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DwpAppService.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Dwp.AppService\\DwpAppService.cs",
-              "RelativeDocumentMoniker": "delivery\\Dwp.AppService\\DwpAppService.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Dwp.AppService\\DwpAppService.cs",
-              "RelativeToolTip": "delivery\\Dwp.AppService\\DwpAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:09:29.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "delivery.csproj",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\delivery.csproj",
-              "RelativeDocumentMoniker": "delivery\\delivery.csproj",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\delivery.csproj",
-              "RelativeToolTip": "delivery\\delivery.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-03T00:15:54.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DwpController.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Controllers\\DwpController.cs",
-              "RelativeDocumentMoniker": "delivery\\Controllers\\DwpController.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\projetos\\deliverywebpdv\\delivery\\Controllers\\DwpController.cs",
-              "RelativeToolTip": "delivery\\Controllers\\DwpController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T23:57:06.478Z",
+              "WhenOpened": "2025-06-06T18:48:22.09Z",
               "EditorCaption": ""
             }
           ]

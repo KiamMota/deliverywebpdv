@@ -1,0 +1,7 @@
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.csproj.AssemblyReference.cache
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.AssemblyInfoInputs.cache
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.AssemblyInfo.cs
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.csproj.CoreCompileInputs.cache
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\somen\Desktop\projetos\deliverywebpdv\delivery\obj\Debug\net8.0\Api.Delivery.sourcelink.json
