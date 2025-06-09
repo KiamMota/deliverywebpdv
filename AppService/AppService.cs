@@ -17,16 +17,27 @@ namespace AppService
         {
             Repo = _repopedido;
         }
-        public int SalvarPedido(PedidoRequest pedido)
+        public int SalvarPedido(PedidoRequest pedido) => _repopedido.SalvarPedido(ObjectsConverter.FromPedidoRequest(pedido));
+        
+        public PedidoResponse? PegarPedidoById(int id) => ObjectsConverter.ToPedidoResponse(_repopedido.SelectPedidoById(id));
+
+        public IList<PedidoResponse> PegarPedidoAll()
         {
-            return _repopedido.SalvarPedido(pedido);
+            //faz uma lista de pedidoresponse 
+            List<PedidoResponse> pedidoResponses = new();
+            var data = _repopedido.SelectPedidoAll();
+
+            foreach (var itemData in data)
+            {
+                var pedidoResponse = ObjectsConverter.ToPedidoResponse(itemData);
+                pedidoResponses.Add(pedidoResponse);
+            }
+
+            return pedidoResponses;
         }
-        public PedidoResponse? PegarPedidoById(int id)
-        {
-        }
-        public bool AlterarPedidoById(PedidoRequest Atualizado, int id)
-        {
-            return _repopedido.PutPedidoById(Atualizado, id);
+
+        public bool AlterarPedidoById(PedidoRequest Atualizado, int id) {
+            return _repopedido.PutPedidoById(ObjectsConverter.FromPedidoRequest(Atualizado), id);
         }
         public bool RemoverPedidoById(int id)
         {

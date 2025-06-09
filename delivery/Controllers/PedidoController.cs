@@ -14,30 +14,26 @@ namespace Api.Delivery.Controllers
         {
             _apps = apsP;
         }
-        public IActionResult Post(PedidoRequest obj)
-        {
-            return Ok()
-        }
+        [HttpPost]
+        public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
 
         [HttpGet]
         [Route("{id}")] 
-        public IActionResult Get(int id)
-        {
-            return Ok();  
-        }
-
-        [HttpGet]
-        [Route("porcpf/{cpf}")]
-        public IActionResult GetByCpf(string cpf)
-        {
-            return Ok("");
-        }
+        public IActionResult GetById(int id) => Ok(_apps.PegarPedidoById(id));
+        
+        
+        //[HttpGet]
+        //[Route("porcpf/{cpf}")]
+        //public IActionResult GetByCpf(string cpf)
+        //{
+        //    return Ok("");
+        //}
 
         [HttpGet]
         //api/pedido
         public IActionResult GetAll()
         {
-            return Ok(new List<string>());
+            return Ok(_apps.PegarPedidoBy);
         }
 
         [HttpGet]
