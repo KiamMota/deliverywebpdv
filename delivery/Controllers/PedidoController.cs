@@ -1,10 +1,7 @@
-﻿
+﻿using AppService;
 using Contracts.Request;
-
-using Microsoft.AspNetCore.Http;
+using Contracts.Response;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using Domain.Core.Interfaces.Entities;
 
 namespace Api.Delivery.Controllers
 {
@@ -12,13 +9,16 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
-        
-        public PedidoController()
+        private readonly AppService.ApsPedido _apps;
+        public PedidoController(ApsPedido apsP)
         {
-
-
-
+            _apps = apsP;
         }
+        public IActionResult Post(PedidoRequest obj)
+        {
+            return Ok()
+        }
+
         [HttpGet]
         [Route("{id}")] 
         public IActionResult Get(int id)
@@ -48,10 +48,7 @@ namespace Api.Delivery.Controllers
         }
 
         [HttpPost] //api/pedido
-        public IActionResult Post(PedidoRequest obj)
-        {
-            return Ok();
-        }
+
 
         [HttpPost] //api/pedido/person
         [Route("person")]

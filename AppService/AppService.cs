@@ -1,7 +1,9 @@
-﻿using Domain.Core.Validation;
-using Domain.Core.Interfaces.AppService;
+﻿using Contracts.Response;
+using Domain.Core.Validation;
 using Domain.Core.Entities;
 using Infra.Data.Repositories;
+using AppService.Interfaces;
+
 
 namespace AppService
 {
@@ -18,9 +20,9 @@ namespace AppService
         {
             return _repopedido.SalvarPedido(pedido);
         }
-        public Pedido? PegarPedidoById(int id)
+        public PedidoResponse? PegarPedidoById(int id)
         {
-            return _repopedido.SelectPedidoById(id);
+            
         }
         public bool AlterarPedidoById(Pedido Atualizado, int id)
         {

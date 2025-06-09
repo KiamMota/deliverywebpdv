@@ -1,24 +1,34 @@
 [
   {
-    "ContainingType": "delivery.Controllers.ControllerClass",
-    "Method": "PostPedido",
-    "RelativePath": "dwp/pedidos",
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "Post",
+    "RelativePath": "api/Pedido",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pedidodto",
-        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
+        "Name": "obj",
+        "Type": "Contracts.Request.PedidoRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "delivery.Controllers.ControllerClass",
-    "Method": "GetPedido",
-    "RelativePath": "dwp/pedidos/{id}",
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "Get",
+    "RelativePath": "api/Pedido/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -29,22 +39,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Delivery.Web.Pdv.Contracts.PedidoDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "delivery.Controllers.ControllerClass",
-    "Method": "PutPedidoById",
-    "RelativePath": "dwp/pedidos/{id}",
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "put",
+    "RelativePath": "api/Pedido/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -53,21 +53,52 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "obj",
+        "Type": "Contracts.Request.PedidoRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "delivery.Controllers.ControllerClass",
-    "Method": "DeletePedido",
-    "RelativePath": "dwp/pedidos/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "PostPerson",
+    "RelativePath": "api/Pedido/person",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "obj",
+        "Type": "Contracts.Request.PedidoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "GetPersons",
+    "RelativePath": "api/Pedido/pessoas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "GetByCpf",
+    "RelativePath": "api/Pedido/porcpf/{cpf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

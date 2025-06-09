@@ -1,1 +1,12 @@
-{"Version":1,"Hash":"6Enj3ooWGwBi2EE2G+dk3nGAhlLZ5wcxMJ6dOezMWqI=","Source":"delivery","BasePath":"_content/delivery","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "O42LEiK6E1syUW2+q29RbPpGj4rN1MPIQh6iwBRdCOw=",
+  "Source": "Api.Delivery",
+  "BasePath": "_content/Api.Delivery",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
