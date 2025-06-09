@@ -1,10 +1,11 @@
 ﻿
 using Contracts.Request;
-using AppService;
+using AppService.Interfaces;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Domain.Core.Interfaces.Entities;
 
 namespace Api.Delivery.Controllers
 {
@@ -12,7 +13,13 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
-        
+        private readonl
+        public PedidoController()
+        {
+
+
+
+        }
         [HttpGet]
         [Route("{id}")] 
         public IActionResult Get(int id)

@@ -23,3 +23,10 @@ C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\Infra.Data.sourceli
 C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\Infra.Data.dll
 C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\refint\Infra.Data.dll
 C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\Infra.Data.pdb
+C:\Users\somen\Desktop\kprojetos\Infra.Data\bin\Debug\net8.0\Infra.Data.deps.json
+C:\Users\somen\Desktop\kprojetos\Infra.Data\bin\Debug\net8.0\Infra.Data.dll
+C:\Users\somen\Desktop\kprojetos\Infra.Data\bin\Debug\net8.0\Infra.Data.pdb
+C:\Users\somen\Desktop\kprojetos\Infra.Data\bin\Debug\net8.0\Domain.Core.dll
+C:\Users\somen\Desktop\kprojetos\Infra.Data\bin\Debug\net8.0\Domain.Core.pdb
+C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\Infra.Data.csproj.Up2Date
+C:\Users\somen\Desktop\kprojetos\Infra.Data\obj\Debug\net8.0\ref\Infra.Data.dll

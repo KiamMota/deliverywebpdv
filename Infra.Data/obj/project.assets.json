@@ -237,16 +237,6 @@
         "runtime": {
           "bin/placeholder/Domain.Core.dll": {}
         }
-      },
-      "Infra.Log/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Infra.Log.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infra.Log.dll": {}
-        }
       }
     }
   },
@@ -632,17 +622,11 @@
       "type": "project",
       "path": "../Domain.Core/Domain.Core.csproj",
       "msbuildProject": "../Domain.Core/Domain.Core.csproj"
-    },
-    "Infra.Log/1.0.0": {
-      "type": "project",
-      "path": "../Log/Infra.Log.csproj",
-      "msbuildProject": "../Log/Infra.Log.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Domain.Core >= 1.0.0",
-      "Infra.Log >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.5"
     ]
   },
@@ -682,9 +666,6 @@
           "projectReferences": {
             "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
               "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj"
-            },
-            "C:\\Users\\somen\\Desktop\\kprojetos\\Log\\Infra.Log.csproj": {
-              "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Log\\Infra.Log.csproj"
             }
           }
         }

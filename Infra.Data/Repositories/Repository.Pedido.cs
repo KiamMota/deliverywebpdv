@@ -1,9 +1,6 @@
 ﻿using Domain.Core.Entities;
 using Infra.Data.Interfaces;
 using Infra.Data.Database;
-using System.Linq;
-using CrossCutting.Log;
-using System.Numerics;
 using Delivery.Web.Pdv.Helper;
 
 
@@ -13,26 +10,10 @@ namespace Infra.Data.Repositories
     public class PedidoRepository : IPedidoRepository
     {
         private readonly AppDbContext _appDbContext;
-        private Log _log = new Log();
-
-        public PedidoRepository(AppDbContext appDbContext)
-        {
-            _appDbContext = appDbContext;
-        }
-
         public bool SalvarPedido(Pedido pedido)
         {
-            try
-            {
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _log.Insert("Houve algum erro com o banco de dados");
-                _log.Insert("Õ Banco não pôde salvar o pedido");
-                return false;
-            }
+                _appDbContext.Pedidos.Add(pedido);
+                return _appDbContext.SaveChanges() > 0;
         }
         public IList<Pedido> SelectPedidoAll()
         {
