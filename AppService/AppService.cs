@@ -1,4 +1,5 @@
 ﻿using Contracts.Response;
+using Contracts.Request;
 using Domain.Core.Validation;
 using Domain.Core.Entities;
 using Infra.Data.Repositories;
@@ -16,15 +17,14 @@ namespace AppService
         {
             Repo = _repopedido;
         }
-        public int SalvarPedido(Pedido pedido)
+        public int SalvarPedido(PedidoRequest pedido)
         {
             return _repopedido.SalvarPedido(pedido);
         }
         public PedidoResponse? PegarPedidoById(int id)
         {
-            
         }
-        public bool AlterarPedidoById(Pedido Atualizado, int id)
+        public bool AlterarPedidoById(PedidoRequest Atualizado, int id)
         {
             return _repopedido.PutPedidoById(Atualizado, id);
         }

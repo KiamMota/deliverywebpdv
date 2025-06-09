@@ -1,4 +1,5 @@
 ﻿using Contracts.Response;
+using Contracts.Request;
 using Domain.Core.Entities;
 
 namespace AppService.Interfaces;
@@ -6,11 +7,11 @@ namespace AppService.Interfaces;
 public interface IProcessPedido
 {
     /* retorna o id */
-    int SalvarPedido(Pedido pedido);
+    int SalvarPedido(PedidoRequest pedido);
     /* retorna o objeto */
     PedidoResponse? PegarPedidoById(int id);
     /* predicate */
-    bool AlterarPedidoById(Pedido Atualizado, int id);
+    bool AlterarPedidoById(PedidoRequest Atualizado, int id);
     /* predicate */
     bool RemoverPedidoById(int id);
 }
