@@ -5,6 +5,12 @@ namespace Delivery.Web.Pdv.Helper
 {
     public class DwpHelper
     {
+        public static bool No<T>(T obj)
+        {
+            if (obj == null) return true;
+            return EqualityComparer<T>.Default.Equals(obj, default(T));
+        }
+
         public enum BigBoolean : short
         {
             Error = -1,

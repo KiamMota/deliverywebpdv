@@ -10,3 +10,11 @@ C:\Users\somen\Desktop\projetos\deliverywebpdv\Domain.Core\obj\Debug\net8.0\Doma
 C:\Users\somen\Desktop\projetos\deliverywebpdv\Domain.Core\obj\Debug\net8.0\refint\Domain.Core.dll
 C:\Users\somen\Desktop\projetos\deliverywebpdv\Domain.Core\obj\Debug\net8.0\Domain.Core.pdb
 C:\Users\somen\Desktop\projetos\deliverywebpdv\Domain.Core\obj\Debug\net8.0\ref\Domain.Core.dll
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.AssemblyInfoInputs.cache
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.AssemblyInfo.cs
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.sourcelink.json
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.dll
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\refint\Domain.Core.dll
+C:\Users\somen\Desktop\kprojetos\Domain.Core\obj\Debug\net8.0\Domain.Core.pdb

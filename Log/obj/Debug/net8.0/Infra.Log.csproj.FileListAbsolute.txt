@@ -1,0 +1,5 @@
+C:\Users\somen\Desktop\kprojetos\Log\obj\Debug\net8.0\Infra.Log.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\Desktop\kprojetos\Log\obj\Debug\net8.0\Infra.Log.AssemblyInfoInputs.cache
+C:\Users\somen\Desktop\kprojetos\Log\obj\Debug\net8.0\Infra.Log.AssemblyInfo.cs
+C:\Users\somen\Desktop\kprojetos\Log\obj\Debug\net8.0\Infra.Log.csproj.CoreCompileInputs.cache
+C:\Users\somen\Desktop\kprojetos\Log\obj\Debug\net8.0\Infra.Log.sourcelink.json

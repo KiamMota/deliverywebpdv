@@ -1,5 +1,7 @@
 using Contracts;
 using Microsoft.AspNetCore.DataProtection.Repositories;
+using Infra.Data.Database;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +17,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-//builder.Services.AddDbContext<Database>(options =>
-//options.UseInMemoryDatabase("DbOfPedidos"));
-
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
 
 var app = builder.Build();
 
