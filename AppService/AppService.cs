@@ -1,37 +1,35 @@
-﻿using Contracts.Request;
-using Contracts.Response;
-using Domain.Core.Validation;
+﻿using Domain.Core.Validation;
+using Domain.Core.Interfaces.AppService;
+using Domain.Core.Entities;
 using Infra.Data.Repositories;
-using AppService.Interfaces;
 
 namespace AppService
 {
-    public class ProcessPedido : IProcessPedido
+    public class ApsPedido : IProcessPedido
     {
         private PedidoValidation _validation = new PedidoValidation();
-        private PedidoRepository _repository = new PedidoRepository();
-        public int SalvarPedido(PedidoRequest pedido)
-        {
-            if (pedido == null) throw new ArgumentNullException("pedido é nulo!");
-            return 0;
-        }
-        public PedidoResponse? PegarPedidoById(int id)
-        {
-            
+        private RepoPedido _repopedido;
 
-            return null;
-        }
-        public bool AlterarPedidoById(int id)
+        public ApsPedido(RepoPedido Repo)
         {
-
+            Repo = _repopedido;
+        }
+        public int SalvarPedido(Pedido pedido)
+        {
+            return _repopedido.SalvarPedido(pedido);
+        }
+        public Pedido? PegarPedidoById(int id)
+        {
+            return _repopedido.SelectPedidoById(id);
+        }
+        public bool AlterarPedidoById(Pedido Atualizado, int id)
+        {
+            return _repopedido.PutPedidoById(Atualizado, id);
         }
         public bool RemoverPedidoById(int id)
         {
-
-
+            return _repopedido.DeletePedidoById(id);
         }
 
     }
-
-
 }

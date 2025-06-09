@@ -10,3 +10,17 @@ C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.Assembly
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.AssemblyInfo.cs
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.csproj.CoreCompileInputs.cache
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.sourcelink.json
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\AppService.deps.json
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\AppService.dll
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\AppService.pdb
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Contracts.dll
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Domain.Core.dll
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Infra.Data.dll
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Contracts.pdb
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Domain.Core.pdb
+C:\Users\somen\Desktop\kprojetos\AppService\bin\Debug\net8.0\Infra.Data.pdb
+C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.csproj.Up2Date
+C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.dll
+C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\refint\AppService.dll
+C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.pdb
+C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\ref\AppService.dll

@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Domain.Core.Validation
 {
+    /* sistema para validação do pedido */
     public class PedidoValidation : IPedidoValidation
     {
         public bool ValidarNome(string nomePedido)

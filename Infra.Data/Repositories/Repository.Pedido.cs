@@ -1,19 +1,25 @@
 ﻿using Domain.Core.Entities;
-using Infra.Data.Interfaces;
+using Domain.Core.Interfaces.Entities;
 using Infra.Data.Database;
-using Delivery.Web.Pdv.Helper;
-
+using Domain.Core.Interfaces;
+using Infra.Data.Interfaces;
 
 
 namespace Infra.Data.Repositories
 {
-    public class PedidoRepository : IPedidoRepository
+    public class RepoPedido : IPedidoRepository
     {
         private readonly AppDbContext _appDbContext;
-        public bool SalvarPedido(Pedido pedido)
+        public RepoPedido(AppDbContext obj)
+        {
+            _appDbContext = obj;
+        }
+
+        public int SalvarPedido(Pedido pedido)
         {
                 _appDbContext.Pedidos.Add(pedido);
-                return _appDbContext.SaveChanges() > 0;
+                _appDbContext.SaveChanges();
+                return pedido.Id;
         }
         public IList<Pedido> SelectPedidoAll()
         {
@@ -29,11 +35,8 @@ namespace Infra.Data.Repositories
         {
             if (Atualizado == null)
                 return false;
-            bool isIdValid = DwpHelper.No(Atualizado.Id);
             var putById = _appDbContext.Pedidos.FirstOrDefault(pid => pid.Id == id);
             
-            if (isIdValid)
-                return false;
             if (putById == null)
             if (Atualizado.valorPedido != 0)
                 putById.valorPedido = Atualizado.valorPedido;

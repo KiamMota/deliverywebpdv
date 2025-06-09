@@ -8,13 +8,10 @@
 
   <ItemGroup>
     <Compile Remove="Enums\**" />
-    <Compile Remove="Interfaces - Cópia\Repository\**" />
     <Compile Remove="Interfaces\Repository\**" />
     <EmbeddedResource Remove="Enums\**" />
-    <EmbeddedResource Remove="Interfaces - Cópia\Repository\**" />
     <EmbeddedResource Remove="Interfaces\Repository\**" />
     <None Remove="Enums\**" />
-    <None Remove="Interfaces - Cópia\Repository\**" />
     <None Remove="Interfaces\Repository\**" />
   </ItemGroup>
 

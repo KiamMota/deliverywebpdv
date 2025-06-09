@@ -7,32 +7,20 @@
       "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\repository.pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\domain.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\domain.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\kprojetos\\infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\kprojetos\\appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\appservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\kprojetos\\infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\kprojetos\\delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\entities\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,24 +31,44 @@
       "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\base\\pedidobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\appservice\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\appservice\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\infra.data\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\infra.data\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\kprojetos\\delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\ipedidovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\kprojetos\\infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\interfaces\\entities\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|c:\\users\\somen\\desktop\\kprojetos\\delivery\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58599F03-D765-4816-80F6-0DDE3ED70DED}|delivery\\Api.Delivery.csproj|solutionrelative:delivery\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|c:\\users\\somen\\desktop\\kprojetos\\infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{46F51405-7BD7-432F-B04A-12A0FEC462BA}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\infra.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\domain.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\domain.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|c:\\users\\somen\\desktop\\kprojetos\\domain.core\\helpers\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13B275E1-3B27-49B0-A857-F385DD770881}|Domain.Core\\Domain.Core.csproj|solutionrelative:domain.core\\helpers\\dwphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\response\\pedidoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|c:\\users\\somen\\desktop\\kprojetos\\contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A81F00B-BA4B-43BA-949A-863C5EDDFEAA}|Contracts\\Contracts.csproj|solutionrelative:contracts\\request\\pedidorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|c:\\users\\somen\\desktop\\kprojetos\\appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5D41429-D3DC-4CAC-9D9E-5ADF88DC533E}|AppService\\AppService.csproj|solutionrelative:appservice\\interfaces\\iprocesspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,11 +78,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "IPedidoValidation.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "RelativeToolTip": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:02:23.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPedidoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\Infra.Data\\IPedidoRepository.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\Infra.Data\\IPedidoRepository.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\Infra.Data\\IPedidoRepository.cs",
+              "RelativeToolTip": "Domain.Core\\Interfaces\\Infra.Data\\IPedidoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:58:02.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProcessPedido.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\AppService\\IProcessPedido.cs",
+              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\AppService\\IProcessPedido.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\AppService\\IProcessPedido.cs",
+              "RelativeToolTip": "Domain.Core\\Interfaces\\AppService\\IProcessPedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:52:00.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\delivery\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "delivery\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\delivery\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "delivery\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:47:05.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Repository.Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Repositories\\Repository.Pedido.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\Repository.Pedido.cs",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Repositories\\Repository.Pedido.cs",
+              "RelativeToolTip": "Infra.Data\\Repositories\\Repository.Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:36:21.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Domain.Core",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj",
               "RelativeDocumentMoniker": "Domain.Core\\Domain.Core.csproj",
@@ -91,33 +164,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Database.cs",
               "RelativeDocumentMoniker": "Infra.Data\\Database.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Database.cs",
               "RelativeToolTip": "Infra.Data\\Database.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T17:16:42.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Repository.Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Repositories\\Repository.Pedido.cs",
-              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\Repository.Pedido.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Repositories\\Repository.Pedido.cs",
-              "RelativeToolTip": "Infra.Data\\Repositories\\Repository.Pedido.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:12:01.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "DwpHelper.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Helpers\\DwpHelper.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Helpers\\DwpHelper.cs",
@@ -129,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "PedidoResponse.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Response\\PedidoResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\Response\\PedidoResponse.cs",
@@ -137,23 +197,12 @@
               "RelativeToolTip": "Contracts\\Response\\PedidoResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:31:49.957Z"
+              "WhenOpened": "2025-06-06T19:31:49.957Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IProcessPedido.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\Interfaces\\IProcessPedido.cs",
-              "RelativeDocumentMoniker": "AppService\\Interfaces\\IProcessPedido.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\Interfaces\\IProcessPedido.cs",
-              "RelativeToolTip": "AppService\\Interfaces\\IProcessPedido.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:13:07.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "IPedido.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\Entities\\IPedido.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\Entities\\IPedido.cs",
@@ -166,19 +215,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Domain.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Entities\\Domain.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Entities\\Domain.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Entities\\Domain.cs",
               "RelativeToolTip": "Domain.Core\\Entities\\Domain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T17:13:52.988Z"
+              "WhenOpened": "2025-06-06T17:13:52.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "PedidoBase.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Base\\PedidoBase.cs",
               "RelativeDocumentMoniker": "Contracts\\Base\\PedidoBase.cs",
@@ -186,11 +236,12 @@
               "RelativeToolTip": "Contracts\\Base\\PedidoBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:49:19.584Z"
+              "WhenOpened": "2025-06-06T18:49:19.584Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "PedidoRequest.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Request\\PedidoRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\Request\\PedidoRequest.cs",
@@ -198,11 +249,12 @@
               "RelativeToolTip": "Contracts\\Request\\PedidoRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:48:47.233Z"
+              "WhenOpened": "2025-06-06T18:48:47.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Entities\\Pedido.cs",
               "RelativeDocumentMoniker": "Domain.Core\\Entities\\Pedido.cs",
@@ -210,56 +262,47 @@
               "RelativeToolTip": "Domain.Core\\Entities\\Pedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:40:26.329Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPedidoValidation.cs",
-              "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
-              "RelativeDocumentMoniker": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Interfaces\\IPedidoValidation.cs",
-              "RelativeToolTip": "Domain.Core\\Interfaces\\IPedidoValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:08:55.686Z",
+              "WhenOpened": "2025-06-06T18:40:26.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "Infra.Data.csproj",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj",
               "RelativeDocumentMoniker": "Infra.Data\\Infra.Data.csproj",
               "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj",
               "RelativeToolTip": "Infra.Data\\Infra.Data.csproj",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T17:17:43.117Z"
+              "WhenOpened": "2025-06-06T17:17:43.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Builder.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\delivery\\Builder.cs",
               "RelativeDocumentMoniker": "delivery\\Builder.cs",
               "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\delivery\\Builder.cs",
               "RelativeToolTip": "delivery\\Builder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAvwBYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:53:01.62Z"
+              "WhenOpened": "2025-06-06T18:53:01.62Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AppService.cs",
               "DocumentMoniker": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.cs",
               "RelativeDocumentMoniker": "AppService\\AppService.cs",
-              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.cs",
-              "RelativeToolTip": "AppService\\AppService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.cs*",
+              "RelativeToolTip": "AppService\\AppService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:48:22.09Z"
+              "WhenOpened": "2025-06-06T18:48:22.09Z",
+              "EditorCaption": ""
             }
           ]
         }

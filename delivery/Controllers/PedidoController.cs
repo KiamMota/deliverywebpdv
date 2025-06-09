@@ -1,6 +1,5 @@
 ﻿
 using Contracts.Request;
-using AppService.Interfaces;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +12,7 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
-        private readonl
+        
         public PedidoController()
         {
 
