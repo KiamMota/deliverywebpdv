@@ -2,12 +2,12 @@
 using Domain.Core.Interfaces.Entities;
 using Infra.Data.Database;
 using Domain.Core.Interfaces;
-using Infra.Data.Interfaces;
+using Domain.Core.Repo.Interfaces;
 
 
 namespace Infra.Data.Repositories
 {
-    public class RepoPedido : IPedidoRepository
+    public class RepoPedido : IRepoPedido
     {
         private readonly AppDbContext _appDbContext;
         public RepoPedido(AppDbContext obj)
@@ -19,7 +19,7 @@ namespace Infra.Data.Repositories
         {
                 _appDbContext.Pedidos.Add(pedido);
                 _appDbContext.SaveChanges();
-                return pedido.Id;
+                return pedido.id;
         }
         public IList<Pedido> SelectPedidoAll()
         {
@@ -27,7 +27,7 @@ namespace Infra.Data.Repositories
         }
         public Pedido SelectPedidoById(int id)
         {
-            var selectById = _appDbContext.Pedidos.FirstOrDefault(p => p.Id == id);
+            var selectById = _appDbContext.Pedidos.FirstOrDefault(p => p.id == id);
             if (selectById == null) return null;
             return selectById;
         }
@@ -35,21 +35,21 @@ namespace Infra.Data.Repositories
         {
             if (Atualizado == null)
                 return false;
-            var putById = _appDbContext.Pedidos.FirstOrDefault(pid => pid.Id == id);
+            var putById = _appDbContext.Pedidos.FirstOrDefault(pid => pid.id == id);
             
             if (putById == null)
-            if (Atualizado.valorPedido != 0)
-                putById.valorPedido = Atualizado.valorPedido;
-                putById.nomePedido = Atualizado.nomePedido;
-            if (Atualizado.quantidadePedido != 0)
-                putById.quantidadePedido = Atualizado.quantidadePedido;
+            if (Atualizado.valor != 0)
+                putById.valor = Atualizado.valor;
+                putById.nome = Atualizado.nome;
+            if (Atualizado.quantidade != 0)
+                putById.quantidade = Atualizado.quantidade;
             _appDbContext.SaveChanges();
             return true;
         }
 
         public bool DeletePedidoById(int id)
         {
-            var acharPedido = _appDbContext.Pedidos.FirstOrDefault(pid => pid.Id == id);
+            var acharPedido = _appDbContext.Pedidos.FirstOrDefault(pid => pid.id == id);
             if (acharPedido is null) return false;
             _appDbContext.Pedidos.Remove(acharPedido);
             _appDbContext.SaveChanges();

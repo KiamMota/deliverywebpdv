@@ -7,13 +7,13 @@ namespace Domain.Core.Entities
     public class Pedido : IPedido
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
         [Required]
-        public string nomePedido { get; set; } = "";
+        public string nome { get; set; } = "";
         [Required]
-        public decimal valorPedido { get; set; }
+        public decimal valor { get; set; }
         [Required]
         [Range(1, 99)]
-        public int quantidadePedido { get; set; }
+        public int quantidade { get; set; }
     }
 }

@@ -43,7 +43,7 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "put",
+    "Method": "Put",
     "RelativePath": "api/Pedido/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -60,32 +60,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "PostPerson",
-    "RelativePath": "api/Pedido/person",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "obj",
-        "Type": "Contracts.Request.PedidoRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "GetPersons",
-    "RelativePath": "api/Pedido/pessoas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]

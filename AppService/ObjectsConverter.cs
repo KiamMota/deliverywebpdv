@@ -11,9 +11,9 @@ namespace AppService
         {
             return new Pedido
             {
-                nomePedido = pedidoRq.nomePedido,
-                valorPedido = pedidoRq.valorPedido,
-                quantidadePedido = pedidoRq.quantidadePedido
+                nome = pedidoRq.nomePedido,
+                valor = pedidoRq.valorPedido,
+                quantidade = pedidoRq.quantidadePedido
             };
         }
 
@@ -22,10 +22,10 @@ namespace AppService
         {
             return new Pedido
             {
-                Id = pedidoRs.id,
-                nomePedido = pedidoRs.nomePedido,
-                valorPedido = pedidoRs.valorPedido,
-                quantidadePedido = pedidoRs.quantidadePedido
+                id = pedidoRs.id,
+                nome = pedidoRs.nomePedido,
+                valor = pedidoRs.valorPedido,
+                quantidade = pedidoRs.quantidadePedido
             };
         }
 
@@ -34,9 +34,9 @@ namespace AppService
         {
             return new PedidoRequest
             {
-                nomePedido = pedido.nomePedido,
-                valorPedido = pedido.valorPedido,
-                quantidadePedido = pedido.quantidadePedido
+                nomePedido = pedido.nome,
+                valorPedido = pedido.valor,
+                quantidadePedido = pedido.quantidade
             };
         }
 
@@ -45,10 +45,10 @@ namespace AppService
         {
             return new PedidoResponse
             {
-                id = pedido.Id,
-                nomePedido = pedido.nomePedido,
-                valorPedido = pedido.valorPedido,
-                quantidadePedido = pedido.quantidadePedido
+                id = pedido.id,
+                nomePedido = pedido.nome,
+                valorPedido = pedido.valor,
+                quantidadePedido = pedido.quantidade
             };
         }
     }

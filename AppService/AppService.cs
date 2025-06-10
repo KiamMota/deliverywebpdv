@@ -1,35 +1,31 @@
 ﻿using Contracts.Response;
 using Contracts.Request;
+using Domain.Core.Entities;
 using Domain.Core.Validation;
-using Infra.Data.Repositories;
+using Domain.Core.Repo.Interfaces;
 using AppService.Interfaces;
+
 
 namespace AppService
 {
     public class ApsPedido : IProcessPedido
     {
         private PedidoValidation _validation = new PedidoValidation();
-        private RepoPedido _repopedido;
+        private IRepoPedido _repopedido;
 
-        public ApsPedido(RepoPedido Repo)
-        {
-            Repo = _repopedido;
-        }
+        public ApsPedido(IRepoPedido Repo) { _repopedido = Repo; }
         public int SalvarPedido(PedidoRequest pedido) => _repopedido.SalvarPedido(ObjectsConverter.FromPedidoRequest(pedido));
-        
         public PedidoResponse? PegarPedidoById(int id) => ObjectsConverter.ToPedidoResponse(_repopedido.SelectPedidoById(id));
 
         public IList<PedidoResponse> PegarPedidoAll()
         {
-            //faz uma lista de pedidoresponse 
+            /* criando uma lista do tipo pedidoresponse e instanciando ela */
             List<PedidoResponse> pedidoResponses = new();
-            var data = _repopedido.SelectPedidoAll();
-
-            foreach (var itemData in data)
-            {
-                var pedidoResponse = ObjectsConverter.ToPedidoResponse(itemData);
-                pedidoResponses.Add(pedidoResponse);
-            }
+            /* criando uma ilist do tipo pedido 'data' e atribuind todos os elementos do retorno do
+             repository para ela
+            */
+            IList<Pedido> data = _repopedido.SelectPedidoAll();
+            foreach (var itemData in data) pedidoResponses.Add(ObjectsConverter.ToPedidoResponse(itemData));
             return pedidoResponses;
         }
 

@@ -1,8 +1,8 @@
 ﻿using Domain.Core.Entities;
 
-namespace Infra.Data.Interfaces
+namespace Domain.Core.Repo.Interfaces
 {
-    public interface IPedidoRepository
+    public interface IRepoPedido
     {
         int SalvarPedido(Pedido pedido);
         IList<Pedido> SelectPedidoAll();
