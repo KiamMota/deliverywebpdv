@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "Post",
-    "RelativePath": "api/Pedido",
+    "RelativePath": "api/Pedidos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "GetAll",
-    "RelativePath": "api/Pedido",
+    "RelativePath": "api/Pedidos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "GetById",
-    "RelativePath": "api/Pedido/{id}",
+    "RelativePath": "api/Pedidos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "Put",
-    "RelativePath": "api/Pedido/{id}",
+    "RelativePath": "api/Pedidos/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

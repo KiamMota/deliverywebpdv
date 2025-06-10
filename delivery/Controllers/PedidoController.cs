@@ -6,14 +6,14 @@ namespace Api.Delivery.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    /* PEDIDO */ public class PedidoController : ControllerBase
+    /* PEDIDO */ public class PedidosController : ControllerBase
     {
         /* eu usei expression bodied em todos os sistemas aqui, 
          * já que a lógica adicional está no appservice que herda do domain 
          */
         private readonly IProcessPedido _apps;
         /* construtor */ 
-        public PedidoController(IProcessPedido apsP) => _apps = apsP;
+        public PedidosController(IProcessPedido apsP) => _apps = apsP;
         
         [HttpPost]
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
