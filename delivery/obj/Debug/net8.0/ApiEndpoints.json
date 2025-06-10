@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "GetAll",
-    "RelativePath": "api/Pedido",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
     "Method": "Post",
     "RelativePath": "api/Pedido",
     "HttpMethod": "POST",
@@ -27,7 +17,17 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "Get",
+    "Method": "GetAll",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidoController",
+    "Method": "GetById",
     "RelativePath": "api/Pedido/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -86,22 +86,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.PedidoController",
-    "Method": "GetByCpf",
-    "RelativePath": "api/Pedido/porcpf/{cpf}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cpf",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   }
 ]

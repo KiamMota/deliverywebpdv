@@ -18,7 +18,7 @@ namespace Api.Delivery.Controllers
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
 
         [HttpGet]
-        [Route("{id}")] 
+        [Route("{id}")]                         /* => return */
         public IActionResult GetById(int id) => Ok(_apps.PegarPedidoById(id));
         
         
@@ -30,35 +30,13 @@ namespace Api.Delivery.Controllers
         //}
 
         [HttpGet]
-        //api/pedido
-        public IActionResult GetAll()
-        {
-            return Ok(_apps.PegarPedidoBy);
-        }
-
-        [HttpGet]
-        [Route("pessoas")] //api/pedido/pessoas
-        public IActionResult GetPersons()
-        {
-            return Ok(new List<string>());
-        }
-
-        [HttpPost] //api/pedido
-
-
-        [HttpPost] //api/pedido/person
-        [Route("person")]
-        public IActionResult PostPerson(PedidoRequest obj)
-        {
-            return Ok();
-        }
-
-        //editar
+        
+        public IActionResult GetAll() => Ok(_apps.PegarPedidoAll());
         [HttpPut] //api/pedido/12
         [Route("{id}")]
-        public IActionResult put([FromRoute] int id,  [FromBody] PedidoRequest obj)
+        public IActionResult Put([FromRoute] int id,  [FromBody] PedidoRequest obj)
         {
-            return Ok();
+            return Ok(_apps.AlterarPedidoById(obj, id));
         }
 
     }

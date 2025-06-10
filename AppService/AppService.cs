@@ -1,10 +1,8 @@
 ﻿using Contracts.Response;
 using Contracts.Request;
 using Domain.Core.Validation;
-using Domain.Core.Entities;
 using Infra.Data.Repositories;
 using AppService.Interfaces;
-
 
 namespace AppService
 {
@@ -32,7 +30,6 @@ namespace AppService
                 var pedidoResponse = ObjectsConverter.ToPedidoResponse(itemData);
                 pedidoResponses.Add(pedidoResponse);
             }
-
             return pedidoResponses;
         }
 
