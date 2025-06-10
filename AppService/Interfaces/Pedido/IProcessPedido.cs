@@ -1,8 +1,8 @@
-﻿using Contracts.Response;
-using Contracts.Request;
-using Domain.Core.Entities;
+﻿using Domain.Core.Entities;
+using Contracts.PedidoContracts.Request;
+using Contracts.PedidoContracts.Response;
 
-namespace AppService.Interfaces;
+namespace AppService.Interfaces.Pedido;
 
 public interface IProcessPedido
 {
@@ -12,7 +12,7 @@ public interface IProcessPedido
     PedidoResponse? PegarPedidoById(int id);
     /* predicate */
     PedidoResponse? PegarPedidoByNome(string pedido_nome);
-    
+
     bool AlterarPedidoById(PedidoRequest Atualizado, int id);
     IList<PedidoResponse> PegarPedidoAll();
     /* predicate */

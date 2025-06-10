@@ -1,9 +1,9 @@
 using Infra.Data.Database;
 using Microsoft.EntityFrameworkCore;
 using Domain.Core.Repo.Interfaces;
-using AppService.Interfaces;
-using Infra.Data.Repositories;
 using AppService;
+using AppService.Interfaces.Pedido;
+using Infra.Data.Repositories.RepoPedido;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
-builder.Services.AddScoped<IProcessPedido, ApsPedido>();
+builder.Services.AddScoped<IProcessPedido, AppPedido>();
 builder.Services.AddScoped<IRepoPedido, RepoPedido>();
 
 var app = builder.Build();

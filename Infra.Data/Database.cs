@@ -7,8 +7,7 @@ namespace Infra.Data.Database
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<DomainPedido> Pedidos { get; set; }
-
+        public DbSet<Pedido> Pedidos { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {}

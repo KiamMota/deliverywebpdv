@@ -1,12 +1,11 @@
 ﻿using AppService.Interfaces.Pedido;
-using Contracts.Request;
+using Contracts.PedidoContracts.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Delivery.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    /* PEDIDO */
     public class PedidosController : ControllerBase
     {
         /* eu usei expression bodied em todos os sistemas aqui, 
@@ -15,10 +14,8 @@ namespace Api.Delivery.Controllers
         private readonly IProcessPedido _apps;
         /* construtor */
         public PedidosController(IProcessPedido apsP) => _apps = apsP;
-
         [HttpPost]
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
-
         /* área get */
         [HttpGet]
         [Route("{pedido_nome}")]
