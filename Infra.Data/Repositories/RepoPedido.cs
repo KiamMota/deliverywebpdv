@@ -1,9 +1,6 @@
 ﻿using Domain.Core.Entities;
-using Domain.Core.Interfaces.Entities;
 using Infra.Data.Database;
-using Domain.Core.Interfaces;
 using Domain.Core.Repo.Interfaces;
-
 
 namespace Infra.Data.Repositories
 {
@@ -23,7 +20,8 @@ namespace Infra.Data.Repositories
         }
         public IList<Pedido> SelectPedidoAll()
         {
-            return _appDbContext.Pedidos.ToList();
+            var resultado = (from pedido in _appDbContext.Pedidos select pedido).ToList();
+            return resultado;
         }
         public Pedido SelectPedidoById(int id)
         {
@@ -55,6 +53,16 @@ namespace Infra.Data.Repositories
             _appDbContext.SaveChanges();
             return true;
         }
+
+        public Pedido? SelectPedidoByNome(string nome)
+        {
+            /* linq para nome */
+            var acharNome = (from pNome in _appDbContext.Pedidos where pNome.nome == nome select pNome).FirstOrDefault();
+            return acharNome;
+        }
+
+
+
     }
 
 }
