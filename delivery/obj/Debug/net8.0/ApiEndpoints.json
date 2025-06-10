@@ -65,15 +65,15 @@
   {
     "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "GetByNome",
-    "RelativePath": "api/Pedidos/nome",
+    "RelativePath": "api/Pedidos/{pedido_nome}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nome",
+        "Name": "pedido_nome",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

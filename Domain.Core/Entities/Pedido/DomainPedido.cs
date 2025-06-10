@@ -1,11 +1,13 @@
-﻿using Domain.Core.Interfaces.Entities;
+﻿using Domain.Core.Interfaces.Entities.Pedido;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Core.Entities
+namespace Domain.Core.Entities.Pedido
 {
-    public class Pedido : IPedido
+    public class DomainPedido : IPedido
     {
+        [Required]
+        public DateTime data { get; set; } = DateTime.UtcNow;
         [Key]
         public int id { get; set; }
         [Required]

@@ -1,9 +1,8 @@
 ﻿using Contracts.Response;
 using Contracts.Request;
-using Domain.Core.Entities;
-using Domain.Core.Validation;
 using Domain.Core.Repo.Interfaces;
 using AppService.Interfaces;
+using Domain.Core.Entities.Pedido;
 
 
 namespace AppService
@@ -23,7 +22,7 @@ namespace AppService
             /* criando uma ilist do tipo pedido 'data' e atribuind todos os elementos do retorno do
              repository para ela
             */
-            IList<Pedido> data = _repoPedido.SelectPedidoAll();
+            IList<DomainPedido> data = _repoPedido.SelectPedidoAll();
             foreach (var itemData in data)
             {
                 pedidoResponses.Add(ObjectsConverter.ToPedidoResponse(itemData));

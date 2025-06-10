@@ -1,6 +1,6 @@
-﻿using Domain.Core.Entities;
-using Infra.Data.Database;
+﻿using Infra.Data.Database;
 using Domain.Core.Repo.Interfaces;
+using Domain.Core.Entities.Pedido;
 
 namespace Infra.Data.Repositories
 {
@@ -12,24 +12,24 @@ namespace Infra.Data.Repositories
             _appDbContext = obj;
         }
 
-        public int SalvarPedido(Pedido pedido)
+        public int SalvarPedido(DomainPedido pedido)
         {
                 _appDbContext.Pedidos.Add(pedido);
                 _appDbContext.SaveChanges();
                 return pedido.id;
         }
-        public IList<Pedido> SelectPedidoAll()
+        public IList<DomainPedido> SelectPedidoAll()
         {
             var resultado = (from pedido in _appDbContext.Pedidos select pedido).ToList();
             return resultado;
         }
-        public Pedido SelectPedidoById(int id)
+        public DomainPedido SelectPedidoById(int id)
         {
             var selectById = _appDbContext.Pedidos.FirstOrDefault(p => p.id == id);
             if (selectById == null) return null;
             return selectById;
         }
-        public bool PutPedidoById(Pedido Atualizado, int id)
+        public bool PutPedidoById(DomainPedido Atualizado, int id)
         {
             if (Atualizado == null)
                 return false;
@@ -54,7 +54,7 @@ namespace Infra.Data.Repositories
             return true;
         }
 
-        public Pedido? SelectPedidoByNome(string nome)
+        public DomainPedido? SelectPedidoByNome(string nome)
         {
             /* linq para nome */
             var acharNome = (from pNome in _appDbContext.Pedidos where pNome.nome == nome select pNome).FirstOrDefault();

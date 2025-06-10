@@ -20,20 +20,15 @@ namespace Api.Delivery.Controllers
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
 
         /* área get */
-
         [HttpGet]
-        [Route("nome")]
-        public IActionResult GetByNome([FromQuery] string nome)
+        [Route("{pedido_nome}")]
+        public IActionResult GetByNome(string pedido_nome)
         {
-            /* foo */
-            return Ok(_apps.PegarPedidoByNome(nome));
+            return Ok(_apps.PegarPedidoByNome(pedido_nome));
         }
         public IActionResult GetById(int id) => Ok(_apps.PegarPedidoById(id));
         [HttpGet]
-
         public IActionResult GetAll() => Ok(_apps.PegarPedidoAll());
-
-
         [HttpPut]
         [Route("{id}")]
         public IActionResult Put([FromRoute] int id, [FromBody] PedidoRequest obj) => Ok(_apps.AlterarPedidoById(obj, id));

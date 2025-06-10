@@ -11,7 +11,7 @@ public interface IProcessPedido
     /* retorna o objeto */
     PedidoResponse? PegarPedidoById(int id);
     /* predicate */
-    PedidoResponse? PegarPedidoByNome(string nome);
+    PedidoResponse? PegarPedidoByNome(string pedido_nome);
     
     bool AlterarPedidoById(PedidoRequest Atualizado, int id);
     IList<PedidoResponse> PegarPedidoAll();

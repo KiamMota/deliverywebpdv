@@ -1,26 +1,26 @@
 ﻿using Contracts.Request;
 using Contracts.Response;
-using Domain.Core.Entities;
+using Domain.Core.Entities.Pedido;
 
 namespace AppService
 {
     public class ObjectsConverter
     {
-        // Converte de PedidoRequest para Pedido (domínio)
-        public static Pedido FromPedidoRequest(PedidoRequest pedidoRq)
+        /* dto -> domínio converte pedidorequest para pedido -> dominio */
+        public static DomainPedido FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            return new Pedido
+            return new DomainPedido
             {
                 nome = pedidoRq.nomePedido,
                 valor = pedidoRq.valorPedido,
                 quantidade = pedidoRq.quantidadePedido
             };
         }
-
-        // Converte de PedidoResponse para Pedido (domínio)
-        public static Pedido FromPedidoResponse(PedidoResponse pedidoRs)
+        
+        /* dto -> domínio (de response para domínio real) */
+        public static DomainPedido FromPedidoResponse(PedidoResponse pedidoRs)
         {
-            return new Pedido
+            return new DomainPedido
             {
                 id = pedidoRs.id,
                 nome = pedidoRs.nomePedido,
@@ -29,9 +29,10 @@ namespace AppService
             };
         }
 
-        // Converte de Pedido (domínio) para PedidoRequest
-        public static PedidoRequest ToPedidoRequest(Pedido pedido)
+        /* domínio -> dto; de pedido para pedidorequest */
+        public static PedidoRequest? ToPedidoRequest(DomainPedido pedido)
         {
+            if (pedido == null) return null;
             return new PedidoRequest
             {
                 nomePedido = pedido.nome,
@@ -40,9 +41,12 @@ namespace AppService
             };
         }
 
-        // Converte de Pedido (domínio) para PedidoResponse
-        public static PedidoResponse ToPedidoResponse(Pedido pedido)
+        /* domínio -> dto; de pedido para pedidoResposne */
+        public static PedidoResponse? ToPedidoResponse(DomainPedido pedido)
         {
+            if (pedido == null)
+                return null;
+
             return new PedidoResponse
             {
                 id = pedido.id,
