@@ -11,24 +11,24 @@ namespace Infra.Data.Repositories.RepoPedido
         {
             _appDbContext = obj;
         }
-        public int SalvarPedido(Pedido pedido)
+        public int SalvarPedido(Domain.Core.Entities.Pedido.Domain pedido)
         {
             _appDbContext.Pedidos.Add(pedido);
             _appDbContext.SaveChanges();
             return pedido.id;
         }
-        public IList<Pedido> SelectPedidoAll()
+        public IList<Domain.Core.Entities.Pedido.Domain> SelectPedidoAll()
         {
             var resultado = (from pedido in _appDbContext.Pedidos select pedido).ToList();
             return resultado;
         }
-        public Pedido? SelectPedidoById(int id)
+        public Domain.Core.Entities.Pedido.Domain? SelectPedidoById(int id)
         {
             var selectById = _appDbContext.Pedidos.FirstOrDefault(p => p.id == id);
             if (selectById == null) return null;
             return selectById;
         }
-        public bool PutPedidoById(Pedido Atualizado, int id)
+        public bool PutPedidoById(Domain.Core.Entities.Pedido.Domain Atualizado, int id)
         {
             var putById = _appDbContext.Pedidos.FirstOrDefault(pid => pid.id == id);
             
@@ -61,7 +61,7 @@ namespace Infra.Data.Repositories.RepoPedido
             return true;
         }
 
-        public Pedido? SelectPedidoByNome(string nome)
+        public Domain.Core.Entities.Pedido.Domain? SelectPedidoByNome(string nome)
         {
             /* linq para nome */
             var acharNome = (from pNome in _appDbContext.Pedidos where pNome.nome == nome select pNome).FirstOrDefault();

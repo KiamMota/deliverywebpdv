@@ -1,8 +1,9 @@
 ﻿using Domain.Core.Repo.Interfaces;
-using Domain.Core.Entities.Pedido;
 using AppService.Interfaces.Pedido;
 using Contracts.PedidoContracts.Request;
 using Contracts.PedidoContracts.Response;
+using Domain.Core;
+using Delivery.Web.Pdv.Helper;
 
 namespace AppService
 {
@@ -14,6 +15,7 @@ namespace AppService
         public int SalvarPedido(PedidoRequest pedido)
         {
             pedido.data = DateTime.UtcNow;
+            DwpHelper.Normalizar(pedido.nomePedido);   
             return _repoPedido.SalvarPedido(ObjectsConverter.FromPedidoRequest(pedido));
         }
         public PedidoResponse? PegarPedidoById(int id)
@@ -27,7 +29,7 @@ namespace AppService
             /* criando uma ilist do tipo pedido 'data' e atribuind todos os elementos do retorno do
              repository para ela
             */
-            IList<Pedido> data = _repoPedido.SelectPedidoAll();
+            IList<Domain.Core.Entities.Pedido.Domain> data = _repoPedido.SelectPedidoAll();
             foreach (var itemData in data)
             {
                 pedidoResponses.Add(ObjectsConverter.ToPedidoResponse(itemData));

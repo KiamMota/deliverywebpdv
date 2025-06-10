@@ -6,8 +6,8 @@ namespace Contracts.PedidoContracts.Response
     {
         public int id { get; set; }
         public DateTime data { get; set; }
-        public string nomePedido { get; set; } = "";
-        public decimal valorPedido { get; set; }
-        public int quantidadePedido { get; set; }
+        public string nome { get; set; } = "";
+        public decimal valor { get; set; }
+        public int quantidade { get; set; }
     }
 }

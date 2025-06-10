@@ -7,9 +7,9 @@ namespace AppService
     public class ObjectsConverter
     {
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
-        public static Pedido FromPedidoRequest(PedidoRequest pedidoRq)
+        public static Domain.Core.Entities.Pedido.Domain FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            return new Pedido
+            return new Domain.Core.Entities.Pedido.Domain
             {
                 data = pedidoRq.data,
                 nome = pedidoRq.nomePedido,
@@ -19,20 +19,20 @@ namespace AppService
         }
         
         /* dto -> domínio (de response para domínio real) */
-        public static Pedido FromPedidoResponse(PedidoResponse pedidoRs)
+        public static Domain.Core.Entities.Pedido.Domain FromPedidoResponse(PedidoResponse pedidoRs)
         {
-            return new Pedido
+            return new Domain.Core.Entities.Pedido.Domain
             {
                 id = pedidoRs.id,
                 data = pedidoRs.data,
-                nome = pedidoRs.nomePedido,
-                valor = pedidoRs.valorPedido,
-                quantidade = pedidoRs.quantidadePedido
+                nome = pedidoRs.nome,
+                valor = pedidoRs.valor,
+                quantidade = pedidoRs.quantidade
             };
         }
 
         /* domínio -> dto; de pedido para pedidorequest */
-        public static PedidoRequest? ToPedidoRequest(Pedido pedido)
+        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Pedido.Domain pedido)
         {
             if (pedido == null) return null;
             return new PedidoRequest
@@ -44,7 +44,7 @@ namespace AppService
         }
 
         /* domínio -> dto; de pedido para pedidoResposne */
-        public static PedidoResponse? ToPedidoResponse(Pedido pedido)
+        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Pedido.Domain pedido)
         {
             if (pedido == null)
                 return null;
@@ -53,9 +53,9 @@ namespace AppService
             {
                 data = pedido.data,
                 id = pedido.id,
-                nomePedido = pedido.nome,
-                valorPedido = pedido.valor,
-                quantidadePedido = pedido.quantidade
+                nome = pedido.nome,
+                valor = pedido.valor,
+                quantidade = pedido.quantidade
             };
         }
     }

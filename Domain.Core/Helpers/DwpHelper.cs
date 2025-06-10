@@ -1,10 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 
 namespace Delivery.Web.Pdv.Helper
 {
     public class DwpHelper
     {
+        public static string Normalizar(string str)
+        {
+            TextInfo text = CultureInfo.CurrentCulture.TextInfo;
+            return text.ToTitleCase(str.ToLower());
+        }
         public static bool No<T>(T obj)
         {
             if (obj == null) return true;
