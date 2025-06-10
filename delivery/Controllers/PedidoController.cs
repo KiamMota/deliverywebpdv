@@ -1,4 +1,4 @@
-﻿using AppService.Interfaces;
+﻿using AppService.Interfaces.Pedido;
 using Contracts.Request;
 using Microsoft.AspNetCore.Mvc;
 
