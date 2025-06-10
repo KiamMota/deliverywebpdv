@@ -1,8 +1,7 @@
 ﻿using Domain.Core.Interfaces;
-using Domain.Core.Entities;
 using System.Text.RegularExpressions;
 
-namespace Domain.Core.Entities.Pedido
+namespace Domain.Core
 {
     /* sistema para validação do pedido */
     public class PedidoValidation : IPedidoValidation

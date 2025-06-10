@@ -4,7 +4,6 @@ using AppService.Interfaces.Pedido;
 using Contracts.PedidoContracts.Request;
 using Contracts.PedidoContracts.Response;
 
-
 namespace AppService
 {
     public class AppPedido : IProcessPedido
@@ -17,7 +16,6 @@ namespace AppService
             pedido.data = DateTime.UtcNow;
             return _repoPedido.SalvarPedido(ObjectsConverter.FromPedidoRequest(pedido));
         }
-
         public PedidoResponse? PegarPedidoById(int id)
         {
             return ObjectsConverter.ToPedidoResponse(_repoPedido.SelectPedidoById(id));
