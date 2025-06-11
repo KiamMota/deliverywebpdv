@@ -4,9 +4,11 @@ using Domain.Core.Repo.Interfaces;
 using AppService;
 using AppService.Interfaces.Pedido;
 using Infra.Data.Repositories.RepoPedido;
+using System.ComponentModel.DataAnnotations;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddCors(options =>
 {
@@ -26,6 +28,8 @@ builder.Services.AddScoped<IRepoPedido, RepoPedido>();
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.MapGet("id/", ([Required] int id) => $"Id: {id}");
 
 app.UseCors("PermitirTudo");
 

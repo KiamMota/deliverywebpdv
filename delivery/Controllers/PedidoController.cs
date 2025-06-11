@@ -8,7 +8,7 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidosController : ControllerBase
     {
-        /* eu usei expression bodied em todos os sistemas aqui, 
+        /* 
          * já que a lógica adicional está no appservice que herda do domain 
          */
         private readonly IProcessPedido _apps;
@@ -38,6 +38,10 @@ namespace Api.Delivery.Controllers
         }
         [HttpPut]
         [Route("{id}")]
-        public IActionResult Put([FromRoute] int id, [FromBody] PedidoRequest obj) => Ok(_apps.AlterarPedidoById(obj, id));
+        public IActionResult Put([FromRoute] int id, [FromBody] PedidoRequest obj)
+        {
+            return Ok(_apps.AlterarPedidoById(obj, id));
+        }
+        
     }
 }
