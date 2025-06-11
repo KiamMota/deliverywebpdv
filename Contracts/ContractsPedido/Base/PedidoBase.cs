@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Contracts.PedidoContracts.Base
 {
-    public class PedidoBase : IPedido
+    public class PedidoBase : IPedidoModel
     {
         [Required]
         public DateTime data { get; set; }

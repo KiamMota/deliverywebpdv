@@ -16,7 +16,5 @@ public interface IProcessPedido
     bool AlterarPedidoById(PedidoRequest Atualizado, int id);
     IList<PedidoResponse> PegarPedidoAll();
     /* predicate */
-
-
     bool RemoverPedidoById(int id);
 }

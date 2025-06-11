@@ -1,10 +1,11 @@
 ﻿using AppService.Interfaces.Pedido;
 using Contracts.PedidoContracts.Request;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Delivery.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("controller/[controller]")]
     [ApiController]
     public class PedidosController : ControllerBase
     {
@@ -22,11 +23,11 @@ namespace Api.Delivery.Controllers
         public IActionResult GetByNome(string pedido_nome)
         {
             return Ok(_apps.PegarPedidoByNome(pedido_nome));
-        }
+        }       
         /* by id */
         [HttpGet]
-        [Route("id/{id}")]
-        public IActionResult GetById(int id) {
+        public IActionResult GetById([Required] int id) 
+        {
             
             return Ok(_apps.PegarPedidoById(id));
         }
