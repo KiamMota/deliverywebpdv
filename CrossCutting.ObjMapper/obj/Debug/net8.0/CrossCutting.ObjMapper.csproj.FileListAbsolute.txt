@@ -1,0 +1,6 @@
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.csproj.AssemblyReference.cache
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.AssemblyInfoInputs.cache
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.AssemblyInfo.cs
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.csproj.CoreCompileInputs.cache
+C:\Users\somen\Desktop\kprojetos\CrossCutting.ObjMapper\obj\Debug\net8.0\CrossCutting.ObjMapper.sourcelink.json
