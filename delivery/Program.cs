@@ -1,31 +1,21 @@
-using Contracts.PedidoContracts.Request;
-using Contracts.PedidoContracts.Response;
-
-using Infra.Data.Database;
-using Microsoft.EntityFrameworkCore;
-using Domain.Core.Repo.Interfaces;
-using AppService;
 using AppService.Interfaces.Pedido;
+using Domain.Core.Repo.Interfaces;
+using Infra.Data.Database;
 using Infra.Data.Repositories.RepoPedido;
-using System.ComponentModel.DataAnnotations;
-using Domain.Core;
+
+using Microsoft.EntityFrameworkCore;
+
+using AppService.Mappers.Interfaces;
+using AppService.Pedido;
+using AppService.Interfaces.EstabelecimentoMappers;
 
 var builder = WebApplication.CreateBuilder(args);
-    builder.Services.AddCors(options =>
-{
-    options.AddPolicy("PermitirTudo", builder =>
-    {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-});
-});
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
 builder.Services.AddScoped<IProcessPedido, AppPedido>();
 builder.Services.AddScoped<IRepoPedido, RepoPedido>();
-builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
+builder.Services.AddScoped<IEstabelecimentoMapper, EstabelecimentoMapper>();
 
 var app = builder.Build();
 
@@ -35,27 +25,7 @@ app.UseAuthorization();
 
 
 /* Endpoint dos pedidos */
-RouteGroupBuilder pedidoEndpoint = app.MapGroup("/api/pedidos");
 
-pedidoEndpoint.MapPost("/", ([Required] PedidoRequest pedido, IProcessPedido _apps) =>
-{
-    return _apps.SalvarPedido(pedido);
-});
-
-pedidoEndpoint.MapGet("/{id}", (int id, IProcessPedido _apps) =>
-{
-    return _apps.PegarPedidoById(id);
-});
-
-pedidoEndpoint.MapPut("/{id}", (int id, PedidoRequest pedido, IProcessPedido _apps) =>
-{
-    return _apps.AlterarPedidoById(pedido, id);
-});
-
-pedidoEndpoint.MapDelete("/{id}", (int id, IProcessPedido _apps) =>
-{
-    return _apps.RemoverPedidoById(id);
-});
 
 app.Run();
 

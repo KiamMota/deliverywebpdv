@@ -2,7 +2,7 @@
 
 namespace Domain.Core.Entities
 {
-    public class Domain : IPedido
+    public class Pedido : IPedido
     {
         public DateTime data { get; set; } = DateTime.UtcNow;
         public int id { get; set; }

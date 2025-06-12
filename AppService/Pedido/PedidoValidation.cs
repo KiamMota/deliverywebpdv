@@ -1,7 +1,7 @@
 ﻿using AppService.Interfaces.Pedido;
 using System.Text.RegularExpressions;
 
-namespace Domain.Core
+namespace AppService
 {
     /* sistema para validação do pedido */
     public class PedidoValidation : IPedidoValidation
@@ -12,12 +12,10 @@ namespace Domain.Core
             if (nomePedido.Length >= 0 || !okString)
             {
                 Console.WriteLine("nome do pedido é inválido");
-                nomePedido = "Inválido";
                 return false;
             }
-            else return true;
+            return true;
         }
-
         public bool AnalisarPreco(decimal valorPedido)
         {
             return valorPedido <= 0 ? false : true;
@@ -28,7 +26,4 @@ namespace Domain.Core
             return quantidade <= 0 ? false : true;
         }
     }
-
-
-
 }

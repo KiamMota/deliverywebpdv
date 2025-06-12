@@ -1,15 +1,15 @@
 ﻿using Contracts.PedidoContracts.Request;
 using Contracts.PedidoContracts.Response;
-using Domain.Core.Pedido.Interfaces;
+using Domain.Core.Entities;
 
 namespace AppService
 {
-    public class ObjectsConverter
+    public class PedidoMapper
     {
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
-        public static Domain.Core.Entities.Domain FromPedidoRequest(PedidoRequest pedidoRq)
+        public static Domain.Core.Entities.Pedido FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            return new Domain.Core.Entities.Pedido.Domain
+            return new Domain.Core.Entities.Pedido
             {
                 data = pedidoRq.data,
                 nome = pedidoRq.nomePedido,
@@ -17,11 +17,11 @@ namespace AppService
                 quantidade = pedidoRq.quantidadePedido
             };
         }
-        
+
         /* dto -> domínio (de response para domínio real) */
-        public static Domain.Core.Entities.Domain FromPedidoResponse(PedidoResponse pedidoRs)
+        public static Domain.Core.Entities.Pedido FromPedidoResponse(PedidoResponse pedidoRs)
         {
-            return new Domain.Core.Entities.Pedido.Domain
+            return new Domain.Core.Entities.Pedido
             {
                 id = pedidoRs.id,
                 data = pedidoRs.data,
@@ -32,7 +32,7 @@ namespace AppService
         }
 
         /* domínio -> dto; de pedido para pedidorequest */
-        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Domain pedido)
+        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Pedido pedido)
         {
             if (pedido == null) return null;
             return new PedidoRequest
@@ -44,7 +44,7 @@ namespace AppService
         }
 
         /* domínio -> dto; de pedido para pedidoResposne */
-        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Domain pedido)
+        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Pedido pedido)
         {
             if (pedido == null)
                 return null;

@@ -10,26 +10,26 @@ namespace Infra.Data.Repositories.RepoPedido
         {
             _appDbContext = obj;
         }
-        public int SalvarPedido(Domain.Core.Entities.Domain pedido)
+        public int SalvarPedido(Domain.Core.Entities.Pedido pedido)
         {
-            _appDbContext.Pedidos.Add(pedido);
+            _appDbContext.pedidos.Add(pedido);
             _appDbContext.SaveChanges();
             return pedido.id;
         }
-        public IList<Domain.Core.Entities.Domain> SelectPedidoAll()
+        public IList<Domain.Core.Entities.Pedido> SelectPedidoAll()
         {
-            var resultado = (from pedido in _appDbContext.Pedidos select pedido).ToList();
+            var resultado = (from pedido in _appDbContext.pedidos select pedido).ToList();
             return resultado;
         }
-        public Domain.Core.Entities.Domain? SelectPedidoById(int id)
+        public Domain.Core.Entities.Pedido? SelectPedidoById(int id)
         {
-            var selectById = _appDbContext.Pedidos.FirstOrDefault(p => p.id == id);
+            var selectById = _appDbContext.pedidos.FirstOrDefault(p => p.id == id);
             if (selectById == null) return null;
             return selectById;
         }
-        public bool PutPedidoById(Domain.Core.Entities.Domain Atualizado, int id)
+        public bool PutPedidoById(Domain.Core.Entities.Pedido Atualizado, int id)
         {
-            var putById = _appDbContext.Pedidos.FirstOrDefault(pid => pid.id == id);
+            var putById = _appDbContext.pedidos.FirstOrDefault(pid => pid.id == id);
             
             if (Atualizado == null) return false;
             if (putById == null) return false;
@@ -53,17 +53,17 @@ namespace Infra.Data.Repositories.RepoPedido
 
         public bool DeletePedidoById(int id)
         {
-            var acharPedido = _appDbContext.Pedidos.FirstOrDefault(pid => pid.id == id);
+            var acharPedido = _appDbContext.pedidos.FirstOrDefault(pid => pid.id == id);
             if (acharPedido is null) return false;
-            _appDbContext.Pedidos.Remove(acharPedido);
+            _appDbContext.pedidos.Remove(acharPedido);
             _appDbContext.SaveChanges();
             return true;
         }
 
-        public Domain.Core.Entities.Domain? SelectPedidoByNome(string nome)
+        public Domain.Core.Entities.Pedido? SelectPedidoByNome(string nome)
         {
             /* linq para nome */
-            var acharNome = (from pNome in _appDbContext.Pedidos where pNome.nome == nome select pNome).FirstOrDefault();
+            var acharNome = (from pNome in _appDbContext.pedidos where pNome.nome == nome select pNome).FirstOrDefault();
             return acharNome;
         }
 
