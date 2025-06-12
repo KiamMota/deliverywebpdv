@@ -7,7 +7,7 @@ namespace AppService.Estabelecimento
     {
         public static EstabelecimentoResponse? ToEstbResponse(Domain.Core.Entities.Estabelecimento estabelecimento)
         {
-            if (estabelecimento == null) throw new ArgumentNullException($"o valor de {nameof(estabelecimento)} é nulo!");
+            if (estabelecimento == null) throw new ArgumentNullException($"o valor de {nameof(estabelecimento)} é nulo ou não existe");
             return new EstabelecimentoResponse
             {
                 id = estabelecimento.id,

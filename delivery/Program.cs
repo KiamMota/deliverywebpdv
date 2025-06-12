@@ -37,8 +37,8 @@ app.UseCors("DevPolicy");
 app.UseHttpsRedirection();
 app.UseCors("PermitirTudo");
 app.UseAuthorization();
-
 app.MapControllers();
+app.UseRouting();
 
 /* Endpoint dos pedidos */
 

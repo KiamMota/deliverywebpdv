@@ -2,7 +2,6 @@
 using AppService.Interfaces.Pedido;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
-using Domain.Core.Entities.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
@@ -19,7 +18,11 @@ namespace Api.Delivery.Controllers
             _apps = apsP;
         }
         [HttpPost]
-        public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
+        public IActionResult Post(PedidoRequest obj)
+        {
+            return Ok(_apps.SalvarPedido(obj));
+        }
+        
         /* área get */
         [HttpGet("nome/{pedido_nome}")]
         public IActionResult GetByNome(string pedido_nome)
