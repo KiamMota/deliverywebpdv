@@ -1,13 +1,13 @@
 ﻿using Contracts.PedidoContracts.Request;
 using Contracts.PedidoContracts.Response;
-using Domain.Core.Entities.Pedido;
+using Domain.Core.Pedido.Interfaces;
 
 namespace AppService
 {
     public class ObjectsConverter
     {
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
-        public static Domain.Core.Entities.Pedido.Domain FromPedidoRequest(PedidoRequest pedidoRq)
+        public static Domain.Core.Entities.Domain FromPedidoRequest(PedidoRequest pedidoRq)
         {
             return new Domain.Core.Entities.Pedido.Domain
             {
@@ -19,7 +19,7 @@ namespace AppService
         }
         
         /* dto -> domínio (de response para domínio real) */
-        public static Domain.Core.Entities.Pedido.Domain FromPedidoResponse(PedidoResponse pedidoRs)
+        public static Domain.Core.Entities.Domain FromPedidoResponse(PedidoResponse pedidoRs)
         {
             return new Domain.Core.Entities.Pedido.Domain
             {
@@ -32,7 +32,7 @@ namespace AppService
         }
 
         /* domínio -> dto; de pedido para pedidorequest */
-        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Pedido.Domain pedido)
+        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Domain pedido)
         {
             if (pedido == null) return null;
             return new PedidoRequest
@@ -44,7 +44,7 @@ namespace AppService
         }
 
         /* domínio -> dto; de pedido para pedidoResposne */
-        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Pedido.Domain pedido)
+        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Domain pedido)
         {
             if (pedido == null)
                 return null;

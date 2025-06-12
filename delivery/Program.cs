@@ -8,6 +8,7 @@ using AppService;
 using AppService.Interfaces.Pedido;
 using Infra.Data.Repositories.RepoPedido;
 using System.ComponentModel.DataAnnotations;
+using Domain.Core;
 
 var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddCors(options =>
@@ -24,6 +25,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
 builder.Services.AddScoped<IProcessPedido, AppPedido>();
 builder.Services.AddScoped<IRepoPedido, RepoPedido>();
+builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
 
 var app = builder.Build();
 

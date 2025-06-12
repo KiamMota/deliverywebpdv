@@ -1,6 +1,6 @@
-﻿namespace Domain.Core.Interfaces.Entities.Pedido
+﻿namespace Domain.Core.Pedido.Interfaces
 {
-    public interface IPedidoModel
+    public interface IPedido
     {
         DateTime data { get; set; }
         int id { get; set; }

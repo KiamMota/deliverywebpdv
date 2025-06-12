@@ -10,5 +10,3 @@ namespace Contracts.PedidoContracts.Request
         public int quantidadePedido { get; set; }
     }
 }
-
-    

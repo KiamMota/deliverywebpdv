@@ -1,9 +1,9 @@
-﻿using Domain.Core.Interfaces.Entities.Pedido;
+﻿using Domain.Core.Pedido.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace Contracts.PedidoContracts.Base
 {
-    public class PedidoBase : IPedidoModel
+    public class PedidoBase : IPedido
     {
         [Required]
         public DateTime data { get; set; }

@@ -9,9 +9,13 @@ namespace AppService
 {
     public class AppPedido : IProcessPedido
     {
-        private PedidoValidation _validation = new PedidoValidation();
+        private IPedidoValidation _validation;
         private IRepoPedido _repoPedido;
-        public AppPedido(IRepoPedido Repo) { _repoPedido = Repo; }
+        public AppPedido(IRepoPedido Repo, IPedidoValidation _validation) 
+        { 
+            _repoPedido = Repo;
+            this._validation = _validation;
+        }
         public int SalvarPedido(PedidoRequest pedido)
         {
             pedido.data = DateTime.UtcNow;
@@ -29,7 +33,7 @@ namespace AppService
             /* criando uma ilist do tipo pedido 'data' e atribuind todos os elementos do retorno do
              repository para ela
             */
-            IList<Domain.Core.Entities.Pedido.Domain> data = _repoPedido.SelectPedidoAll();
+            IList<Domain.Core.Entities.Domain> data = _repoPedido.SelectPedidoAll();
             foreach (var itemData in data)
             {
                 pedidoResponses.Add(ObjectsConverter.ToPedidoResponse(itemData));

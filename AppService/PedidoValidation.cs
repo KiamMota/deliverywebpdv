@@ -1,4 +1,4 @@
-﻿using Domain.Core.Interfaces;
+﻿using AppService.Interfaces.Pedido;
 using System.Text.RegularExpressions;
 
 namespace Domain.Core
