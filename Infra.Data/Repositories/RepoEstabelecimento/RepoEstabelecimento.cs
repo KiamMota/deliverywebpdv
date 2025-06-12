@@ -6,9 +6,14 @@ namespace Infra.Data.Repositories.RepoEstabelecimento
 {
     public class RepoEstabelecimento : IRepoEstabelecimento
     {
-        private AppDbContext _dbcntx;
+        private readonly AppDbContext _dbcntx;
+        public RepoEstabelecimento(AppDbContext context)
+        {
+            _dbcntx = context;
+        }
         public int SaveEstabelecimento(Domain.Core.Entities.Estabelecimento estabelecimento)
         {
+            if (estabelecimento == null) return -1;
             _dbcntx.estabelecimentos.Add(estabelecimento);
             _dbcntx.SaveChanges();
             return estabelecimento.id;
@@ -17,13 +22,15 @@ namespace Infra.Data.Repositories.RepoEstabelecimento
         {
             var estabelecimentoId = _dbcntx.estabelecimentos.FirstOrDefault(est => est.id == id);
             if (estabelecimentoId == null) return false;
-            return true;
+            _dbcntx.estabelecimentos.Remove(estabelecimentoId);
+            return _dbcntx.SaveChanges() > 0;
         }
         public bool DeleteEstabelecimentoByNome(string nome)
         {
             var estabelecimentoByNome = _dbcntx.estabelecimentos.FirstOrDefault(estName => estName.nome == nome);
             if(estabelecimentoByNome == null) return false;
-            return true;
+            _dbcntx.estabelecimentos.Remove(estabelecimentoByNome);
+            return _dbcntx.SaveChanges() > 0;
         }
         public Estabelecimento? GetEstabelecimentoByCategorias(string categorias)
         {

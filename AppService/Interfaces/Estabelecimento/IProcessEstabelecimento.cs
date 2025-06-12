@@ -7,8 +7,8 @@ namespace AppService.Interfaces.Estabelecimento
     {
         int SalvarEstabelecimento(Contracts.ContractsEstabelecimento.Request.EstabelecimentoRequest estabelecimento);
         EstabelecimentoResponse? GetEstabelecimentoById(int id);
-        EstabelecimentoResponse? GetEstabelecimentobByNome(string nome);
-        EstabelecimentoResponse? GetEstabelecimentoByCategoria(IList<string> categorias);
+        EstabelecimentoResponse? GetEstabelecimentoByNome(string nome);
+        EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias);
         bool DeleteEstabelecimentoById(int id);
         bool DeleteEstabelecimentoByNome(string nome);
 

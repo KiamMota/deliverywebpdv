@@ -5,7 +5,7 @@ using Infra.Data.Repositories.Interfaces;
 
 namespace AppService.Estabelecimento
 {
-    public class ProcessEstabelecimento
+    public class ProcessEstabelecimento : IProcessEstabelecimento
     {
         private readonly IRepoEstabelecimento _repoEstabelecimento;
         public ProcessEstabelecimento(IRepoEstabelecimento repo)
@@ -26,7 +26,7 @@ namespace AppService.Estabelecimento
         {
             return _repoEstabelecimento.DeleteEstabelecimentoByNome(nome);
         }
-        public EstabelecimentoResponse? GetEstabelecimentobByNome(string nome)
+        public EstabelecimentoResponse? GetEstabelecimentoByNome(string nome)
         {
             var resultado = EstabelecimentoMapper.ToEstbResponse(_repoEstabelecimento.GetEstabelecimentoByNome(nome));
             return resultado;
