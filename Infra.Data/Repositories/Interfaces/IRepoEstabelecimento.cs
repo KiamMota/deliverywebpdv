@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories.Interfaces
         Estabelecimento? GetEstabelecimentoByNome(string nome);
         Estabelecimento? GetEstabelecimentoByCategorias(string categorias);
         /* deletes */
-        bool            DeleteEstabelecimentoByNome(string nome);
         bool            DeleteEstabelecimentoById(int id);
+        bool            DeleteEstabelecimentoByNome(string nome);
     }
 }

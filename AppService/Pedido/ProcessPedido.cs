@@ -6,11 +6,11 @@ using Delivery.Web.Pdv.Helper;
 
 namespace AppService.Pedido
 {
-    public class AppPedido : IProcessPedido
+    public class ProcessPedido : IProcessPedido
     {
         private readonly IPedidoValidation _validation;
         private readonly IRepoPedido _repoPedido;
-        public AppPedido(IRepoPedido Repo, IPedidoValidation _validation)
+        public ProcessPedido(IRepoPedido Repo, IPedidoValidation _validation)
         {
             _repoPedido = Repo;
             this._validation = _validation;

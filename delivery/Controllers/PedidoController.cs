@@ -5,16 +5,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Api.Delivery.Controllers
 {
-    [Route("controller/[controller]")]
+    [Route("Pedidos/[controller]")]
     [ApiController]
     public class PedidosController : ControllerBase
     {
-        /* 
-         * já que a lógica adicional está no appservice que herda do domain 
-         */
+        /* DI constructor */
         private readonly IProcessPedido _apps;
-        /* construtor */
-        public PedidosController(IProcessPedido apsP) => _apps = apsP;
+        public PedidosController(IProcessPedido apsP)
+        {
+            _apps = apsP;
+        }
         [HttpPost]
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
         /* área get */
@@ -43,6 +43,13 @@ namespace Api.Delivery.Controllers
         {
             return Ok(_apps.AlterarPedidoById(obj, id));
         }
+    }
+    [Route("EstabelecimentoRequest/[controller]")]
+    [ApiController]
+    public class EstabelecimentoController : ControllerBase
+    {
         
+
+
     }
 }

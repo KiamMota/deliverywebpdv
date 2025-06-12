@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Infra.Data\Infra.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Estabelecimento\" />
-  </ItemGroup>
-
 </Project>

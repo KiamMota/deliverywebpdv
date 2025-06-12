@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Contracts.ContractsEstabelecimento.Request
 {
-    public class EstabeleimentoRequest : EstabelecimentoBase
+    public class EstabelecimentoRequest : EstabelecimentoBase
     {
         [Required] public string nome { get; set; } = "Sem Nome";
         [Required] public string local { get; set; } = "Sem Nome";
