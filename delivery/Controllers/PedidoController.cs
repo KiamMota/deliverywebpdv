@@ -10,24 +10,25 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidosController : ControllerBase
     {
-        /* DI constructor */
         private readonly IProcessPedido _apps;
         public PedidosController(IProcessPedido apsP)
         {
             _apps = apsP;
         }
         [HttpPost]
+        
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
-        /* área get */
         [HttpGet("nome/{pedido_nome}")]
         public IActionResult GetByNome(string pedido_nome)
         {
             return Ok(_apps.PegarPedidoByNome(pedido_nome));
         }
+
         public IActionResult GetAll()
         {
             return Ok(_apps.PegarPedidoAll());
         }
+
         [HttpGet("id/{id}")]
         public IActionResult GetId(int id)
         {
