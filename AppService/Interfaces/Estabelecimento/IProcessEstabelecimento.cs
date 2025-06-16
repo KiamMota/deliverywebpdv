@@ -5,7 +5,7 @@ namespace AppService.Interfaces.Estabelecimento
 {
     public interface IProcessEstabelecimento
     {
-        int SalvarEstabelecimento(Contracts.ContractsEstabelecimento.Request.EstabelecimentoRequest estabelecimento);
+        int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
         EstabelecimentoResponse? GetEstabelecimentoById(int id);
         EstabelecimentoResponse? GetEstabelecimentoByNome(string nome);
         EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias);

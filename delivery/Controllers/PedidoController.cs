@@ -43,7 +43,6 @@ namespace Api.Delivery.Controllers
         {
             return Ok(_apps.RemoverPedidoById(id));
         }
-
     }
 
     [Route("api/[controller]")]
@@ -67,7 +66,7 @@ namespace Api.Delivery.Controllers
             return Ok(_processEstabelecimento.GetEstabelecimentoById(id));
         }
         [HttpGet]
-        [Route("pedidoNome/{pedidoNome}")]
+        [Route("nome/{nome}")]
         public IActionResult EstabelecimentoGetByNome(string nome)
         {
             return Ok(_processEstabelecimento.GetEstabelecimentoByNome(nome));
@@ -79,7 +78,7 @@ namespace Api.Delivery.Controllers
             return Ok(_processEstabelecimento.DeleteEstabelecimentoById(id));
         }
         [HttpDelete]
-        [Route("pedidoNome/{pedidoNome}")]
+        [Route("nome/{nome}")]
         public IActionResult DeleteEstabelecimentoByNome(string nome)
         {
             return Ok(_processEstabelecimento.DeleteEstabelecimentoByNome(nome));

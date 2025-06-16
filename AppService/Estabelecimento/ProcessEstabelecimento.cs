@@ -14,9 +14,8 @@ namespace AppService.Estabelecimento
         }
         public int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento)
         {
-            if(estabelecimento == null) return -1;
-            var salvar = EstabelecimentoMapper.FromEstbRequest(estabelecimento);
-            return _repoEstabelecimento.SaveEstabelecimento(salvar);                
+            if(estabelecimento == null) return -1;;
+            return _repoEstabelecimento.SaveEstabelecimento(EstabelecimentoMapper.FromEstbRequest(estabelecimento));                
         }
         public bool DeleteEstabelecimentoById(int id)
         {

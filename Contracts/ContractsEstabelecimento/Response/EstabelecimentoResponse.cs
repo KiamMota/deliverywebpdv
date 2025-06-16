@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Contracts.ContractsEstabelecimento.Response
 {
-    public class EstabelecimentoResponse : EstabelecimentoBase
+    public class EstabelecimentoResponse
     {
-        public int id { get; set; }
-        public string nome { get; set; } = "Sem Nome";
-        public string local { get; set; } = "Sem Nome";
-        public IList<string> categorias { get; set; } = new string[0];
-        public string descricao { get; set; } = "Sem Nome";
+        public int id       { get; set; }
+        public string nome  { get; set; } = "";
+        public string local { get; set; } = "";
+        public IList<string> categorias { get; set; } = new string[1];
+        public string descricao { get; set; } = "";
     }
 }
