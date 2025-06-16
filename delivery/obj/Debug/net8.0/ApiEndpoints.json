@@ -192,15 +192,15 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.UserController",
-    "Method": "GetByPassword",
-    "RelativePath": "api/User",
+    "Method": "GetByNome",
+    "RelativePath": "api/User/nome/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Contracts.User.UserRequest",
+        "Name": "name",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

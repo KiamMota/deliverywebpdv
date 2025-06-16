@@ -101,12 +101,13 @@ namespace Api.Delivery.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] UserRequest user)
         {
-            return Ok();
+            return Ok(_apps.SalvarUsuario(user));
         }
+
         [HttpGet("nome/{name}")]
-        public IActionResult GetByNome(string nome)
+        public IActionResult GetByNome(string name)
         {
-            return Ok(_apps.);
+            return Ok(_apps.GetUserByName(name));
         }
         
     }
