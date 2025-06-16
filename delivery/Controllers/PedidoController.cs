@@ -45,8 +45,8 @@ namespace Api.Delivery.Controllers
         }
     }
 
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class EstabelecimentoController : ControllerBase
     {
         private readonly IProcessEstabelecimento _processEstabelecimento;
@@ -57,6 +57,7 @@ namespace Api.Delivery.Controllers
         [HttpPost]
         public IActionResult EstabelecimentoSalvar([FromBody] EstabelecimentoRequest estabelecimentoRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             return Ok(_processEstabelecimento.SalvarEstabelecimento(estabelecimentoRequest));
         }
         [HttpGet]

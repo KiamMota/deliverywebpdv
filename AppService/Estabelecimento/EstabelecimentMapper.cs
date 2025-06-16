@@ -54,6 +54,5 @@ namespace AppService.Estabelecimento
                 estabLocal = request.local
             };
         }
-
     }
 }
