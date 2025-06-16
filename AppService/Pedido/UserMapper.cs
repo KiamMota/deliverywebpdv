@@ -18,6 +18,7 @@ namespace AppService.Pedido
         {
             return new UserResponse()
             {
+                Prop = User.Prop,
                 Senha = User.Password,
                 Nome = User.Nome,
                 Id = User.Id,
