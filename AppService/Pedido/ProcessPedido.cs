@@ -17,8 +17,8 @@ namespace AppService.Pedido
         }
         public int SalvarPedido(PedidoRequest pedido)
         {
-            pedido.data = DateTime.UtcNow;
-            DwpHelper.Normalizar(pedido.nomePedido);
+            pedido.pedidoData = DateTime.UtcNow;
+            DwpHelper.Normalizar(pedido.pedidoNome);
             return _repoPedido.SalvarPedido(PedidoMapper.FromPedidoRequest(pedido));
         }
         public PedidoResponse? PegarPedidoById(int id)

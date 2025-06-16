@@ -2,10 +2,10 @@
 {
     public interface IPedido
     {
-        DateTime data { get; set; }
-        int id { get; set; }
-        string nome { get; set; }
-        decimal valor { get; set; }
-        int quantidade { get; set; }
+        DateTime pedidoData   { get; set; }
+        int pedidoId          { get; set; }
+        string pedidoNome     { get; set; }
+        decimal pedidoValor   { get; set; }
+        int pedidoQuantidade  { get; set; }
     }
 }

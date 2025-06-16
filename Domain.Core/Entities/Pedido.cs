@@ -4,10 +4,10 @@ namespace Domain.Core.Entities
 {
     public class Pedido : IPedido
     {
-        public DateTime data { get; set; } = DateTime.UtcNow;
-        public int id { get; set; }
-        public string nome { get; set; } = "";
-        public decimal valor { get; set; }
-        public int quantidade { get; set; }
+        public DateTime pedidoData { get; set; }
+        public int pedidoId { get; set; }
+        public string pedidoNome { get; set; } = "";
+        public decimal pedidoValor { get; set; }
+        public int pedidoQuantidade { get; set; }
     }
 }

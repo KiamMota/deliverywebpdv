@@ -5,11 +5,10 @@ namespace Contracts.ContractsEstabelecimento.Base
 {
     public class EstabelecimentoBase : IEstabelecimento
     {
-
-        public int id { get; set; }
-        public string nome { get; set; } = "Sem Nome";
-        public string local { get; set; } = "Sem Nome";
-        public IList<string> categorias { get; set; } = new string[0];
-        public string descricao { get; set; } = "Sem Nome";
+        public int estabId { get; set; }
+        public string estabNome { get; set; } = "";
+        public string estabLocal { get; set; } = "";
+        public IList<string> estabCategorias { get; set; } = new string[0];
+        public string estabDescricao { get; set; } = "";
     }
 }

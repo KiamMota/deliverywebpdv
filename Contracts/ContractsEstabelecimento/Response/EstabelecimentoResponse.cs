@@ -6,7 +6,6 @@ namespace Contracts.ContractsEstabelecimento.Response
 {
     public class EstabelecimentoResponse : EstabelecimentoBase
     {
-        [Key]
         public int id { get; set; }
         public string nome { get; set; } = "Sem Nome";
         public string local { get; set; } = "Sem Nome";

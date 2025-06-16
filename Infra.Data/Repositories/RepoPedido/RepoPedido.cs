@@ -14,7 +14,7 @@ namespace Infra.Data.Repositories.RepoPedido
         {
             _appDbContext.pedidos.Add(pedido);
             _appDbContext.SaveChanges();
-            return pedido.id;
+            return pedido.pedidoId;
         }
         public IList<Domain.Core.Entities.Pedido> SelectPedidoAll()
         {
@@ -23,28 +23,28 @@ namespace Infra.Data.Repositories.RepoPedido
         }
         public Domain.Core.Entities.Pedido? SelectPedidoById(int id)
         {
-            var selectById = _appDbContext.pedidos.FirstOrDefault(p => p.id == id);
+            var selectById = _appDbContext.pedidos.FirstOrDefault(p => p.pedidoId == id);
             if (selectById == null) return null;
             return selectById;
         }
         public bool PutPedidoById(Domain.Core.Entities.Pedido Atualizado, int id)
         {
-            var putById = _appDbContext.pedidos.FirstOrDefault(pid => pid.id == id);
+            var putById = _appDbContext.pedidos.FirstOrDefault(pid => pid.pedidoId == id);
             
             if (Atualizado == null) return false;
             if (putById == null) return false;
 
-            if(Atualizado.quantidade > 0)
+            if(Atualizado.pedidoQuantidade > 0)
             {
-                putById.quantidade = Atualizado.quantidade;
+                putById.pedidoQuantidade = Atualizado.pedidoQuantidade;
             }
-            if (Atualizado.nome != null) 
+            if (Atualizado.pedidoNome != null) 
             { 
-                putById.nome = Atualizado.nome;
+                putById.pedidoNome = Atualizado.pedidoNome;
             }
-            if (Atualizado.valor > 0)
+            if (Atualizado.pedidoValor > 0)
             {
-                putById.valor = Atualizado.valor;
+                putById.pedidoValor = Atualizado.pedidoValor;
             }
 
             return _appDbContext.SaveChanges() > 0;
@@ -53,7 +53,7 @@ namespace Infra.Data.Repositories.RepoPedido
 
         public bool DeletePedidoById(int id)
         {
-            var acharPedido = _appDbContext.pedidos.FirstOrDefault(pid => pid.id == id);
+            var acharPedido = _appDbContext.pedidos.FirstOrDefault(pid => pid.pedidoId == id);
             if (acharPedido is null) return false;
             _appDbContext.pedidos.Remove(acharPedido);
             _appDbContext.SaveChanges();
@@ -62,8 +62,8 @@ namespace Infra.Data.Repositories.RepoPedido
 
         public Domain.Core.Entities.Pedido? SelectPedidoByNome(string nome)
         {
-            /* linq para nome */
-            var acharNome = (from pNome in _appDbContext.pedidos where pNome.nome == nome select pNome).FirstOrDefault();
+            /* linq para pedidoNome */
+            var acharNome = (from pNome in _appDbContext.pedidos where pNome.pedidoNome == nome select pNome).FirstOrDefault();
             return acharNome;
         }
 

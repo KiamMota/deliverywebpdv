@@ -11,10 +11,10 @@ namespace AppService
         {
             return new Domain.Core.Entities.Pedido
             {
-                data = pedidoRq.data,
-                nome = pedidoRq.nomePedido,
-                valor = pedidoRq.valorPedido,
-                quantidade = pedidoRq.quantidadePedido
+                pedidoData      = pedidoRq.pedidoData,
+                pedidoNome      = pedidoRq.pedidoNome,
+                pedidoValor    = pedidoRq.pedidoValor,
+                pedidoQuantidade = pedidoRq.pedidoQuantidade,
             };
         }
 
@@ -23,11 +23,11 @@ namespace AppService
         {
             return new Domain.Core.Entities.Pedido
             {
-                id = pedidoRs.id,
-                data = pedidoRs.data,
-                nome = pedidoRs.nome,
-                valor = pedidoRs.valor,
-                quantidade = pedidoRs.quantidade
+                pedidoId    = pedidoRs.id,
+                pedidoData  = pedidoRs.data,
+                pedidoNome  = pedidoRs.nome,
+                pedidoValor = pedidoRs.valor,
+                pedidoQuantidade = pedidoRs.quantidade
             };
         }
 
@@ -37,9 +37,9 @@ namespace AppService
             if (pedido == null) return null;
             return new PedidoRequest
             {
-                nomePedido = pedido.nome,
-                valorPedido = pedido.valor,
-                quantidadePedido = pedido.quantidade
+                pedidoNome       = pedido.pedidoNome,
+                pedidoValor      = pedido.pedidoValor,
+                pedidoQuantidade = pedido.pedidoQuantidade
             };
         }
 
@@ -51,11 +51,11 @@ namespace AppService
 
             return new PedidoResponse
             {
-                data = pedido.data,
-                id = pedido.id,
-                nome = pedido.nome,
-                valor = pedido.valor,
-                quantidade = pedido.quantidade
+                data = pedido.pedidoData,
+                id = pedido.pedidoId,
+                nome = pedido.pedidoNome,
+                valor = pedido.pedidoValor,
+                quantidade = pedido.pedidoQuantidade
             };
         }
     }

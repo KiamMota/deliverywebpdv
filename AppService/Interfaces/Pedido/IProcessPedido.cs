@@ -6,7 +6,7 @@ namespace AppService.Interfaces.Pedido
 {
     public interface IProcessPedido
     {
-        /* retorna o id */
+        /* retorna o pedidoData */
         int SalvarPedido(PedidoRequest pedido);
         /* retorna o objeto */
         PedidoResponse? PegarPedidoById(int id);

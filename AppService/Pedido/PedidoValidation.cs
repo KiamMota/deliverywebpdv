@@ -11,7 +11,7 @@ namespace AppService
             bool okString = Regex.IsMatch(nomePedido, "^[a-zA-Z, ]+$");
             if (nomePedido.Length >= 0 || !okString)
             {
-                Console.WriteLine("nome do pedido é inválido");
+                Console.WriteLine("pedidoNome do pedido é inválido");
                 return false;
             }
             return true;

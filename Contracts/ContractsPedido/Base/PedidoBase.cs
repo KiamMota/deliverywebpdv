@@ -6,16 +6,14 @@ namespace Contracts.PedidoContracts.Base
     public class PedidoBase : IPedido
     {
         [Required]
-        public DateTime data { get; set; }
+        public DateTime pedidoData { get; set; }
         [Key]
-
-        public int id { get; set; }
+        public int pedidoId { get; set; }
         [Required]
-
-        public string nome { get; set; } = "";
+        public string pedidoNome { get; set; } = "";
         [Required]
-        public decimal valor { get; set; }
+        public decimal pedidoValor { get; set; }
         [Range(1, 9999)]
-        public int quantidade { get; set; }
+        public int pedidoQuantidade { get; set; }
     }
 }

@@ -7,14 +7,14 @@ namespace AppService.Estabelecimento
     {
         public static EstabelecimentoResponse? ToEstbResponse(Domain.Core.Entities.Estabelecimento estabelecimento)
         {
-            if (estabelecimento == null) throw new ArgumentNullException($"o valor de {nameof(estabelecimento)} é nulo!");
+            if (estabelecimento == null) throw new ArgumentNullException($"o pedidoValor de {nameof(estabelecimento)} é nulo!");
             return new EstabelecimentoResponse
             {
-                id = estabelecimento.id,
-                nome = estabelecimento.nome,
-                categorias = estabelecimento.categorias,
-                descricao = estabelecimento.descricao,
-                local = estabelecimento.local
+                id = estabelecimento.estabId,
+                nome = estabelecimento.estabNome,
+                categorias = estabelecimento.estabCategorias,
+                descricao = estabelecimento.estabDescricao,
+                local = estabelecimento.estabLocal
             };
         }
 
@@ -23,10 +23,10 @@ namespace AppService.Estabelecimento
             if (request == null) throw new ArgumentNullException(nameof(request));
             return new EstabelecimentoRequest
             {
-                nome = request.nome,
-                categorias = request.categorias,
-                descricao = request.descricao,
-                local = request.local
+                nome = request.estabNome,
+                categorias = request.estabCategorias,
+                descricao = request.estabDescricao,
+                local = request.estabLocal
             };
         }
 
@@ -35,11 +35,11 @@ namespace AppService.Estabelecimento
             if(response == null) throw new ArgumentNullException(nameof(response));
             return new Domain.Core.Entities.Estabelecimento
             {
-                id = response.id,
-                nome = response.nome,
-                categorias = response.categorias,
-                descricao = response.descricao,
-                local = response.local
+                estabId = response.id,
+                estabNome = response.nome,
+                estabCategorias = response.categorias,
+                estabDescricao = response.descricao,
+                estabLocal = response.local
             };
         }
 
@@ -48,10 +48,10 @@ namespace AppService.Estabelecimento
             if(request == null) throw new ArgumentNullException();
             return new Domain.Core.Entities.Estabelecimento {
 
-                nome = request.nome,
-                categorias = request.categorias,
-                descricao = request.descricao,
-                local = request.local
+                estabNome = request.nome,
+                estabCategorias = request.categorias,
+                estabDescricao = request.descricao,
+                estabLocal = request.local
             };
         }
 
