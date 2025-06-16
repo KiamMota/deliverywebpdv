@@ -1,8 +1,12 @@
 ﻿using AppService.Interfaces.Estabelecimento;
 using AppService.Interfaces.Pedido;
+using AppService.Interfaces.User;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
+using Contracts.User;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Delivery.Controllers
 {
@@ -86,4 +90,25 @@ namespace Api.Delivery.Controllers
             return Ok(_processEstabelecimento.DeleteEstabelecimentoByNome(nome));
         }
     }
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
+    {
+        private readonly IProcessUser _apps;
+        public UserController(IProcessUser processUser)
+            => _apps = processUser;
+        [HttpPost]
+        public IActionResult Post([FromBody] UserRequest user)
+        {
+            return Ok();
+        }
+        [HttpGet("nome/{name}")]
+        public IActionResult GetByNome(string nome)
+        {
+            return Ok(_apps.);
+        }
+        
+    }
+
 }

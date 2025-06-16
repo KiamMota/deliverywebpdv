@@ -10,17 +10,20 @@ namespace Infra.Data.Repositories.RepoPedido
         {
             _appDbContext = obj;
         }
+        
         public int SalvarPedido(Domain.Core.Entities.Pedido pedido)
         {
             _appDbContext.pedidos.Add(pedido);
             _appDbContext.SaveChanges();
             return pedido.pedidoId;
         }
+        
         public IList<Domain.Core.Entities.Pedido> SelectPedidoAll()
         {
             var resultado = (from pedido in _appDbContext.pedidos select pedido).ToList();
             return resultado;
         }
+
         public Domain.Core.Entities.Pedido? SelectPedidoById(int id)
         {
             var selectById = _appDbContext.pedidos.FirstOrDefault(p => p.pedidoId == id);

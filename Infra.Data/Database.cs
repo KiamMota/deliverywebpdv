@@ -6,6 +6,7 @@ namespace Infra.Data.Database
 {
     public class AppDbContext : DbContext
     {
+        public DbSet<Domain.Core.Entities.User> Users { get; set; }
         public DbSet<Domain.Core.Entities.Pedido> pedidos { get; set; }
         public DbSet<Domain.Core.Entities.Estabelecimento> estabelecimentos { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options)
