@@ -6,7 +6,6 @@ namespace Infra.Data.Database
     public class AppDbContext : DbContext
     {
         static readonly string ConnectionString = "Server=localhost; User ID=local; Password=123; Database=MyDatabase";
-
         public DbSet<Domain.Core.Entities.User> Users { get; set; }
         public DbSet<Domain.Core.Entities.Pedido> pedidos { get; set; }
         public DbSet<Domain.Core.Entities.Estabelecimento> estabelecimentos { get; set; }
@@ -18,8 +17,13 @@ namespace Infra.Data.Database
 
             modelBuilder.Entity<User>
             (
-                UserFields => UserFields.HasKey(f => f.Id)
+                UserFields =>
+                {
+                    UserFields.HasKey(f => f.Id);
+                    UserFields.Property(f => f.Email).IsRequired();
+                }
             );
+
 
             /* PEDIDO */
 
