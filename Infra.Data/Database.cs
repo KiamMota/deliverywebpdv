@@ -24,7 +24,6 @@ namespace Infra.Data.Database
                 }
             );
 
-
             /* PEDIDO */
 
             modelBuilder.Entity<Pedido>

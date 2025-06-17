@@ -114,7 +114,7 @@ namespace Api.Delivery.Controllers
             return Ok(result);
         }
 
-        [HttpGet("email/{email")]
+        [HttpGet("email/{email}")]
         public async Task<IActionResult> GetUserByEmail(string email)
         {
             return Ok(await _appS.GetUserByEmail(email));

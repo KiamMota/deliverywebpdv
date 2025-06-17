@@ -176,6 +176,22 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.UserController",
+    "Method": "GetUserByEmail",
+    "RelativePath": "api/User/email/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.UserController",
     "Method": "GetByNome",
     "RelativePath": "api/User/nome/{name}",
     "HttpMethod": "GET",
