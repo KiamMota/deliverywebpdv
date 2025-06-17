@@ -57,3 +57,6 @@ C:\Users\somen\Desktop\kprojetos\delivery\obj\Debug\net8.0\Api.Delivery.pdb
 C:\Users\somen\Desktop\kprojetos\delivery\obj\Debug\net8.0\Api.Delivery.genruntimeconfig.cache
 C:\Users\somen\Desktop\kprojetos\delivery\obj\Debug\net8.0\ref\Api.Delivery.dll
 C:\Users\somen\Desktop\kprojetos\delivery\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\somen\Desktop\kprojetos\delivery\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\somen\Desktop\kprojetos\delivery\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\somen\Desktop\kprojetos\delivery\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll

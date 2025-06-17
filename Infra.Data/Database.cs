@@ -1,11 +1,12 @@
 ﻿using Domain.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Infra.Data.Database
 {
     public class AppDbContext : DbContext
     {
+        static readonly string ConnectionString = "Server=localhost; User ID=local; Password=123; Database=MyDatabase";
+
         public DbSet<Domain.Core.Entities.User> Users { get; set; }
         public DbSet<Domain.Core.Entities.Pedido> pedidos { get; set; }
         public DbSet<Domain.Core.Entities.Estabelecimento> estabelecimentos { get; set; }
@@ -13,7 +14,6 @@ namespace Infra.Data.Database
         #region ModelRules
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             /* USER */
 
             modelBuilder.Entity<User>
@@ -38,8 +38,12 @@ namespace Infra.Data.Database
         }
         #endregion
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseMySql(ConnectionString, ServerVersion.AutoDetect(ConnectionString));
+        }
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
-        {}
+        : base(options) {}
     }
 }
