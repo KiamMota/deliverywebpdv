@@ -5,8 +5,6 @@ using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
 using Contracts.User;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
-using System.ComponentModel.DataAnnotations;
 
 namespace Api.Delivery.Controllers
 {
