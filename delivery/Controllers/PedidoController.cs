@@ -3,7 +3,6 @@ using AppService.Interfaces.Pedido;
 using AppService.Interfaces.User;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
-using Contracts.PedidoContracts.Response;
 using Contracts.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,33 +18,35 @@ namespace Api.Delivery.Controllers
             _apps = apsP;
         }
         [HttpPost]
-        public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
-        [HttpGet("nome/{pedido_nome}")]
-        public IActionResult GetByNome(string pedido_nome)
+        public async Task<IActionResult> Post(PedidoRequest obj)
         {
-            return Ok(_apps.PegarPedidoByNome(pedido_nome));
+            return Ok(await _apps.SalvarPedido(obj));
+        }
+        [HttpGet("nome/{PedidoNome}")]
+        public async Task<IActionResult> GetByNome(string PedidoNome)
+        {
+            return Ok(await _apps.PegarPedidoByNome(PedidoNome));
         }
         [HttpGet("all")]
-        public async Task<ActionResult<PedidoResponse>> GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var pedidos = await _apps.PegarPedidoAll();
-            return Ok(pedidos);
+            return Ok(await _apps.PegarPedidoAll());
         }
 
         [HttpGet("id/{id}")]
-        public IActionResult GetId(int id)
+        public async Task<IActionResult> GetId(int id)
         {
-            return Ok(_apps.PegarPedidoById(id));
+            return Ok(await _apps.PegarPedidoById(id));
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put([FromRoute] int id, [FromBody] PedidoRequest obj)
+        public async Task<IActionResult> Put([FromRoute] int id, [FromBody] PedidoRequest obj)
         {
-            return Ok(_apps.AlterarPedidoById(obj, id));
+            return Ok(await _apps.AlterarPedidoById(obj, id));
         }
-        public IActionResult DeleteById(int id)
+        public async Task<IActionResult> DeleteById(int id)
         {
-            return Ok(_apps.RemoverPedidoById(id));
+            return Ok(await _apps.RemoverPedidoById(id));
         }
     }
 

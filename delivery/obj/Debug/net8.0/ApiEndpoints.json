@@ -77,7 +77,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Api.Delivery.Controllers.PedidosController",
@@ -124,17 +134,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "Contracts.PedidoContracts.Response.PedidoResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Api.Delivery.Controllers.PedidosController",
@@ -155,13 +155,13 @@
   {
     "ContainingType": "Api.Delivery.Controllers.PedidosController",
     "Method": "GetByNome",
-    "RelativePath": "api/Pedidos/nome/{pedido_nome}",
+    "RelativePath": "api/Pedidos/nome/{PedidoNome}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pedido_nome",
+        "Name": "PedidoNome",
         "Type": "System.String",
         "IsRequired": true
       }
