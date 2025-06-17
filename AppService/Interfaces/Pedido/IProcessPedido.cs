@@ -7,16 +7,16 @@ namespace AppService.Interfaces.Pedido
     public interface IProcessPedido
     {
         /* retorna o pedidoData */
-        int SalvarPedido(PedidoRequest pedido);
+        Task<int> SalvarPedido(PedidoRequest pedido);
         /* retorna o objeto */
-        PedidoResponse? PegarPedidoById(int id);
+        Task<PedidoResponse?> PegarPedidoById(int id);
         /* predicate */
-        PedidoResponse? PegarPedidoByNome(string pedido_nome);
+        Task<PedidoResponse?> PegarPedidoByNome(string pedido_nome);
 
-        bool AlterarPedidoById(PedidoRequest Atualizado, int id);
-        IList<PedidoResponse> PegarPedidoAll();
+        Task<bool> AlterarPedidoById(PedidoRequest Atualizado, int id);
+        Task<IList<PedidoResponse>> PegarPedidoAll();
         /* predicate */
-        bool RemoverPedidoById(int id);
+        Task<bool> RemoverPedidoById(int id);
     }
 }
 

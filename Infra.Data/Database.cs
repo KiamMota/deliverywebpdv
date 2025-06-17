@@ -8,22 +8,37 @@ namespace Infra.Data.Database
     public class AppDbContext : DbContext
     {
         public DbSet<Domain.Core.Entities.User> Users { get; set; }
-        #region Required
+        public DbSet<Domain.Core.Entities.Pedido> pedidos { get; set; }
+        public DbSet<Domain.Core.Entities.Estabelecimento> estabelecimentos { get; set; }
+
+        #region ModelRules
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>(UserFields =>
-            {
-                UserFields.HasKey(f =>  f.Id);
-                UserFields.Property(f => f.Prop).IsRequired();
-                UserFields.Property(f => f.Nome).IsRequired();
-                UserFields.Property(f => f.Password).IsRequired();
-            }
+
+            /* USER */
+
+            modelBuilder.Entity<User>
+            (
+                UserFields => UserFields.HasKey(f => f.Id)
             );
+
+            /* PEDIDO */
+
+            modelBuilder.Entity<Pedido>
+            (
+                PedidoFields => PedidoFields.HasKey(p => p.pedidoId)
+            );
+
+            /* ESTABELECIMENTO */
+
+            modelBuilder.Entity<Estabelecimento>
+            (
+                EstabelecimentoFields => EstabelecimentoFields.HasKey(e => e.estabId)
+            );
+
         }
         #endregion
 
-        public DbSet<Domain.Core.Entities.Pedido> pedidos { get; set; }
-        public DbSet<Domain.Core.Entities.Estabelecimento> estabelecimentos { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {}

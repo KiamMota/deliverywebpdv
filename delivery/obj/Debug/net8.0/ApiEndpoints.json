@@ -49,22 +49,6 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
-    "Method": "EstabelecimentoGetByNome",
-    "RelativePath": "api/Estabelecimento/nome/{nome}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "nome",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
     "Method": "DeleteEstabelecimentoByNome",
     "RelativePath": "api/Estabelecimento/nome/{nome}",
     "HttpMethod": "DELETE",
@@ -93,16 +77,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.PedidosController",
-    "Method": "GetAll",
-    "RelativePath": "api/Pedidos",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -141,6 +115,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pedidos/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Contracts.PedidoContracts.Response.PedidoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Api.Delivery.Controllers.PedidosController",

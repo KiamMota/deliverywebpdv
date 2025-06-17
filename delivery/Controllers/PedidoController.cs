@@ -3,6 +3,7 @@ using AppService.Interfaces.Pedido;
 using AppService.Interfaces.User;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
+using Contracts.PedidoContracts.Response;
 using Contracts.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,17 +19,17 @@ namespace Api.Delivery.Controllers
             _apps = apsP;
         }
         [HttpPost]
-        
         public IActionResult Post(PedidoRequest obj) => Ok(_apps.SalvarPedido(obj));
         [HttpGet("nome/{pedido_nome}")]
         public IActionResult GetByNome(string pedido_nome)
         {
             return Ok(_apps.PegarPedidoByNome(pedido_nome));
         }
-
-        public IActionResult GetAll()
+        [HttpGet("all")]
+        public async Task<ActionResult<PedidoResponse>> GetAll()
         {
-            return Ok(_apps.PegarPedidoAll());
+            var pedidos = await _apps.PegarPedidoAll();
+            return Ok(pedidos);
         }
 
         [HttpGet("id/{id}")]
@@ -69,12 +70,6 @@ namespace Api.Delivery.Controllers
         {
             return Ok(_processEstabelecimento.GetEstabelecimentoById(id));
         }
-        [HttpGet]
-        [Route("nome/{nome}")]
-        public IActionResult EstabelecimentoGetByNome(string nome)
-        {
-            return Ok(_processEstabelecimento.GetEstabelecimentoByNome(nome));
-        }
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteEstabelecimentoById(int id)
@@ -107,6 +102,8 @@ namespace Api.Delivery.Controllers
         {
             return Ok(_apps.GetUserByName(name));
         }
+
+        
         
     }
 

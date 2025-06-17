@@ -17,15 +17,15 @@ using AppService.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
-   builder.Services.AddControllers();  
-   builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
-   builder.Services.AddScoped<IProcessPedido, ProcessPedido>();
-   builder.Services.AddScoped<IRepoPedido, RepoPedido>();
-    builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
-    builder.Services.AddScoped<IRepoEstabelecimento, RepoEstabelecimento>();
-    builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
-    builder.Services.AddScoped<IRepoUser, RepoUser>();
-    builder.Services.AddScoped<IProcessUser, ProcessUser>();
+builder.Services.AddControllers();  
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
+builder.Services.AddScoped<IProcessPedido, ProcessPedido>();
+builder.Services.AddScoped<IRepoPedido, RepoPedido>();
+builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
+builder.Services.AddScoped<IRepoEstabelecimento, RepoEstabelecimento>();
+builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
+builder.Services.AddScoped<IRepoUser, RepoUser>();
+builder.Services.AddScoped<IProcessUser, ProcessUser>();
 
 builder.Services.AddCors(options =>
 {
@@ -40,13 +40,8 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors("DevPolicy");
 app.UseHttpsRedirection();
-app.UseCors("PermitirTudo");
 app.UseAuthorization();
-
 app.MapControllers();
-
-/* Endpoint dos pedidos */
-
 
 app.Run();
 

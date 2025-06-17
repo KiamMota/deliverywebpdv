@@ -5,7 +5,6 @@ namespace Contracts.PedidoContracts.Request
 {
     public class PedidoRequest : PedidoBase
     {
-        [Required]
         public DateTime pedidoData { get; set; }
         [Required]
         public string pedidoNome { get; set; } = "";
