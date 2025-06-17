@@ -1,5 +1,6 @@
 ﻿using Infra.Data.Database;
 using Infra.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Data.Repositories.User
 {
@@ -9,23 +10,30 @@ namespace Infra.Data.Repositories.User
         public RepoUser(AppDbContext DbContext) { 
             _dbctx = DbContext;
         }
-        public bool ValidarUsuario(string Nome, string Password)
+        public async Task<bool> ValidarUsuario(string Nome, string Password)
         {
-            var validar = _dbctx.Users.FirstOrDefault(u => u.Password == Password && u.Nome == Nome);
-            _dbctx.SaveChanges();
+            var validar = await _dbctx.Users.FirstOrDefaultAsync(u => u.Password == Password && u.Nome == Nome);
+            await _dbctx.SaveChangesAsync();
             return validar != null;
         }
 
-        public int SalvarUsuario(Domain.Core.Entities.User user)
+        public async Task<int> SalvarUsuario(Domain.Core.Entities.User user)
         {
-            _dbctx.Users.Add(user);
-            _dbctx.SaveChanges();
+            await _dbctx.Users.AddAsync(user);
+            await _dbctx.SaveChangesAsync();
             return user.Id;
         }
 
-        public Domain.Core.Entities.User? GetUserByName(string name)
+        public async Task<Domain.Core.Entities.User>? GetUserByName(string name)
         {
-            var result = _dbctx.Users.FirstOrDefault(u => u.Nome == name);
+            var result = await _dbctx.Users.FirstOrDefaultAsync(u => u.Nome == name);
+            return result;
+        }
+
+        public async Task<Domain.Core.Entities.User>? GetUserByEmail(string Email)
+        {
+            var result = await _dbctx.Users.FirstOrDefaultAsync(u => u.Email == Email);
+            _dbctx.SaveChangesAsync();
             return result;
         }
     }

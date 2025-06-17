@@ -67,7 +67,7 @@ namespace Api.Delivery.Controllers
         public async Task<IActionResult> EstabelecimentoSalvar([FromBody] EstabelecimentoRequest estabelecimentoRequest)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            return Ok(await _processEstabelecimento.SalvarEstabelecimento(estabelecimentoRequest));
+            return Ok(_processEstabelecimento.SalvarEstabelecimento(estabelecimentoRequest));
         }
 
         [HttpGet]
@@ -97,21 +97,27 @@ namespace Api.Delivery.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IProcessUser _apps;
+        private readonly IProcessUser _appS;
         public UserController(IProcessUser processUser)
-            => _apps = processUser;
+            => _appS = processUser;
         [HttpPost]
         public IActionResult Post([FromBody] UserRequest user)
         {
-            return Ok(_apps.SalvarUsuario(user));
+            return Ok(_appS.SalvarUsuario(user));
         }
 
         [HttpGet("nome/{name}")]
         public IActionResult GetByNome(string name)
         {
-            var result = _apps.GetUserByName(name);
+            var result = _appS.GetUserByName(name);
             if(result == null) return NotFound();
             return Ok(result);
+        }
+
+        [HttpGet("email/{email")]
+        public async Task<IActionResult> GetUserByEmail(string email)
+        {
+            return Ok(await _appS.GetUserByEmail(email));
         }
     }
 }
