@@ -23,7 +23,10 @@ namespace AppService.User
 
         public UserResponse? GetUserByName(string name)
         {
-            return UserMapper.UserToReponse(_repoUser.GetUserByName(name));
+            var resu = _repoUser.GetUserByName(name);
+            if (resu == null) return null;
+            return UserMapper.UserToReponse(resu);
         }
+
     }
 }

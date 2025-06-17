@@ -12,6 +12,7 @@ namespace Domain.Core.Entities
         [Required]
         public string estabLocal { get; set; }
         [Required]
+        
         public IList<string> estabCategorias { get; set; }
         [Required]
         public string estabDescricao { get; set; }

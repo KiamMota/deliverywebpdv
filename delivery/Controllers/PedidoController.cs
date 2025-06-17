@@ -17,16 +17,19 @@ namespace Api.Delivery.Controllers
         {
             _apps = apsP;
         }
+        
         [HttpPost]
         public async Task<IActionResult> Post(PedidoRequest obj)
         {
             return Ok(await _apps.SalvarPedido(obj));
         }
+     
         [HttpGet("nome/{PedidoNome}")]
         public async Task<IActionResult> GetByNome(string PedidoNome)
         {
             return Ok(await _apps.PegarPedidoByNome(PedidoNome));
         }
+
         [HttpGet("all")]
         public async Task<IActionResult> GetAll()
         {
@@ -57,26 +60,31 @@ namespace Api.Delivery.Controllers
         private readonly IProcessEstabelecimento _processEstabelecimento;
         public EstabelecimentoController(IProcessEstabelecimento estabelecimento)
         {
-            _processEstabelecimento = estabelecimento;
+           _processEstabelecimento = estabelecimento;
         }
+
         [HttpPost]
-        public IActionResult EstabelecimentoSalvar([FromBody] EstabelecimentoRequest estabelecimentoRequest)
+        public async Task<IActionResult> EstabelecimentoSalvar([FromBody] EstabelecimentoRequest estabelecimentoRequest)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            return Ok(_processEstabelecimento.SalvarEstabelecimento(estabelecimentoRequest));
+            return Ok(await _processEstabelecimento.SalvarEstabelecimento(estabelecimentoRequest));
         }
+
         [HttpGet]
         [Route("{id}")]
         public IActionResult EstabelecimentoGetById(int id)
         {
             return Ok(_processEstabelecimento.GetEstabelecimentoById(id));
         }
+
         [HttpDelete]
         [Route("{id}")]
+
         public IActionResult DeleteEstabelecimentoById(int id)
         {
             return Ok(_processEstabelecimento.DeleteEstabelecimentoById(id));
         }
+
         [HttpDelete]
         [Route("nome/{nome}")]
         public IActionResult DeleteEstabelecimentoByNome(string nome)
@@ -101,11 +109,9 @@ namespace Api.Delivery.Controllers
         [HttpGet("nome/{name}")]
         public IActionResult GetByNome(string name)
         {
-            return Ok(_apps.GetUserByName(name));
+            var result = _apps.GetUserByName(name);
+            if(result == null) return NotFound();
+            return Ok(result);
         }
-
-        
-        
     }
-
 }

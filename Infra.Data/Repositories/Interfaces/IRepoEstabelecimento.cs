@@ -4,13 +4,13 @@ namespace Infra.Data.Repositories.Interfaces
 {
     public interface IRepoEstabelecimento
     {
-        int             SaveEstabelecimento(Estabelecimento estabelecimento);
+        Task<int>             SaveEstabelecimento(Estabelecimento estabelecimento);
         /* gets */
-        Estabelecimento? GetEstabelecimentoById(int id);
-        Estabelecimento? GetEstabelecimentoByNome(string nome);
-        Estabelecimento? GetEstabelecimentoByCategorias(string categorias);
+        Task<Estabelecimento>? GetEstabelecimentoById(int id);
+        Task<Estabelecimento>? GetEstabelecimentoByNome(string nome);
+        Task<Estabelecimento>? GetEstabelecimentoByCategorias(string categorias);
         /* deletes */
-        bool            DeleteEstabelecimentoById(int id);
-        bool            DeleteEstabelecimentoByNome(string nome);
+        Task<bool>            DeleteEstabelecimentoById(int id);
+        Task<bool>            DeleteEstabelecimentoByNome(string nome);
     }
 }

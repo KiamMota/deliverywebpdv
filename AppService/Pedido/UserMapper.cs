@@ -16,7 +16,7 @@ namespace AppService.Pedido
 
         public static UserResponse UserToReponse(Domain.Core.Entities.User User)
         {
-            return new UserResponse()
+            return new UserResponse
             {
                 Prop  = User.Prop,
                 Senha = User.Password,

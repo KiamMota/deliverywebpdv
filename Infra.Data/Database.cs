@@ -1,6 +1,5 @@
 ﻿using Domain.Core.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.InMemory;
 
 
 namespace Infra.Data.Database

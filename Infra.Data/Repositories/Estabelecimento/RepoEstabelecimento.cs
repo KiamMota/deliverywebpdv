@@ -1,6 +1,7 @@
 ﻿using Domain.Core.Entities;
 using Infra.Data.Database;
 using Infra.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Data.Repositories.RepoEstabelecimento
 {
@@ -11,40 +12,43 @@ namespace Infra.Data.Repositories.RepoEstabelecimento
         {
             _dbcntx = context;
         }
-        public int SaveEstabelecimento(Domain.Core.Entities.Estabelecimento estabelecimento)
+        public async Task<int> SaveEstabelecimento(Domain.Core.Entities.Estabelecimento estabelecimento)
         {
             if (estabelecimento == null) return -1;
-            _dbcntx.estabelecimentos.Add(estabelecimento);
-            _dbcntx.SaveChanges();
+            await _dbcntx.estabelecimentos.AddAsync(estabelecimento);
+            await _dbcntx.SaveChangesAsync();
             return estabelecimento.estabId;
         }
-        public bool DeleteEstabelecimentoById(int id)
+        public async Task<bool> DeleteEstabelecimentoById(int id)
         {
-            var estabelecimentoId = _dbcntx.estabelecimentos.FirstOrDefault(est => est.estabId == id);
+            var estabelecimentoId = await _dbcntx.estabelecimentos.FirstOrDefaultAsync(est => est.estabId == id);
             if (estabelecimentoId == null) return false;
             _dbcntx.estabelecimentos.Remove(estabelecimentoId);
-            return _dbcntx.SaveChanges() > 0;
+            return await _dbcntx.SaveChangesAsync() > 0;
         }
-        public bool DeleteEstabelecimentoByNome(string nome)
+        public async Task<bool> DeleteEstabelecimentoByNome(string nome)
         {
-            var estabelecimentoByNome = _dbcntx.estabelecimentos.FirstOrDefault(estName => estName.estabNome == nome);
+            var estabelecimentoByNome = await _dbcntx.estabelecimentos.FirstOrDefaultAsync(estName => estName.estabNome == nome);
             if(estabelecimentoByNome == null) return false;
             _dbcntx.estabelecimentos.Remove(estabelecimentoByNome);
-            return _dbcntx.SaveChanges() > 0;
+            return await _dbcntx.SaveChangesAsync() > 0;
         }
-        public Estabelecimento? GetEstabelecimentoByCategorias(string categorias)
+        public async Task<Estabelecimento>? GetEstabelecimentoByCategorias(string categorias)
         {
-            return _dbcntx.estabelecimentos.FirstOrDefault(estCat => estCat.estabCategorias.Any(c => c == categorias));
+            var EstabelecimentoByCategorias = await _dbcntx.estabelecimentos.FirstOrDefaultAsync(e => e.estabCategorias.Any(l => l == categorias));
+            if (EstabelecimentoByCategorias == null) return null;
+            await _dbcntx.SaveChangesAsync();
+            return EstabelecimentoByCategorias;
         }
-        public Estabelecimento? GetEstabelecimentoById(int id)
+        public async Task<Estabelecimento>? GetEstabelecimentoById(int id)
         {
-            var estabelecimentoIdConsulta = _dbcntx.estabelecimentos.FirstOrDefault(estid => estid.estabId == id);
+            var estabelecimentoIdConsulta = await _dbcntx.estabelecimentos.FirstOrDefaultAsync(estid => estid.estabId == id);
             if (estabelecimentoIdConsulta == null) return null;
             return estabelecimentoIdConsulta;
         }
-        public Estabelecimento? GetEstabelecimentoByNome(string nome)
+        public async Task<Estabelecimento>? GetEstabelecimentoByNome(string nome)
         {
-            var estabelecimentoByNome = _dbcntx.estabelecimentos.FirstOrDefault(estNome => estNome.estabNome == nome);
+            var estabelecimentoByNome = await _dbcntx.estabelecimentos.FirstOrDefaultAsync(estNome => estNome.estabNome == nome);
             if (estabelecimentoByNome == null) return null;
             return estabelecimentoByNome;
         }
