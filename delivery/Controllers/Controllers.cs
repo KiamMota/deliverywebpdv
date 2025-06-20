@@ -19,37 +19,37 @@ namespace Api.Delivery.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Post(PedidoRequest obj)
+        public IActionResult Post(PedidoRequest obj)
         {
-            return Ok(await _apps.SalvarPedido(obj));
+            return Ok(_apps.SalvarPedido(obj));
         }
      
         [HttpGet("nome/{PedidoNome}")]
-        public async Task<IActionResult> GetByNome(string PedidoNome)
+        public IActionResult GetByNome(string PedidoNome)
         {
-            return Ok(await _apps.PegarPedidoByNome(PedidoNome));
+            return Ok(_apps.PegarPedidoByNome(PedidoNome));
         }
 
         [HttpGet("all")]
-        public async Task<IActionResult> GetAll()
+        public IActionResult GetAll()
         {
-            return Ok(await _apps.PegarPedidoAll());
+            return Ok(_apps.PegarPedidoAll());
         }
 
         [HttpGet("id/{id}")]
-        public async Task<IActionResult> GetId(int id)
+        public IActionResult GetId(int id)
         {
-            return Ok(await _apps.PegarPedidoById(id));
+            return Ok(_apps.PegarPedidoById(id));
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put([FromRoute] int id, [FromBody] PedidoRequest obj)
+        public IActionResult Put([FromRoute] int id, [FromBody] PedidoRequest obj)
         {
-            return Ok(await _apps.AlterarPedidoById(obj, id));
+            return Ok(_apps.AtualizarPedidoById(obj, id));
         }
         public async Task<IActionResult> DeleteById(int id)
         {
-            return Ok(await _apps.RemoverPedidoById(id));
+            return Ok(_apps.RemoverPedidoById(id));
         }
     }
 
@@ -115,9 +115,9 @@ namespace Api.Delivery.Controllers
         }
 
         [HttpGet("email/{email}")]
-        public async Task<IActionResult> GetUserByEmail(string email)
+        public IActionResult GetUserByEmail(string email)
         {
-            return Ok(await _appS.GetUserByEmail(email));
+            return Ok(_appS.GetUserByEmail(email));
         }
     }
 }

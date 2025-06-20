@@ -1,6 +1,6 @@
 ﻿using Infra.Data.Database;
 using Domain.Core.Repo.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using Domain.Core.Entities;
 
 namespace Infra.Data.Repositories.RepoPedido
 {
@@ -12,27 +12,27 @@ namespace Infra.Data.Repositories.RepoPedido
             _appDbContext = obj;
         }
         
-        public async Task<int> SalvarPedido(Domain.Core.Entities.Pedido pedido)
+        public int SalvarPedido(Domain.Core.Entities.Pedido pedido)
         {
-            await _appDbContext.pedidos.AddAsync(pedido);
-            await _appDbContext.SaveChangesAsync();
+            _appDbContext.pedidos.AddAsync(pedido);
+            _appDbContext.SaveChanges();
             return pedido.pedidoId;
         }
         
-        public async Task<IList<Domain.Core.Entities.Pedido>> SelectPedidoAll()
+        public IList<Domain.Core.Entities.Pedido> SelectPedidoAll()
         {
-            var resultado = await (from pedido in _appDbContext.pedidos select pedido).ToListAsync();
+            var resultado = (from pedido in _appDbContext.pedidos select pedido).ToList();
             return resultado;
         }
 
-        public async Task<Domain.Core.Entities.Pedido>? SelectPedidoById(int id)
+        public Domain.Core.Entities.Pedido? SelectPedidoById(int id)
         {
-            var selectById = await _appDbContext.pedidos.FirstOrDefaultAsync(p => p.pedidoId == id);
+            var selectById = _appDbContext.pedidos.FirstOrDefault(p => p.pedidoId == id);
             return selectById;
         }
-        public async Task<bool> PutPedidoById(Domain.Core.Entities.Pedido Atualizado, int id)
+        public bool PutPedidoById(Domain.Core.Entities.Pedido Atualizado, int id)
         {
-            var putById = await _appDbContext.pedidos.FirstOrDefaultAsync(pid => pid.pedidoId == id);
+            var putById = _appDbContext.pedidos.FirstOrDefault(pid => pid.pedidoId == id);
             
             if (Atualizado == null) return false;
             if (putById == null) return false;
@@ -52,24 +52,21 @@ namespace Infra.Data.Repositories.RepoPedido
             return _appDbContext.SaveChanges() > 0;
         }
 
-        public async Task<bool> DeletePedidoById(int id)
+        public bool DeletePedidoById(int id)
         {
-            var acharPedido = await _appDbContext.pedidos.FirstOrDefaultAsync(pid => pid.pedidoId == id);
+            var acharPedido = _appDbContext.pedidos.FirstOrDefault(pid => pid.pedidoId == id);
             if (acharPedido is null) return false;
             _appDbContext.pedidos.Remove(acharPedido);
             _appDbContext.SaveChanges();
             return true;
         }
 
-        public async Task<Domain.Core.Entities.Pedido>? SelectPedidoByNome(string nome)
+        public Domain.Core.Entities.Pedido? SelectPedidoByNome(string nome)
         {
             /* linq para pedidoNome */
-            var acharNome = await (from pNome in _appDbContext.pedidos where pNome.pedidoNome == nome select pNome).FirstOrDefaultAsync();
+            var acharNome = (from pNome in _appDbContext.pedidos where pNome.pedidoNome == nome select pNome).FirstOrDefault();
             return acharNome;
         }
-
-
-
     }
 
 }

@@ -15,46 +15,46 @@ namespace AppService.Pedido
             _repoPedido = Repo;
             this._validation = _validation;
         }
-        public async Task<int> SalvarPedido(PedidoRequest pedido)
+        public int SalvarPedido(PedidoRequest pedido)
         {
             pedido.pedidoData = DateTime.UtcNow;
             DwpHelper.Normalizar(pedido.pedidoNome);
-            return await _repoPedido.SalvarPedido(PedidoMapper.FromPedidoRequest(pedido));
+            return _repoPedido.SalvarPedido(PedidoMapper.FromPedidoRequest(pedido));
         }
-        public async Task<PedidoResponse?> PegarPedidoById(int id)
+        public PedidoResponse? PegarPedidoById  (int id)
         {
-            var GetPedido = await _repoPedido.SelectPedidoById(id);
+            var GetPedido = _repoPedido.SelectPedidoById(id);
             return PedidoMapper.ToPedidoResponse(GetPedido);
         }
-        public async Task<IList<PedidoResponse>> PegarPedidoAll()
+        public IList<PedidoResponse> PegarPedidoAll()
         {
             /* criando uma lista do tipo pedidoresponse e instanciando ela */
             List<PedidoResponse> pedidoResponses = new();
             /* criando uma ilist do tipo pedido 'data' e atribuind todos os elementos do retorno do
              repository para ela
             */
-            IList<Domain.Core.Entities.Pedido> data = await _repoPedido.SelectPedidoAll();
+            IList<Domain.Core.Entities.Pedido> data = _repoPedido.SelectPedidoAll();
             foreach (var itemData in data)
             {
                pedidoResponses.Add(PedidoMapper.ToPedidoResponse(itemData));
             }
-            return await Task.FromResult<IList<PedidoResponse>>(pedidoResponses);
+            return pedidoResponses;
         }
 
-        public async Task<PedidoResponse>? PegarPedidoByNome(string nome)
+        public PedidoResponse? PegarPedidoByNome(string nome)
         {
-            var pedidoByNome = PedidoMapper.ToPedidoResponse(await _repoPedido.SelectPedidoByNome(nome));
+            var pedidoByNome = PedidoMapper.ToPedidoResponse(_repoPedido.SelectPedidoByNome(nome));
             return pedidoByNome;
         }
 
-        public async Task<bool> AlterarPedidoById(PedidoRequest Atualizado, int id)
+        public bool AtualizarPedidoById   (PedidoRequest Atualizado, int id)
         {
-            var FromId = await _repoPedido.PutPedidoById(PedidoMapper.FromPedidoRequest(Atualizado), id);
+            var FromId = _repoPedido.PutPedidoById(PedidoMapper.FromPedidoRequest(Atualizado), id);
             return FromId;
         }
-        public async Task<bool> RemoverPedidoById(int id)
+        public bool RemoverPedidoById(int id)
         {
-            return await _repoPedido.DeletePedidoById(id);
+            return _repoPedido.DeletePedidoById(id);
         }
 
     }

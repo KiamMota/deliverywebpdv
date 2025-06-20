@@ -10,29 +10,33 @@ namespace AppService.User
         private readonly IRepoUser _repoUser;
         public ProcessUser(IRepoUser repoUser)
             => _repoUser = repoUser;
-        public async Task<bool> ValidationPassword(string Nome, string Password)
+        public bool Password(string Nome, string Password)
         {
-            return await _repoUser.ValidarUsuario(Nome, Password);    
+            return _repoUser.ValidarUsuario(Nome, Password);    
         }
 
-        public async Task<int> SalvarUsuario(UserRequest user)
+        public int SalvarUsuario(UserRequest user)
         {
-            return await _repoUser.SalvarUsuario(UserMapper.FromRequest(user));
+            return _repoUser.SalvarUsuario(UserMapper.FromRequest(user));
         }
 
-        public async Task<UserResponse>? GetUserByName(string name)
+        public UserResponse? GetUserByName(string name)
         {
-            var resu = await _repoUser.GetUserByName(name);
+            var resu = _repoUser.GetUserByName(name);
             if (resu == null) return null;
             return UserMapper.UserToReponse(resu);
         }
 
-        public async Task<UserResponse> GetUserByEmail(string email)
+        public UserResponse GetUserByEmail(string email)
         {
-            var resu = await _repoUser.GetUserByEmail(email);
+            var resu = _repoUser.GetUserByEmail(email);
             return UserMapper.UserToReponse(resu);
 
         }
 
+        public bool ValidationPassword(string Nome, string Password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
