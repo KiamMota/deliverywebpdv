@@ -14,6 +14,7 @@ using Infra.Data.Repositories.RepoEstabelecimento;
 using Infra.Data.Repositories.User;
 using AppService.Interfaces.User;
 using AppService.User;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,11 @@ builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
 builder.Services.AddScoped<IRepoUser, RepoUser>();
 builder.Services.AddScoped<IProcessUser, ProcessUser>();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    ));
 
 
 builder.Services.AddCors(options =>
@@ -47,7 +53,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-app.UseCors("DevPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
