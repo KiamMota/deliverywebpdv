@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250623184157_RemoveEmailRequired")]
-    partial class RemoveEmailRequired
+    [Migration("20250623190943_InitialCore")]
+    partial class InitialCore
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,10 +87,6 @@ namespace Infra.Data.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<string>("Nome")
                         .IsRequired()

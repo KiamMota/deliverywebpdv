@@ -126,6 +126,5 @@ namespace Api.Delivery.Controllers
             if(result == null) return NotFound();
             return Ok(result);
         }
-    
     }
 }

@@ -85,10 +85,6 @@ namespace Infra.Data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("longtext");
