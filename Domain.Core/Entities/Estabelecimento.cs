@@ -6,15 +6,15 @@ namespace Domain.Core.Entities
     public class Estabelecimento : IEstabelecimento
     {
         [Key]
-        public int estabId { get; set; }
+        public int EstabelecimentoId { get; set; }
         [Required]
-        public string estabNome { get; set; }
+        public string EstabelecimentoNome { get; set; }
         [Required]
-        public string estabLocal { get; set; }
+        public string EstabelecimentoLocal { get; set; }
         [Required]
         
-        public IList<string> estabCategorias { get; set; }
+        public IList<string> EstabelecimentoCategorias { get; set; }
         [Required]
-        public string estabDescricao { get; set; }
+        public string EstabelecimentoDescricao { get; set; }
     }
 }

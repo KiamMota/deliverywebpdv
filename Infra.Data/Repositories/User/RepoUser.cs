@@ -1,6 +1,7 @@
 ﻿using Infra.Data.Database;
 using Infra.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace Infra.Data.Repositories.User
 {
@@ -17,9 +18,18 @@ namespace Infra.Data.Repositories.User
 
         public int SalvarUsuario(Domain.Core.Entities.User user)
         {
+            try
+            {
             _dbctx.Users.Add(user);
             _dbctx.SaveChanges();
-            return user.Id;
+                return user.Id;
+            }
+            catch (Exception ex)
+            {
+                var erro = ex.InnerException;
+                Console.WriteLine(ex.InnerException.ToString);
+                throw;
+            }
         }
 
         public Domain.Core.Entities.User? GetUserByName(string name)

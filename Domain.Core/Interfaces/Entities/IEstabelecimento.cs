@@ -3,10 +3,10 @@ namespace Domain.Core.Entities.Interfaces
 {
     public interface IEstabelecimento
     {
-        public int estabId { get; set; }
-        public string estabNome { get; set; }
-        public string estabLocal { get; set; }
-        public IList<string> estabCategorias { get; set; } 
-        public string estabDescricao { get; set; }
+        public int EstabelecimentoId { get; set; }
+        public string EstabelecimentoNome { get; set; }
+        public string EstabelecimentoLocal { get; set; }
+        public IList<string> EstabelecimentoCategorias { get; set; } 
+        public string EstabelecimentoDescricao { get; set; }
     }
 }

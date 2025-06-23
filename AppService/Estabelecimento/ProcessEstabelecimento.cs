@@ -12,37 +12,37 @@ namespace AppService.Estabelecimento
         {
             _repoEstabelecimento = repo;
         }
-        public async Task<int> SalvarEstabelecimento(EstabelecimentoRequest estabelecimento)
+        public int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento)
         {
             if(estabelecimento == null) return -1;
-            var salvar = await _repoEstabelecimento.SaveEstabelecimento(EstabelecimentoMapper.FromEstbRequest(estabelecimento));
+            var salvar = _repoEstabelecimento.SaveEstabelecimento(EstabelecimentoMapper.FromEstbRequest(estabelecimento));
             return salvar;
         }
-        public async Task<bool> DeleteEstabelecimentoById(int id)
+        public bool DeleteEstabelecimentoById(int id)
         {
-            var result = await _repoEstabelecimento.DeleteEstabelecimentoById(id);
+            var result = _repoEstabelecimento.DeleteEstabelecimentoById(id);
             return result;
         }
-        public async Task<bool> DeleteEstabelecimentoByNome(string nome)
+        public bool DeleteEstabelecimentoByNome(string nome)
         {
-            var result = await _repoEstabelecimento.DeleteEstabelecimentoByNome(nome);
+            var result = _repoEstabelecimento.DeleteEstabelecimentoByNome(nome);
             return result;
         }
-        public async Task<EstabelecimentoResponse?> GetEstabelecimentoByNome(string nome)
+        public EstabelecimentoResponse? GetEstabelecimentoByNome(string nome)
         {
-            var resultado = await _repoEstabelecimento.GetEstabelecimentoByNome(nome);
+            var resultado = _repoEstabelecimento.GetEstabelecimentoByNome(nome);
             return EstabelecimentoMapper.ToEstbResponse(resultado);
         }
 
-        public async Task<EstabelecimentoResponse?> GetEstabelecimentoByCategoria(string categorias)
+        public EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias)
         {
-            var resultado = await _repoEstabelecimento.GetEstabelecimentoByCategorias(categorias);
+            var resultado = _repoEstabelecimento.GetEstabelecimentoByCategorias(categorias);
             return EstabelecimentoMapper.ToEstbResponse(resultado);
         }
 
-        public async Task<EstabelecimentoResponse?> GetEstabelecimentoById(int id)
+        public EstabelecimentoResponse? GetEstabelecimentoById(int id)
         {
-            var resultado = await _repoEstabelecimento.GetEstabelecimentoById(id);
+            var resultado = _repoEstabelecimento.GetEstabelecimentoById(id);
             return EstabelecimentoMapper.ToEstbResponse(resultado);
         }
     }

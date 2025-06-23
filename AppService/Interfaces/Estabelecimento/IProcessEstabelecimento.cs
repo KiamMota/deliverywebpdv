@@ -5,12 +5,12 @@ namespace AppService.Interfaces.Estabelecimento
 {
     public interface IProcessEstabelecimento
     {
-        Task<int> SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
-        Task<EstabelecimentoResponse>? GetEstabelecimentoById(int id);
-        Task<EstabelecimentoResponse>? GetEstabelecimentoByNome(string nome);
-        Task<EstabelecimentoResponse>? GetEstabelecimentoByCategoria(string categorias);
-        Task<bool> DeleteEstabelecimentoById(int id);
-        Task<bool> DeleteEstabelecimentoByNome(string nome);
+        int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
+        EstabelecimentoResponse? GetEstabelecimentoById(int id);
+        EstabelecimentoResponse? GetEstabelecimentoByNome(string nome);
+        EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias);
+        bool DeleteEstabelecimentoById(int id);
+        bool DeleteEstabelecimentoByNome(string nome);
 
     }
 }
