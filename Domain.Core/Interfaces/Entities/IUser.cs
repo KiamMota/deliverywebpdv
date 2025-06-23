@@ -6,7 +6,6 @@ namespace Domain.Core.Interfaces.Entities
     {
         int     Id { get; }
         int     Prop { get; set; }
-        string Email { get; set; }
         string  Nome { get; set; }
         string  Password { get; set; }
     }

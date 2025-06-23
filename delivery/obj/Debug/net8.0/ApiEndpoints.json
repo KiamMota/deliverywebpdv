@@ -33,6 +33,27 @@
   },
   {
     "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoPutById",
+    "RelativePath": "api/Estabelecimento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estabelecimentoNovo",
+        "Type": "Contracts.ContractsEstabelecimento.Request.EstabelecimentoRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
     "Method": "DeleteEstabelecimentoById",
     "RelativePath": "api/Estabelecimento/{id}",
     "HttpMethod": "DELETE",
@@ -42,6 +63,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoGetByNome",
+    "RelativePath": "api/Estabelecimento/nome/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -169,22 +211,6 @@
       {
         "Name": "user",
         "Type": "Contracts.User.UserRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.UserController",
-    "Method": "GetUserByEmail",
-    "RelativePath": "api/User/email/{email}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "email",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

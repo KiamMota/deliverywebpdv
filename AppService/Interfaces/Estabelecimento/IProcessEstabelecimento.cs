@@ -8,7 +8,7 @@ namespace AppService.Interfaces.Estabelecimento
         int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
         EstabelecimentoResponse? GetEstabelecimentoById(int id);
         EstabelecimentoResponse? GetEstabelecimentoByNome(string nome);
-        EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias);
+        bool PutEstabelecimentoById(EstabelecimentoRequest estabelecimentoNovo, int id);
         bool DeleteEstabelecimentoById(int id);
         bool DeleteEstabelecimentoByNome(string nome);
 

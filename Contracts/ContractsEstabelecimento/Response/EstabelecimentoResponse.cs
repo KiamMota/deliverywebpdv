@@ -1,5 +1,4 @@
-﻿using Contracts.ContractsEstabelecimento.Base;
-using Domain.Core.Entities.Interfaces;
+﻿using Domain.Core.Entities.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace Contracts.ContractsEstabelecimento.Response

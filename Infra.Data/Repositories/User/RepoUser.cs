@@ -38,11 +38,6 @@ namespace Infra.Data.Repositories.User
             return result;
         }
 
-        public Domain.Core.Entities.User? GetUserByEmail(string Email)
-        {
-            var result = _dbctx.Users.FirstOrDefault(u => u.Email == Email);
-            _dbctx.SaveChangesAsync();
-            return result;
-        }
+
     }
 }

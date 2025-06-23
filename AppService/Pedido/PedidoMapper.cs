@@ -11,10 +11,10 @@ namespace AppService
         {
             return new Domain.Core.Entities.Pedido
             {
-                pedidoData      = pedidoRq.pedidoData,
-                pedidoNome      = pedidoRq.pedidoNome,
-                pedidoValor    = pedidoRq.pedidoValor,
-                pedidoQuantidade = pedidoRq.pedidoQuantidade,
+                pedidoData      =  pedidoRq.pedidoData,
+                pedidoNome      =  pedidoRq.pedidoNome,
+                pedidoValor    =   pedidoRq.pedidoValor.Value,
+                pedidoQuantidade = pedidoRq.pedidoQuantidade.Value,
             };
         }
 

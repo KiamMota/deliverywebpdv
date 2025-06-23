@@ -2,6 +2,7 @@
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.ContractsEstabelecimento.Response;
 using Infra.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace AppService.Estabelecimento
 {
@@ -28,17 +29,17 @@ namespace AppService.Estabelecimento
             var result = _repoEstabelecimento.DeleteEstabelecimentoByNome(nome);
             return result;
         }
-        public EstabelecimentoResponse? GetEstabelecimentoByNome(string nome)
+        public EstabelecimentoResponse?     GetEstabelecimentoByNome(string nome)
         {
             var resultado = _repoEstabelecimento.GetEstabelecimentoByNome(nome);
             return EstabelecimentoMapper.ToEstbResponse(resultado);
         }
 
-        public EstabelecimentoResponse? GetEstabelecimentoByCategoria(string categorias)
+        public bool PutEstabelecimentoById(EstabelecimentoRequest estabelecimentoNovo, int id)
         {
-            var resultado = _repoEstabelecimento.GetEstabelecimentoByCategorias(categorias);
-            return EstabelecimentoMapper.ToEstbResponse(resultado);
-        }
+            var result = _repoEstabelecimento.PutEstabelecimentoById(EstabelecimentoMapper.FromEstbRequest(estabelecimentoNovo), id);
+            return result;
+        }   
 
         public EstabelecimentoResponse? GetEstabelecimentoById(int id)
         {

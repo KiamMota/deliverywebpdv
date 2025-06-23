@@ -27,12 +27,6 @@ namespace AppService.User
             return UserMapper.UserToReponse(resu);
         }
 
-        public UserResponse GetUserByEmail(string email)
-        {
-            var resu = _repoUser.GetUserByEmail(email);
-            return UserMapper.UserToReponse(resu);
-
-        }
 
         public bool ValidationPassword(string Nome, string Password)
         {

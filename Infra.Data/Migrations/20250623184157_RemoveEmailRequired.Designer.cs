@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250623165754_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250623184157_RemoveEmailRequired")]
+    partial class RemoveEmailRequired
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,29 +27,29 @@ namespace Infra.Data.Migrations
 
             modelBuilder.Entity("Domain.Core.Entities.Estabelecimento", b =>
                 {
-                    b.Property<int>("estabId")
+                    b.Property<int>("EstabelecimentoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("estabId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("EstabelecimentoId"));
 
-                    b.Property<string>("estabCategorias")
+                    b.Property<string>("EstabelecimentoCategorias")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("estabDescricao")
+                    b.Property<string>("EstabelecimentoDescricao")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("estabLocal")
+                    b.Property<string>("EstabelecimentoLocal")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("estabNome")
+                    b.Property<string>("EstabelecimentoNome")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("estabId");
+                    b.HasKey("EstabelecimentoId");
 
                     b.ToTable("estabelecimentos");
                 });

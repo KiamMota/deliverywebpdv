@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infra.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialCore : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,20 +19,20 @@ namespace Infra.Data.Migrations
                 name: "estabelecimentos",
                 columns: table => new
                 {
-                    estabId = table.Column<int>(type: "int", nullable: false)
+                    EstabelecimentoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    estabNome = table.Column<string>(type: "longtext", nullable: false)
+                    EstabelecimentoNome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    estabLocal = table.Column<string>(type: "longtext", nullable: false)
+                    EstabelecimentoLocal = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    estabCategorias = table.Column<string>(type: "longtext", nullable: false)
+                    EstabelecimentoCategorias = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    estabDescricao = table.Column<string>(type: "longtext", nullable: false)
+                    EstabelecimentoDescricao = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_estabelecimentos", x => x.estabId);
+                    table.PrimaryKey("PK_estabelecimentos", x => x.EstabelecimentoId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -62,8 +62,6 @@ namespace Infra.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Prop = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")

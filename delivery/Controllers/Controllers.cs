@@ -21,6 +21,7 @@ namespace Api.Delivery.Controllers
         [HttpPost]
         public IActionResult Post(PedidoRequest obj)
         {
+            if(!ModelState.IsValid) return BadRequest(ModelState);
             return Ok(_apps.SalvarPedido(obj));
         }
      
@@ -76,6 +77,18 @@ namespace Api.Delivery.Controllers
         {
             return Ok(_processEstabelecimento.GetEstabelecimentoById(id));
         }
+        [HttpGet]
+        [Route("nome/{id}")]
+        public IActionResult EstabelecimentoGetByNome(string nome)
+        {
+            return Ok(_processEstabelecimento.GetEstabelecimentoByNome(nome));
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult EstabelecimentoPutById([FromBody] EstabelecimentoRequest estabelecimentoNovo, [FromRoute] int id)
+        {
+            return Ok(_processEstabelecimento.PutEstabelecimentoById(estabelecimentoNovo, id));
+        }
 
         [HttpDelete]
         [Route("{id}")]
@@ -113,11 +126,6 @@ namespace Api.Delivery.Controllers
             if(result == null) return NotFound();
             return Ok(result);
         }
-
-        [HttpGet("email/{email}")]
-        public IActionResult GetUserByEmail(string email)
-        {
-            return Ok(_appS.GetUserByEmail(email));
-        }
+    
     }
 }
