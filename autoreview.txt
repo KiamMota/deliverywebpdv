@@ -1,0 +1,20 @@
+
+mini-code review
+
+checar:
+	se cada entidade tem método GPPD
+	analisar lacunas de conhecimento (minhas)
+	se cada camada tem responsabilidades respectivas
+	adicionar tratamentos de exceções robustos, verificações em cada camada
+	
+auto-review:
+DDD:	Design Dirigido a Domínio
+	DDD não é padrão de arquitetura, mas sim uma abordagem
+	de software que visa ser orientado a um problema.
+	
+	Ele não apresenta estrutura rígida de separação de diretórios.
+	
+	em DDD, um domínio é o foco. O módulo de domínio(Domain) não deve ser dependente
+	de frameworks, ou dependêcnias externas. o Domínio deve ter lógica de negócio
+	pura. Entidades representando os sub-domínios, e fazendo validações mínimas puras.
+	
