@@ -19,4 +19,47 @@ DDD:	Design Dirigido a Domínio
 	pura. Entidades representando os sub-domínios, e fazendo validações mínimas puras.
 	
 design patterns 
+	padrões de design gof são padrões usados em grandes
+	arquiteturas para aumentar flexibilidade, expansibilidade e clareza no código
+	eles foram criados para POO, em arquiteturas mais complexas
+	
+	padrões criacionais:
+		factory >
+			é um modelo usado para criar objetos via retorno.
+			pode ser um método (factory method) ou uma classe (factory class)
+			o factory padrão é abstrato, que delega a criação a uma classe concreta
+			ou seja:
+				cliente -> factory(abstract) -> delegação -> classe concreta
+			esse modelo serve pra evitar acoplamento, fazendo com que o sistema
+			dependa de um método centralizado de criação, e não instância direta
+			nas classes, fazendo um código extremamente confuso
+			
+			ABSTRACT FACTORY:
+			
+			abstract factory segue o mesmo raciocínio, contudo, o abstract factory
+			segue um padrão criacional sólido, sem o cliente depender do conhecimento
+			classes concretas
+			
+				cliente -> factory(abstract) -> delegação -> classes concretas
+			as desvantagens desse sistema é que ele é mais difícil quando você
+			precisa de 
+	
+		builder >
+			objetivo:	separar
+			o que: 		a construção
+			do que: 	de um objeto complexo
+			de quem:	da sua representação
+			por que:	de modo que o processo de construção possa criar
+						diferentes representações
+						
+		esse modelo visa criar objetos complexos, como objetos muito ou ligeiramente
+		diferentes. que quebra o limite que o abstract factory im põe
+	
+		prototype >
+			o protótipo é um método criacional usado para evitar verbosidade e 
+			clonar um objeto já existente.
+			imagine que você tem um sistema de janela já pronto que você chama de 
+			"main_window", mas você quer outra janela, com todas as propriedades
+			você faz:
+			window_t window_other = main_window.clone();
 	
