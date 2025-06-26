@@ -4,7 +4,7 @@ using Domain.Core.Entities;
 
 namespace AppService
 {
-    public class PedidoMapper
+    public sealed class PedidoMapper
     {
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
         public static Domain.Core.Entities.Pedido FromPedidoRequest(PedidoRequest pedidoRq)
