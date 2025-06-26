@@ -18,3 +18,5 @@ DDD:	Design Dirigido a Domínio
 	de frameworks, ou dependêcnias externas. o Domínio deve ter lógica de negócio
 	pura. Entidades representando os sub-domínios, e fazendo validações mínimas puras.
 	
+design patterns 
+	

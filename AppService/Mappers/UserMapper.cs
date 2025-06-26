@@ -1,16 +1,16 @@
 ﻿using Contracts.User;
 
-namespace AppService.Pedido
+namespace AppService.Mappers
 {
-    public class UserMapper
+    public sealed class UserMapper
     {
         public static Domain.Core.Entities.User FromRequest(UserRequest request)
         {
-            return new Domain.Core.Entities.User 
+            return new Domain.Core.Entities.User
             {
                 Nome = request.Nome,
                 Password = request.Senha,
-                Prop     = request.Prop,
+                Prop = request.Prop,
             };
         }
 
@@ -18,10 +18,10 @@ namespace AppService.Pedido
         {
             return new UserResponse
             {
-                Prop  = User.Prop,
+                Prop = User.Prop,
                 Senha = User.Password,
-                Nome  = User.Nome,
-                Id    = User.Id,
+                Nome = User.Nome,
+                Id = User.Id,
             };
         }
 

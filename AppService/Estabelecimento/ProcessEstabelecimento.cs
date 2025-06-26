@@ -1,4 +1,5 @@
 ﻿using AppService.Interfaces.Estabelecimento;
+using AppService.Mappers;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.ContractsEstabelecimento.Response;
 using Infra.Data.Repositories.Interfaces;

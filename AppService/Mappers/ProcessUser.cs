@@ -1,18 +1,17 @@
 ﻿using AppService.Interfaces.User;
-using AppService.Pedido;
 using Contracts.User;
 using Infra.Data.Repositories.Interfaces;
 
-namespace AppService.User
+namespace AppService.Mappers
 {
-    public class ProcessUser : IProcessUser
+    public sealed class ProcessUser : IProcessUser
     {
         private readonly IRepoUser _repoUser;
         public ProcessUser(IRepoUser repoUser)
             => _repoUser = repoUser;
         public bool Password(string Nome, string Password)
         {
-            return _repoUser.ValidarUsuario(Nome, Password);    
+            return _repoUser.ValidarUsuario(Nome, Password);
         }
 
         public int SalvarUsuario(UserRequest user)

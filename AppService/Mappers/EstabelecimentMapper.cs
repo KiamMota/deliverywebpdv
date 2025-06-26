@@ -1,9 +1,9 @@
 ﻿using Contracts.ContractsEstabelecimento.Request;
 using Contracts.ContractsEstabelecimento.Response;
 
-namespace AppService.Estabelecimento
+namespace AppService.Mappers
 {
-    public class EstabelecimentoMapper 
+    public sealed class EstabelecimentoMapper
     {
         public static EstabelecimentoResponse? ToEstbResponse(Domain.Core.Entities.Estabelecimento estabelecimento)
         {
@@ -32,26 +32,27 @@ namespace AppService.Estabelecimento
 
         public static Domain.Core.Entities.Estabelecimento? FromEstbResponse(EstabelecimentoResponse response)
         {
-            if(response == null) throw new ArgumentNullException(nameof(response));
+            if (response == null) throw new ArgumentNullException(nameof(response));
             return new Domain.Core.Entities.Estabelecimento
             {
                 EstabelecimentoId = response.id,
-                EstabelecimentoNome= response.nome,
-                EstabelecimentoCategorias= response.categorias,
-                EstabelecimentoDescricao= response.descricao,
-                EstabelecimentoLocal= response.local
+                EstabelecimentoNome = response.nome,
+                EstabelecimentoCategorias = response.categorias,
+                EstabelecimentoDescricao = response.descricao,
+                EstabelecimentoLocal = response.local
             };
         }
 
         public static Domain.Core.Entities.Estabelecimento? FromEstbRequest(EstabelecimentoRequest request)
         {
-            if(request == null) throw new ArgumentNullException();
-            return new Domain.Core.Entities.Estabelecimento {
+            if (request == null) throw new ArgumentNullException();
+            return new Domain.Core.Entities.Estabelecimento
+            {
 
-                EstabelecimentoNome= request.nome,
-                EstabelecimentoCategorias= request.categorias,
-                EstabelecimentoDescricao= request.descricao,
-                EstabelecimentoLocal= request.local
+                EstabelecimentoNome = request.nome,
+                EstabelecimentoCategorias = request.categorias,
+                EstabelecimentoDescricao = request.descricao,
+                EstabelecimentoLocal = request.local
             };
         }
     }
