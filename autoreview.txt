@@ -18,12 +18,25 @@ DDD:	Design Dirigido a Domínio
 	de frameworks, ou dependêcnias externas. o Domínio deve ter lógica de negócio
 	pura. Entidades representando os sub-domínios, e fazendo validações mínimas puras.
 	
+CLEAN ARCH:
+	caracteristicas:
+		desacoplamento extremo -> tanto de código, quanto de sistemas externos à
+		linguagens.
+		a Clean Archtecture diz que o sistema não depende de acoplamento com 
+		frameworks, ou com qualquer coisa além da linguagem, como extensões
+		de bancos de dados, infraestrutura como reposítorios ou qualquer coisa.
+		
+		
+		
+	
+	
+	
 design patterns 
 	padrões de design gof são padrões usados em grandes
 	arquiteturas para aumentar flexibilidade, expansibilidade e clareza no código
 	eles foram criados para POO, em arquiteturas mais complexas
 	
-	padrões criacionais:
+	PADRÕES CRIACIONAIS:
 		factory >
 			é um modelo usado para criar objetos via retorno.
 			pode ser um método (factory method) ou uma classe (factory class)
@@ -42,7 +55,7 @@ design patterns
 			
 				cliente -> factory(abstract) -> delegação -> classes concretas
 			as desvantagens desse sistema é que ele é mais difícil quando você
-			precisa de 
+			precisa de algo mais simples.
 	
 		builder >
 			objetivo:	separar
@@ -62,4 +75,19 @@ design patterns
 			"main_window", mas você quer outra janela, com todas as propriedades
 			você faz:
 			window_t window_other = main_window.clone();
+		singleton >
+			o singleton é um padrão criacional que visa fazer com que um objeto 
+			tenha apenas uma instância no código inteiro, fazendo essa instância
+			ser ponto de acesso global a um recurso.
+			
+			na classe, você cria uma instñacia dela mesma de forma estática e privada
+			e coloca o construtor como privado também, assim, no código não é possivel
+			fazer com que ele seja instânciado
+			
+			e, na classe, você apenas expõe um getter pra instância
+			mesmo que você faça vários objetos do singleton, ele apontará para o mesmo
+			objeto.
+			
+	PADRÕES ARQUITETURAIS:
 	
+		

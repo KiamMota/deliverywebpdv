@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrossCutting.AutoMapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1942479aa13a8cd6f61e417255d5324aca513860")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+141c3d90d4281a304be8f60920857394358c3262")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrossCutting.AutoMapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrossCutting.AutoMapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

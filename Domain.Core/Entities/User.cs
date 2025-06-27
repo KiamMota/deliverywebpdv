@@ -1,5 +1,4 @@
-﻿using Domain.Core.Interfaces.Entities;
-
+﻿using Domain.Core.Entities.Interfaces.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities

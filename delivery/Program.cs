@@ -12,9 +12,9 @@ using AppService.Estabelecimento;
 using Infra.Data.Repositories.Interfaces;
 using Infra.Data.Repositories.RepoEstabelecimento;
 using Infra.Data.Repositories.User;
-using AppService.Interfaces.User;
 using Microsoft.Extensions.Configuration;
 using AppService.Mappers;
+using AppService.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

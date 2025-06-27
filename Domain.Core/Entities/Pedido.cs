@@ -1,4 +1,4 @@
-﻿using Domain.Core.Pedido.Interfaces;
+﻿using Domain.Core.Entities.Interfaces;
 
 namespace Domain.Core.Entities
 {

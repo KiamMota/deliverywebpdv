@@ -1,6 +1,6 @@
-﻿using AppService.Interfaces.Estabelecimento;
+﻿using AppService.Interfaces;
+using AppService.Interfaces.Estabelecimento;
 using AppService.Interfaces.Pedido;
-using AppService.Interfaces.User;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
 using Contracts.User;
