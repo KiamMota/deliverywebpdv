@@ -1,26 +1,18 @@
-using AppService.Interfaces.Pedido;
 using Domain.Core.Repo.Interfaces;
-using Infra.Data.Database;
-using Infra.Data.Repositories.RepoPedido;
 
 using Microsoft.EntityFrameworkCore;
-
-using AppService.Pedido;
-using AppService;
-using AppService.Interfaces.Estabelecimento;
-using AppService.Estabelecimento;
 using Infra.Data.Repositories.Interfaces;
-using Infra.Data.Repositories.RepoEstabelecimento;
-using Infra.Data.Repositories.User;
 using Microsoft.Extensions.Configuration;
-using AppService.Mappers;
-using AppService.Interfaces;
+using AppService.UseCases.Interfaces;
+using AppService.UseCases;
+using Infra.Data;
+using Infra.Data.Repositories.Base;
+using Infra.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();  
 builder.Services.AddScoped<IProcessPedido, ProcessPedido>();
-builder.Services.AddScoped<IRepoPedido, RepoPedido>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseMySql(
@@ -30,9 +22,8 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 );
 
 builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
-builder.Services.AddScoped<IRepoEstabelecimento, RepoEstabelecimento>();
 builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
-builder.Services.AddScoped<IRepoUser, RepoUser>();
+builder.Services.AddScoped(typeof(ICrudBase<>), typeof(CrudBase<>));
 builder.Services.AddScoped<IProcessUser, ProcessUser>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>

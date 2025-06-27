@@ -1,35 +1,39 @@
 ﻿using Domain.Core.Entities;
 using Infra.Data.Repositories.Base;
-using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace Infra.Data.Repositories
 {
-    public class RepoEstabelecimento : ICrudBase<RepoEstabelecimento>
+    public class RepoEstabelecimento 
     {
-        public int Create(RepoEstabelecimento entity)
+        private readonly ICrudBase<Estabelecimento> _crudEstabelecimento;
+        public RepoEstabelecimento(ICrudBase<Estabelecimento> _userCrud)
         {
-            
+            this._crudEstabelecimento = _userCrud;
         }
 
+        public bool Save(Estabelecimento estabelecimento)
+        {
+            return _crudEstabelecimento.Create(estabelecimento);
+        }
+
+        public IList<Estabelecimento> GetAll()
+        {
+            return _crudEstabelecimento.ReadAll();
+        }
+        public Estabelecimento GetById(int id)
+        {
+            return _crudEstabelecimento.ReadById(id);
+        }
+        
         public bool DeleteById(int id)
         {
-            throw new NotImplementedException();
+            return _crudEstabelecimento.DeleteById(id);
         }
 
-        public IList<RepoEstabelecimento> ReadAll()
+        public bool UpdateById(Estabelecimento novo, int id)
         {
-            throw new NotImplementedException();
+            return _crudEstabelecimento.UpdateById(novo, id);
         }
-
-        public RepoEstabelecimento ReadById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int UpdateById(RepoEstabelecimento newEntity, int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

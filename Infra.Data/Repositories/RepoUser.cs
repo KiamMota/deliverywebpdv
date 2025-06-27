@@ -1,43 +1,42 @@
-﻿using Infra.Data.Database;
+﻿using Domain.Core.Entities;
+using Infra.Data.Repositories.Base;
 using Infra.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
-namespace Infra.Data.Repositories.User
+namespace Infra.Data.Repositories
 {
-    public class RepoUser : IRepoUser
+    public class RepoUser
     {
-        private readonly AppDbContext _dbctx;
-        public RepoUser(AppDbContext DbContext) {_dbctx = DbContext;}
-        public bool ValidarUsuario(string Nome, string Password)
+        private readonly ICrudBase<User> _crudUser;
+        public RepoUser(ICrudBase<User> _userCrud)
         {
-            var validar = _dbctx.Users.FirstOrDefaultAsync(u => u.Password == Password && u.Nome == Nome);
-            _dbctx.SaveChangesAsync();
-            return validar != null;
+            this._crudUser = _userCrud;
         }
 
-        public int SalvarUsuario(Domain.Core.Entities.User user)
+        public bool Save(User user)
         {
-            try
-            {
-            _dbctx.Users.Add(user);
-            _dbctx.SaveChanges();
-                return user.Id;
-            }
-            catch (Exception ex)
-            {
-                var erro = ex.InnerException;
-                Console.WriteLine(ex.InnerException.ToString);
-                throw;
-            }
+            return _crudUser.Create(user);
         }
 
-        public Domain.Core.Entities.User? GetUserByName(string name)
+        public IList<User> GetAll()
         {
-            var result = _dbctx.Users.FirstOrDefault(u => u.Nome == name);
-            return result;
+            return _crudUser.ReadAll();
+        }
+        public User GetById(int id)
+        {
+            return _crudUser.ReadById(id);
         }
 
+        public bool DeleteById(int id)
+        {
+            return _crudUser.DeleteById(id);
+        }
+
+        public bool UpdateById(User novo, int id)
+        {
+            return _crudUser.UpdateById(novo, id);
+        }
 
     }
 }
