@@ -5,7 +5,7 @@ using Contracts.ContractsEstabelecimento.Response;
 using Infra.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
-namespace AppService.Estabelecimento
+namespace AppService.UseCases
 {
     public class ProcessEstabelecimento : IProcessEstabelecimento
     {
@@ -16,9 +16,10 @@ namespace AppService.Estabelecimento
         }
         public int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento)
         {
-            if(estabelecimento == null) return -1;
+            if (estabelecimento == null) return -1;
             var salvar = _repoEstabelecimento.SaveEstabelecimento(EstabelecimentoMapper.FromEstbRequest(estabelecimento));
-            return salvar;
+            if (salvar is null) return -1;
+            return 1;
         }
         public bool DeleteEstabelecimentoById(int id)
         {
@@ -30,7 +31,7 @@ namespace AppService.Estabelecimento
             var result = _repoEstabelecimento.DeleteEstabelecimentoByNome(nome);
             return result;
         }
-        public EstabelecimentoResponse?     GetEstabelecimentoByNome(string nome)
+        public EstabelecimentoResponse? GetEstabelecimentoByNome(string nome)
         {
             var resultado = _repoEstabelecimento.GetEstabelecimentoByNome(nome);
             return EstabelecimentoMapper.ToEstbResponse(resultado);
@@ -40,7 +41,7 @@ namespace AppService.Estabelecimento
         {
             var result = _repoEstabelecimento.PutEstabelecimentoById(EstabelecimentoMapper.FromEstbRequest(estabelecimentoNovo), id);
             return result;
-        }   
+        }
 
         public EstabelecimentoResponse? GetEstabelecimentoById(int id)
         {

@@ -1,6 +1,9 @@
-﻿namespace Domain.Core.Entities.Interfaces.Entities
+﻿using Domain.Core.Entities.Base;
+
+
+namespace Domain.Core.Entities.Interfaces
 {
-    public interface IEstabelecimento
+    public interface IEstabelecimento : IEntity
     {
         public int EstabelecimentoId { get; set; }
         public string EstabelecimentoNome { get; set; }

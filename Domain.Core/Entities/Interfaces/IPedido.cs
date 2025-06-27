@@ -1,6 +1,8 @@
-﻿namespace Domain.Core.Entities.Interfaces.Entities
+﻿using Domain.Core.Entities.Base;
+
+namespace Domain.Core.Entities.Interfaces
 {
-    public interface IPedido
+    public interface IPedido : IEntity
     {
         DateTime pedidoData { get; set; }
         int pedidoId { get; set; }
