@@ -24,40 +24,40 @@ namespace Infra.Data.Migrations
 
             modelBuilder.Entity("Domain.Core.Entities.Estabelecimento", b =>
                 {
-                    b.Property<int>("EstabelecimentoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("EstabelecimentoId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("EstabelecimentoCategorias")
+                    b.Property<string>("Categorias")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("EstabelecimentoDescricao")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("EstabelecimentoLocal")
+                    b.Property<string>("Local")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("EstabelecimentoNome")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("EstabelecimentoId");
+                    b.HasKey("Id");
 
                     b.ToTable("estabelecimentos");
                 });
 
             modelBuilder.Entity("Domain.Core.Entities.Pedido", b =>
                 {
-                    b.Property<int>("pedidoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("pedidoId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("pedidoData")
                         .HasColumnType("datetime(6)");
@@ -72,7 +72,7 @@ namespace Infra.Data.Migrations
                     b.Property<decimal>("pedidoValor")
                         .HasColumnType("decimal(65,30)");
 
-                    b.HasKey("pedidoId");
+                    b.HasKey("Id");
 
                     b.ToTable("pedidos");
                 });

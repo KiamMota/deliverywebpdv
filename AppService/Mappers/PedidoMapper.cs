@@ -2,49 +2,49 @@
 using Contracts.PedidoContracts.Response;
 using Domain.Core.Entities;
 
-namespace AppService
+namespace AppService.Mappers
 {
     public sealed class PedidoMapper
     {
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
-        public static Domain.Core.Entities.Pedido FromPedidoRequest(PedidoRequest pedidoRq)
+        public static Pedido FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            return new Domain.Core.Entities.Pedido
+            return new Pedido
             {
-                pedidoData      =  pedidoRq.pedidoData,
-                pedidoNome      =  pedidoRq.pedidoNome,
-                pedidoValor    =   pedidoRq.pedidoValor.Value,
+                pedidoData = pedidoRq.pedidoData,
+                pedidoNome = pedidoRq.pedidoNome,
+                pedidoValor = pedidoRq.pedidoValor.Value,
                 pedidoQuantidade = pedidoRq.pedidoQuantidade.Value,
             };
         }
 
         /* dto -> domínio (de response para domínio real) */
-        public static Domain.Core.Entities.Pedido FromPedidoResponse(PedidoResponse pedidoRs)
+        public static Pedido FromPedidoResponse(PedidoResponse pedidoRs)
         {
-            return new Domain.Core.Entities.Pedido
+            return new Pedido
             {
-                pedidoId    = pedidoRs.id,
-                pedidoData  = pedidoRs.data,
-                pedidoNome  = pedidoRs.nome,
+                pedidoId = pedidoRs.id,
+                pedidoData = pedidoRs.data,
+                pedidoNome = pedidoRs.nome,
                 pedidoValor = pedidoRs.valor,
                 pedidoQuantidade = pedidoRs.quantidade
             };
         }
 
         /* domínio -> dto; de pedido para pedidorequest */
-        public static PedidoRequest? ToPedidoRequest(Domain.Core.Entities.Pedido pedido)
+        public static PedidoRequest? ToPedidoRequest(Pedido pedido)
         {
             if (pedido == null) return null;
             return new PedidoRequest
             {
-                pedidoNome       = pedido.pedidoNome,
-                pedidoValor      = pedido.pedidoValor,
+                pedidoNome = pedido.pedidoNome,
+                pedidoValor = pedido.pedidoValor,
                 pedidoQuantidade = pedido.pedidoQuantidade
             };
         }
 
         /* domínio -> dto; de pedido para pedidoResposne */
-        public static PedidoResponse? ToPedidoResponse(Domain.Core.Entities.Pedido pedido)
+        public static PedidoResponse? ToPedidoResponse(Pedido pedido)
         {
             if (pedido == null)
                 return null;

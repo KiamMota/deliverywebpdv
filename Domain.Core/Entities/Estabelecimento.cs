@@ -1,20 +1,20 @@
-﻿using Domain.Core.Entities.Interfaces.Entities;
+﻿using Domain.Core.Entities.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities
 {
-    public class Estabelecimento : IEstabelecimento
+    public class Estabelecimento : IEntityBase
     {
         [Key]
-        public int EstabelecimentoId { get; set; }
+        public long Id { get; set; }
         [Required]
-        public string EstabelecimentoNome { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string EstabelecimentoLocal { get; set; }
+        public string Local { get; set; }
         [Required]
         
-        public IList<string> EstabelecimentoCategorias { get; set; }
+        public IList<string> Categorias { get; set; }
         [Required]
-        public string EstabelecimentoDescricao { get; set; }
+        public string Description { get; set; }
     }
 }

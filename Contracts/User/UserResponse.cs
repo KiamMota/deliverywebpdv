@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Domain.Core.Entities.Interfaces;
 namespace Contracts.User
 {
     public class UserResponse
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
         public int Prop { get; set; }
-        public string Nome { get; set; }
-        public string Senha { get; set; }
+        public string Password { get; set; }
 
 
 

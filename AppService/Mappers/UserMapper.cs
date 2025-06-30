@@ -8,7 +8,7 @@ namespace AppService.Mappers
         {
             return new Domain.Core.Entities.User
             {
-                Nome = request.Nome,
+                Name = request.Nome,
                 Password = request.Senha,
                 Prop = request.Prop,
             };
@@ -19,8 +19,8 @@ namespace AppService.Mappers
             return new UserResponse
             {
                 Prop = User.Prop,
-                Senha = User.Password,
-                Nome = User.Nome,
+                Password = User.Password,
+                Name = User.Name,
                 Id = User.Id,
             };
         }

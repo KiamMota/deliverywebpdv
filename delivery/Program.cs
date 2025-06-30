@@ -1,13 +1,9 @@
-using Domain.Core.Repo.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
-using Infra.Data.Repositories.Interfaces;
-using Microsoft.Extensions.Configuration;
 using AppService.UseCases.Interfaces;
 using AppService.UseCases;
-using Infra.Data;
 using Infra.Data.Repositories.Base;
-using Infra.Data.Repositories;
+using Infra.Data.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
         )
 );
 
-builder.Services.AddScoped<IPedidoValidation, PedidoValidation>();
+builder.Services.AddScoped<IPedidoHelper, PedidoHelper>();
 builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
 builder.Services.AddScoped(typeof(ICrudBase<>), typeof(CrudBase<>));
 builder.Services.AddScoped<IProcessUser, ProcessUser>();

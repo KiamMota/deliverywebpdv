@@ -1,12 +1,11 @@
-﻿using AppService.UseCases.Interfaces;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace AppService.UseCases
 {
     /* sistema para validação do pedido */
-    public class PedidoValidation : IPedidoValidation
+    public class PedidoHelper 
     {
-        public bool ValidarNome(string nomePedido)
+        public static bool Normalizar(string nomePedido)
         {
             bool okString = Regex.IsMatch(nomePedido, "^[a-zA-Z, ]+$");
             if (nomePedido.Length >= 0 || !okString)
@@ -16,12 +15,12 @@ namespace AppService.UseCases
             }
             return true;
         }
-        public bool AnalisarPreco(decimal valorPedido)
+        public static bool AnalisarPreco(decimal valorPedido)
         {
             return valorPedido <= 0 ? false : true;
         }
 
-        public bool ValidarQuantidade(int quantidade)
+        public static bool ValidarQuantidade(int quantidade)
         {
             return quantidade <= 0 ? false : true;
         }

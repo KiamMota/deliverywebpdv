@@ -11,10 +11,10 @@ namespace AppService.Mappers
             return new EstabelecimentoResponse
             {
                 id = estabelecimento.EstabelecimentoId,
-                nome = estabelecimento.EstabelecimentoNome,
-                categorias = estabelecimento.EstabelecimentoCategorias,
-                descricao = estabelecimento.EstabelecimentoDescricao,
-                local = estabelecimento.EstabelecimentoLocal
+                nome = estabelecimento.Name,
+                categorias = estabelecimento.Categorias,
+                descricao = estabelecimento.Description,
+                local = estabelecimento.Local
             };
         }
 
@@ -23,10 +23,10 @@ namespace AppService.Mappers
             if (request == null) throw new ArgumentNullException(nameof(request));
             return new EstabelecimentoRequest
             {
-                nome = request.EstabelecimentoNome,
-                categorias = request.EstabelecimentoCategorias,
-                descricao = request.EstabelecimentoDescricao,
-                local = request.EstabelecimentoLocal
+                nome = request.Name,
+                categorias = request.Categorias,
+                descricao = request.Description,
+                local = request.Local
             };
         }
 
@@ -36,10 +36,10 @@ namespace AppService.Mappers
             return new Domain.Core.Entities.Estabelecimento
             {
                 EstabelecimentoId = response.id,
-                EstabelecimentoNome = response.nome,
-                EstabelecimentoCategorias = response.categorias,
-                EstabelecimentoDescricao = response.descricao,
-                EstabelecimentoLocal = response.local
+                Name = response.nome,
+                Categorias = response.categorias,
+                Description = response.descricao,
+                Local = response.local
             };
         }
 
@@ -49,10 +49,10 @@ namespace AppService.Mappers
             return new Domain.Core.Entities.Estabelecimento
             {
 
-                EstabelecimentoNome = request.nome,
-                EstabelecimentoCategorias = request.categorias,
-                EstabelecimentoDescricao = request.descricao,
-                EstabelecimentoLocal = request.local
+                Name = request.nome,
+                Categorias = request.categorias,
+                Description = request.descricao,
+                Local = request.local
             };
         }
     }

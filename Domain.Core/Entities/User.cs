@@ -1,13 +1,13 @@
-﻿using Domain.Core.Entities.Interfaces.Entities;
+﻿using Domain.Core.Entities.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities
 {
-    public class User : IUser
+    public class User : IEntityBase
     {
-        public int Id       { get; set; }
-        public int Prop     { get; set; }
-        public string Nome  { get; set; } = "";
+        public long Id          { get; set; }
+        public string Name      { get; set; } = "";
+        public int Prop         { get; set; }
         public string Password  { get; set; } = "";
     }
 }

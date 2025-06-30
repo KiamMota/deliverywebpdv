@@ -1,6 +1,4 @@
-﻿using AppService.Interfaces;
-using AppService.Interfaces.Estabelecimento;
-using AppService.Interfaces.Pedido;
+﻿using AppService.UseCases.Interfaces;
 using Contracts.ContractsEstabelecimento.Request;
 using Contracts.PedidoContracts.Request;
 using Contracts.User;
@@ -12,7 +10,7 @@ namespace Api.Delivery.Controllers
     [ApiController]
     public class PedidosController : ControllerBase
     {
-        private readonly IProcessPedido _apps;
+        private readonly AppService.UseCases.Interfaces.IProcessPedido _apps;
         public PedidosController(IProcessPedido apsP)
         {
             _apps = apsP;

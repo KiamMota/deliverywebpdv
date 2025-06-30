@@ -3,14 +3,11 @@ using Pomelo.EntityFrameworkCore.MySql;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Infra.Data.Database
+namespace Infra.Data.Repositories.Base
 {
     public class DbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
-        /*
-         isso aqui é uma factory, ele é necessário para o migrations do ef.
-
-         */
+        /* isso aqui é uma factory, ele é necessário para o migrations do ef. */
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
@@ -35,12 +32,12 @@ namespace Infra.Data.Database
             /* PEDIDO */
             modelBuilder.Entity<Pedido>
             (
-                PedidoFields => PedidoFields.HasKey(p => p.pedidoId)
+                PedidoFields => PedidoFields.HasKey(p => p.Id)
             );
             /* ESTABELECIMENTO */
             modelBuilder.Entity<Estabelecimento>
             (
-                EstabelecimentoFields => EstabelecimentoFields.HasKey(e => e.EstabelecimentoId)
+                EstabelecimentoFields => EstabelecimentoFields.HasKey(e => e.Id)
             );
         }
         #endregion

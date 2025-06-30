@@ -2,11 +2,11 @@
 
 namespace Domain.Core.Entities
 {
-    public class Pedido : IPedido
+    public class Pedido : IEntityBase
     {
+        public long Id { get; set; }
+        public string Name { get; set; } = "";
         public DateTime pedidoData { get; set; }
-        public int pedidoId { get; set; }
-        public string pedidoNome { get; set; } = "";
         public decimal pedidoValor { get; set; }
         public int pedidoQuantidade { get; set; }
     }

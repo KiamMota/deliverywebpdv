@@ -5,7 +5,7 @@ namespace AppService.UseCases.Interfaces
 {
     public interface IProcessEstabelecimento
     {
-        int SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
+        long? SalvarEstabelecimento(EstabelecimentoRequest estabelecimento);
         EstabelecimentoResponse? GetEstabelecimentoById(int id);
         EstabelecimentoResponse? GetEstabelecimentoByNome(string nome);
         bool PutEstabelecimentoById(EstabelecimentoRequest estabelecimentoNovo, int id);
