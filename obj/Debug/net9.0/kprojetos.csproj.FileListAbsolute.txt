@@ -1,7 +1,0 @@
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.csproj.AssemblyReference.cache
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.AssemblyInfoInputs.cache
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.AssemblyInfo.cs
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.csproj.CoreCompileInputs.cache
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\somen\Desktop\kprojetos\obj\Debug\net9.0\kprojetos.sourcelink.json
