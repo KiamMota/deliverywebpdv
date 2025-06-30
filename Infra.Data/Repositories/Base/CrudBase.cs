@@ -19,7 +19,7 @@ namespace Infra.Data.Repositories.Base
             return entity.Id;
         }
 
-        public bool DeleteById(int id)
+        public bool DeleteById(long id)
         {
             var e = _context.Set<Entity>().Find(id);
             if (e == null) return false;
@@ -43,7 +43,7 @@ namespace Infra.Data.Repositories.Base
             return true;
         }
 
-        public Entity? ReadById(int id)
+        public Entity? ReadById(long id)
         {
             return _context.Set<Entity>().Find(id);
         }
@@ -54,7 +54,7 @@ namespace Infra.Data.Repositories.Base
             return GetEntity != null ? GetEntity : null;
         }
 
-        public bool UpdateById(Entity newEntity, int id)
+        public bool UpdateById(Entity newEntity, long id)
         {
             var existsEntity = _context.Set<Entity>().Find(id);
             if (existsEntity == null) return false;
