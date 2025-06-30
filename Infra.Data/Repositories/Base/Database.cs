@@ -21,14 +21,6 @@ namespace Infra.Data.Repositories.Base
         #region ModelRules
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /* USER */
-            modelBuilder.Entity<User>
-            (
-                UserFields =>
-                {
-                    UserFields.HasKey(f => f.Id);
-                }
-            );
             /* PEDIDO */
             modelBuilder.Entity<Pedido>
             (

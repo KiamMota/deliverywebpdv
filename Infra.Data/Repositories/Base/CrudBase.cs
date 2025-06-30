@@ -1,6 +1,4 @@
-﻿
-using Domain.Core.Entities;
-using Domain.Core.Entities.Interfaces;
+﻿using Domain.Core.Entities.Interfaces;
 using Infra.Data.Repositories.Interfaces;
 
 namespace Infra.Data.Repositories.Base
