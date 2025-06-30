@@ -2,8 +2,7 @@
 using AppService.Mappers;
 using Domain.Core.Entities;
 using Infra.Data.Repositories.Interfaces;
-using Contracts.VModels.ContractsPedido.Request;
-using Contracts.VModels.ContractsPedido.Response;
+using Contracts.VModels.Pedido;
 
 namespace AppService.UseCases
 {
@@ -16,8 +15,8 @@ namespace AppService.UseCases
         }
         public long? SalvarPedido(PedidoRequest pedido)
         {
-            pedido.pedidoData = DateTime.UtcNow;
-            PedidoHelper.Normalizar(pedido.pedidoNome);
+            pedido.Data = DateTime.UtcNow;
+            PedidoHelper.Normalizar(pedido.Name);
             return _CrudPedido.Create(PedidoMapper.FromPedidoRequest(pedido));
         }
         public PedidoResponse? PegarPedidoById(int id)

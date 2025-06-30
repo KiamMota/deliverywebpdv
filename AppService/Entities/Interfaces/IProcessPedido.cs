@@ -1,6 +1,5 @@
 ﻿using Domain.Core.Entities;
-using Contracts.VModels.ContractsPedido.Request;
-using Contracts.VModels.ContractsPedido.Response;
+using Contracts.VModels.Pedido;
 
 namespace AppService.UseCases.Interfaces
 {

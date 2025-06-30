@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Contracts.VModels.ContractsPedido.Request
+namespace Contracts.VModels.Pedido
 {
     public class PedidoRequest
     {

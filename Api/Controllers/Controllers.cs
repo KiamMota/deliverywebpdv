@@ -1,6 +1,6 @@
 using AppService.UseCases.Interfaces;
-using Contracts.VModels.ContractsEstabelecimento.Request;
-using Contracts.VModels.ContractsPedido.Request;
+using Contracts.VModels.Estabelecimento;
+using Contracts.VModels.Pedido;
 using Contracts.VModels.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -101,28 +101,6 @@ namespace Api.Delivery.Controllers
         public IActionResult DeleteEstabelecimentoByNome(string nome)
         {
             return Ok(_processEstabelecimento.DeleteEstabelecimentoByNome(nome));
-        }
-    }
-
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UserController : ControllerBase
-    {
-        private readonly IProcessUser _appS;
-        public UserController(IProcessUser processUser)
-            => _appS = processUser;
-        [HttpPost]
-        public IActionResult Post([FromBody] UserRequest user)
-        {
-            return Ok(_appS.SalvarUsuario(user));
-        }
-
-        [HttpGet("nome/{name}")]
-        public IActionResult GetByNome(string name)
-        {
-            var result = _appS.GetUserByName(name);
-            if (result == null) return NotFound();
-            return Ok(result);
         }
     }
 }

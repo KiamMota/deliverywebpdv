@@ -1,5 +1,4 @@
-﻿using Contracts.VModels.ContractsPedido.Request;
-using Contracts.VModels.ContractsPedido.Response;
+﻿using Contracts.VModels.Pedido;
 using Domain.Core.Entities;
 
 namespace AppService.Mappers
@@ -11,10 +10,10 @@ namespace AppService.Mappers
         {
             return new Pedido
             {
-                pedidoData = pedidoRq.pedidoData,
-                Name = pedidoRq.pedidoNome,
-                pedidoValor = pedidoRq.pedidoValor.Value,
-                pedidoQuantidade = pedidoRq.pedidoQuantidade.Value,
+                pedidoData = pedidoRq.Data,
+                Name = pedidoRq.Name,
+                pedidoValor = pedidoRq.Valor.Value,
+                pedidoQuantidade = pedidoRq.Quantidade.Value,
             };
         }
 
@@ -37,9 +36,9 @@ namespace AppService.Mappers
             if (pedido == null) return null;
             return new PedidoRequest
             {
-                pedidoNome = pedido.Name,
-                pedidoValor = pedido.pedidoValor,
-                pedidoQuantidade = pedido.pedidoQuantidade
+                Name = pedido.Name,
+                Valor = pedido.pedidoValor,
+                Quantidade = pedido.pedidoQuantidade
             };
         }
 

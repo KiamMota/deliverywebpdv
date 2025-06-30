@@ -1,7 +1,7 @@
 ﻿using Domain.Core.Entities.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace Contracts.VModels.ContractsEstabelecimento.Response
+namespace Contracts.VModels.Estabelecimento
 {
     public class EstabelecimentoResponse
     {

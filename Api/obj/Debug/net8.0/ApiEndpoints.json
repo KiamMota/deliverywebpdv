@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "estabelecimentoRequest",
-        "Type": "Contracts.VModels.ContractsEstabelecimento.Request.EstabelecimentoRequest",
+        "Type": "Contracts.VModels.Estabelecimento.EstabelecimentoRequest",
         "IsRequired": true
       }
     ],
@@ -41,7 +41,7 @@
     "Parameters": [
       {
         "Name": "estabelecimentoNovo",
-        "Type": "Contracts.VModels.ContractsEstabelecimento.Request.EstabelecimentoRequest",
+        "Type": "Contracts.VModels.Estabelecimento.EstabelecimentoRequest",
         "IsRequired": true
       },
       {
@@ -115,7 +115,7 @@
     "Parameters": [
       {
         "Name": "obj",
-        "Type": "Contracts.VModels.ContractsPedido.Request.PedidoRequest",
+        "Type": "Contracts.VModels.Pedido.PedidoRequest",
         "IsRequired": true
       }
     ],
@@ -152,7 +152,7 @@
       },
       {
         "Name": "obj",
-        "Type": "Contracts.VModels.ContractsPedido.Request.PedidoRequest",
+        "Type": "Contracts.VModels.Pedido.PedidoRequest",
         "IsRequired": true
       }
     ],
@@ -194,38 +194,6 @@
     "Parameters": [
       {
         "Name": "PedidoNome",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.UserController",
-    "Method": "Post",
-    "RelativePath": "api/User",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "Contracts.VModels.User.UserRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api.Delivery.Controllers.UserController",
-    "Method": "GetByNome",
-    "RelativePath": "api/User/nome/{name}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
         "Type": "System.String",
         "IsRequired": true
       }

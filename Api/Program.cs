@@ -20,7 +20,6 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 builder.Services.AddScoped<IProcessEstabelecimento, ProcessEstabelecimento>();
 builder.Services.AddScoped(typeof(ICrudBase<>), typeof(CrudBase<>));
-builder.Services.AddScoped<IProcessUser, ProcessUser>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(

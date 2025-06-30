@@ -1,5 +1,4 @@
-﻿using Contracts.VModels.ContractsEstabelecimento.Request;
-using Contracts.VModels.ContractsEstabelecimento.Response;
+﻿using Contracts.VModels.Estabelecimento;
 
 namespace AppService.Mappers
 {
@@ -23,10 +22,10 @@ namespace AppService.Mappers
             if (request == null) throw new ArgumentNullException(nameof(request));
             return new EstabelecimentoRequest
             {
-                nome = request.Name,
-                categorias = request.Categorias,
-                descricao = request.Description,
-                local = request.Local
+                Name = request.Name,
+                Categorias = request.Categorias,
+                Descricao = request.Description,
+                Local = request.Local
             };
         }
 
@@ -49,10 +48,10 @@ namespace AppService.Mappers
             return new Domain.Core.Entities.Estabelecimento
             {
 
-                Name = request.nome,
-                Categorias = request.categorias,
-                Description = request.descricao,
-                Local = request.local
+                Name = request.Name,
+                Categorias = request.Categorias,
+                Description = request.Descricao,
+                Local = request.Local
             };
         }
     }

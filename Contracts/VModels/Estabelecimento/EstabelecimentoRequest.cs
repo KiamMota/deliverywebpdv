@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Contracts.VModels.ContractsEstabelecimento.Request
+namespace Contracts.VModels.Estabelecimento
 {
     public class EstabelecimentoRequest
     {

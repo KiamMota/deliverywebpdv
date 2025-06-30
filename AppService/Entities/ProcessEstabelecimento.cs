@@ -1,8 +1,7 @@
 ﻿using AppService.Mappers;
 using AppService.UseCases.Interfaces;
-using Contracts.VModels.ContractsEstabelecimento.Request;
-using Contracts.VModels.ContractsEstabelecimento.Response;
-using Domain.Core.Entities;
+using Contracts.VModels.Estabelecimento;
+using Domain.Core.Entities.Estabelecimento;
 using Infra.Data.Repositories.Interfaces;
 
 namespace AppService.UseCases

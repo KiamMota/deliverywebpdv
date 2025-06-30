@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Contracts.VModels.ContractsPedido.Response
+namespace Contracts.VModels.Pedido
 {
     public class PedidoResponse
     {

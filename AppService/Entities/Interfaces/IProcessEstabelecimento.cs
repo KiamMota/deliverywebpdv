@@ -1,5 +1,4 @@
-﻿using Contracts.VModels.ContractsEstabelecimento.Request;
-using Contracts.VModels.ContractsEstabelecimento.Response;
+﻿using Contracts.VModels.Estabelecimento;
 
 namespace AppService.UseCases.Interfaces
 {
