@@ -1,5 +1,5 @@
-﻿using Contracts.ContractsEstabelecimento.Request;
-using Contracts.ContractsEstabelecimento.Response;
+﻿using Contracts.VModels.ContractsEstabelecimento.Request;
+using Contracts.VModels.ContractsEstabelecimento.Response;
 
 namespace AppService.Mappers
 {
@@ -10,7 +10,7 @@ namespace AppService.Mappers
             if (estabelecimento == null) throw new ArgumentNullException($"o pedidoValor de {nameof(estabelecimento)} é nulo!");
             return new EstabelecimentoResponse
             {
-                id = estabelecimento.EstabelecimentoId,
+                id = estabelecimento.Id,
                 nome = estabelecimento.Name,
                 categorias = estabelecimento.Categorias,
                 descricao = estabelecimento.Description,
@@ -35,7 +35,7 @@ namespace AppService.Mappers
             if (response == null) throw new ArgumentNullException(nameof(response));
             return new Domain.Core.Entities.Estabelecimento
             {
-                EstabelecimentoId = response.id,
+                Id = response.id,
                 Name = response.nome,
                 Categorias = response.categorias,
                 Description = response.descricao,

@@ -1,9 +1,9 @@
-﻿using Contracts.PedidoContracts.Request;
-using Contracts.PedidoContracts.Response;
-using AppService.UseCases.Interfaces;
+﻿using AppService.UseCases.Interfaces;
 using AppService.Mappers;
 using Domain.Core.Entities;
 using Infra.Data.Repositories.Interfaces;
+using Contracts.VModels.ContractsPedido.Request;
+using Contracts.VModels.ContractsPedido.Response;
 
 namespace AppService.UseCases
 {

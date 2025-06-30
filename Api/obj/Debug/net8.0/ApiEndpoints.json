@@ -1,0 +1,235 @@
+[
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoSalvar",
+    "RelativePath": "api/Estabelecimento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estabelecimentoRequest",
+        "Type": "Contracts.VModels.ContractsEstabelecimento.Request.EstabelecimentoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoGetById",
+    "RelativePath": "api/Estabelecimento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoPutById",
+    "RelativePath": "api/Estabelecimento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estabelecimentoNovo",
+        "Type": "Contracts.VModels.ContractsEstabelecimento.Request.EstabelecimentoRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "DeleteEstabelecimentoById",
+    "RelativePath": "api/Estabelecimento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "EstabelecimentoGetByNome",
+    "RelativePath": "api/Estabelecimento/nome/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.EstabelecimentoController",
+    "Method": "DeleteEstabelecimentoByNome",
+    "RelativePath": "api/Estabelecimento/nome/{nome}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "Post",
+    "RelativePath": "api/Pedidos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "Contracts.VModels.ContractsPedido.Request.PedidoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "DeleteById",
+    "RelativePath": "api/Pedidos",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "Put",
+    "RelativePath": "api/Pedidos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "obj",
+        "Type": "Contracts.VModels.ContractsPedido.Request.PedidoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pedidos/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "GetId",
+    "RelativePath": "api/Pedidos/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.PedidosController",
+    "Method": "GetByNome",
+    "RelativePath": "api/Pedidos/nome/{PedidoNome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PedidoNome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.UserController",
+    "Method": "Post",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Contracts.VModels.User.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Delivery.Controllers.UserController",
+    "Method": "GetByNome",
+    "RelativePath": "api/User/nome/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

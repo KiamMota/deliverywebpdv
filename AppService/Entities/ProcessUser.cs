@@ -1,6 +1,6 @@
 ﻿using AppService.Mappers;
 using AppService.UseCases.Interfaces;
-using Contracts.User;
+using Contracts.VModels.User;
 using Infra.Data.Repositories.Interfaces;
 
 namespace AppService.UseCases
@@ -13,17 +13,18 @@ namespace AppService.UseCases
             this._CrudUser = _CrudUser;
         }
 
-        public long? SalvarUsuario(UserRequest user)
-        {
-            var result = _CrudUser.Create(UserMapper.FromRequest(user));
-            return result;
-        }
-
         public UserResponse? GetUserByName(string name)
         {
             var Result = _CrudUser.ReadByString(name);
             if (Result == null) return null;
             return UserMapper.UserToReponse(Result);
+        }
+
+        public long? SalvarUsuario(UserRequest user)
+        {
+            var save = _CrudUser.Create(UserMapper.FromRequest(user));
+            if(save == null) return 0;
+            return save;
         }
 
         public bool ValidationPassword(string Nome, string Password)

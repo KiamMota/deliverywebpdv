@@ -1,4 +1,4 @@
-﻿using Contracts.User;
+﻿using Contracts.VModels.User;
 
 namespace AppService.Mappers
 {
