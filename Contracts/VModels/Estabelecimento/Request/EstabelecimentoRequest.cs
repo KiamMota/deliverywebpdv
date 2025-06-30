@@ -5,12 +5,12 @@ namespace Contracts.VModels.ContractsEstabelecimento.Request
     public class EstabelecimentoRequest
     {
         [Required]
-        public string nome { get; set; } = "";
+        public string Name { get; set; } = "";
         [Required]
-        public string local { get; set; } = "";
+        public string Local { get; set; } = "";
         [Required]
-        public IList<string> categorias { get; set; } = new string[0];
+        public IList<string> Categorias { get; set; } = new string[0];
         [Required]
-        public string descricao { get; set; } = "";
+        public string Descricao { get; set; } = "";
     }
 }

@@ -3,7 +3,7 @@
     public class UserRequest
     {
         public int Prop { get; set; }
-        public string Nome { get; set; }
-        public string Senha { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
     }
 }

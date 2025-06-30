@@ -4,12 +4,12 @@ namespace Contracts.VModels.ContractsPedido.Request
 {
     public class PedidoRequest
     {
-        public DateTime pedidoData { get; set; }
+        public DateTime Data { get; set; }
         [Required]
-        public string pedidoNome { get; set; } = "";
+        public string Name { get; set; } = "";
         [Required]
-        public decimal? pedidoValor { get; set; }
+        public decimal? Valor { get; set; }
         [Required]
-        public int? pedidoQuantidade { get; set; }
+        public int? Quantidade { get; set; }
     }
 }
