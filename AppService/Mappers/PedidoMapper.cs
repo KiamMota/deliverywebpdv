@@ -1,5 +1,6 @@
 ﻿using Contracts.VModels.Pedido;
 using Domain.Core.Entities;
+using Domain.Core.Entities.Shared;
 
 namespace AppService.Mappers
 {
@@ -8,7 +9,6 @@ namespace AppService.Mappers
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
         public static Pedido FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            
             var pedido = new Pedido(
                 nome:       pedidoRq.Name,
                 quantidade: pedidoRq.Quantidade,
@@ -21,9 +21,9 @@ namespace AppService.Mappers
         public static Pedido FromPedidoResponse(PedidoResponse pedidoRs)
         {
             var pedido = new Pedido(
-                nome: pedidoRs.Nome,
+                nome:       pedidoRs.Nome,
                 quantidade: pedidoRs.Quantidade,
-                valor: pedidoRs.Valor);
+                valor:      pedidoRs.Valor);
 
             return pedido;
         }
@@ -34,9 +34,9 @@ namespace AppService.Mappers
             if (pedido == null) return null;
             return new PedidoRequest
             {
-                Name = pedido.Nome._Name,
-                Valor = pedido.Valor._Valor,
-                Quantidade = pedido.Quantidade._Quantidade
+                Name = pedido.Name.name,
+                Valor = pedido.Valor.valor,
+                Quantidade = pedido.Quantidade.quantidade
             };
         }
 
@@ -48,11 +48,11 @@ namespace AppService.Mappers
 
             return new PedidoResponse
             {
-                Id         = pedido.Id,
-                Nome       = pedido.Nome._Name,
+                Id         = pedido.Id.id,
+                Nome       = pedido.Name.name,
                 Data       = pedido.Data.Date,
-                Valor      = pedido.Valor._Valor,
-                Quantidade = pedido.Quantidade._Quantidade
+                Valor      = pedido.Valor.valor,
+                Quantidade = pedido.Quantidade.quantidade
             };
         }
     }

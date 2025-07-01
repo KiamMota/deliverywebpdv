@@ -1,93 +1,54 @@
 
-mini-code review
 
-checar:
-	se cada entidade tem método GPPD
-	analisar lacunas de conhecimento (minhas)
-	se cada camada tem responsabilidades respectivas
-	adicionar tratamentos de exceções robustos, verificações em cada camada
-	
-auto-review:
-DDD:	Design Dirigido a Domínio
-	DDD não é padrão de arquitetura, mas sim uma abordagem
-	de software que visa ser orientado a um problema.
-	
-	Ele não apresenta estrutura rígida de separação de diretórios.
-	
-	em DDD, um domínio é o foco. O módulo de domínio(Domain) não deve ser dependente
-	de frameworks, ou dependêcnias externas. o Domínio deve ter lógica de negócio
-	pura. Entidades representando os sub-domínios, e fazendo validações mínimas puras.
-	
-CLEAN ARCH:
-	caracteristicas:
-		desacoplamento extremo -> tanto de código, quanto de sistemas externos à
-		linguagens.
-		a Clean Archtecture diz que o sistema não depende de acoplamento com 
-		frameworks, ou com qualquer coisa além da linguagem, como extensões
-		de bancos de dados, infraestrutura como reposítorios ou qualquer coisa.
-		
-		
-		
-	
-	
-	
-design patterns 
-	padrões de design gof são padrões usados em grandes
-	arquiteturas para aumentar flexibilidade, expansibilidade e clareza no código
-	eles foram criados para POO, em arquiteturas mais complexas
-	
-	PADRÕES CRIACIONAIS:
-		factory >
-			é um modelo usado para criar objetos via retorno.
-			pode ser um método (factory method) ou uma classe (factory class)
-			o factory padrão é abstrato, que delega a criação a uma classe concreta
-			ou seja:
-				cliente -> factory(abstract) -> delegação -> classe concreta
-			esse modelo serve pra evitar acoplamento, fazendo com que o sistema
-			dependa de um método centralizado de criação, e não instância direta
-			nas classes, fazendo um código extremamente confuso
-			
-			ABSTRACT FACTORY:
-			
-			abstract factory segue o mesmo raciocínio, contudo, o abstract factory
-			segue um padrão criacional sólido, sem o cliente depender do conhecimento
-			classes concretas
-			
-				cliente -> factory(abstract) -> delegação -> classes concretas
-			as desvantagens desse sistema é que ele é mais difícil quando você
-			precisa de algo mais simples.
-	
-		builder >
-			objetivo:	separar
-			o que: 		a construção
-			do que: 	de um objeto complexo
-			de quem:	da sua representação
-			por que:	de modo que o processo de construção possa criar
-						diferentes representações
-						
-		esse modelo visa criar objetos complexos, como objetos muito ou ligeiramente
-		diferentes. que quebra o limite que o abstract factory im põe
-	
-		prototype >
-			o protótipo é um método criacional usado para evitar verbosidade e 
-			clonar um objeto já existente.
-			imagine que você tem um sistema de janela já pronto que você chama de 
-			"main_window", mas você quer outra janela, com todas as propriedades
-			você faz:
-			window_t window_other = main_window.clone();
-		singleton >
-			o singleton é um padrão criacional que visa fazer com que um objeto 
-			tenha apenas uma instância no código inteiro, fazendo essa instância
-			ser ponto de acesso global a um recurso.
-			
-			na classe, você cria uma instñacia dela mesma de forma estática e privada
-			e coloca o construtor como privado também, assim, no código não é possivel
-			fazer com que ele seja instânciado
-			
-			e, na classe, você apenas expõe um getter pra instância
-			mesmo que você faça vários objetos do singleton, ele apontará para o mesmo
-			objeto.
-			
-	PADRÕES ARQUITETURAIS:
-	
-		
+Cliente — cadastro, 
+autenticação
+
+Produto/Cardápio — criação de itens, preços, disponibilidade.
+
+Pedido — criação, atualização de status, 
+cancelamento, totalização, regras de cupons e descontos.
+
+Pagamento — cálculo de valor total, 
+split de pagamento, validação de métodos, conciliação.
+
+Entrega — definição de área de cobertura, 
+cálculo de taxa, tempo estimado, roteirização, logística reversa.
+
+
+
+***********************
+   REGRAS DE NEGÓCIO
+***********************
+
+Cliente
+
+	Um cliente só pode 
+	realizar pedidos se tiver ao menos um 
+	endereço de entrega cadastrado e validado.
+
+Produto/Cardápio
+
+	Um produto só pode ser 
+	incluído no cardápio se 
+	estiver com todos os 
+	ingredientes disponíveis no estoque.
+
+Pedido
+
+	Um pedido não pode ser 
+	cancelado se já tiver o 
+	status “em rota de entrega”.
+
+Pagamento
+
+	Pedidos acima de R$500 só podem 
+	ser pagos com cartão de crédito 
+	ou Pix, nunca com dinheiro.
+
+Entrega
+
+	Entregas só podem ser atribuídas 
+	a entregadores que estejam com menos 
+	de 3 pedidos em aberto e dentro da 
+	área de cobertura do pedido.
+

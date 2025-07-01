@@ -1,28 +1,21 @@
 ﻿using Domain.Core.Entities.Interfaces;
 using Infra.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Infra.Data.Repositories.Base
 {
-    public class CrudBase<Entity> : ICrudBase<Entity> where Entity : class
+    public class CrudBase<Entity, TId, TName> : ICrudBase<Entity, TId, TName> where Entity : class, IAggregate<TId, TName>
     {
         private readonly AppDbContext _context;
         public CrudBase(AppDbContext _context)
         {
             this._context = _context;
         }
-        public long? Create(Entity entity)
+        public TId? Create(Entity entity)
         {
             _context.Set<Entity>().Add(entity);
             _context.SaveChanges();
             return entity.Id;
-        }
-
-        public bool DeleteById(long id)
-        {
-            var e = _context.Set<Entity>().Find(id);
-            if (e == null) return false;
-            _context.Set<Entity>().Remove(e);
-            return _context.SaveChanges() > 0;
         }
 
         public IList<Entity> ReadAll()
@@ -31,28 +24,28 @@ namespace Infra.Data.Repositories.Base
             return retorno;
         }
 
-        public bool? DeleteByString(string str)
+        public bool? DeleteByString(TName str)
         {
             var set = _context.Set<Entity>();
-            var search = set.FirstOrDefault(e => e.Name == str);
+            var search = set.FirstOrDefault(e => e.Name.Equals(str));
             if(search == null) return false;
             set.Remove(search);
             _context.SaveChanges();
             return true;
         }
 
-        public Entity? ReadById(long id)
+        public Entity? ReadById(TId id)
         {
             return _context.Set<Entity>().Find(id);
         }
 
-        public Entity? ReadByString(string str)
+        public Entity? ReadByString(TName str)
         {
-            var GetEntity = _context.Set<Entity>().Find();
+            var GetEntity = _context.Set<Entity>().Find(str);
             return GetEntity != null ? GetEntity : null;
         }
 
-        public bool UpdateById(Entity newEntity, long id)
+        public bool UpdateById(Entity newEntity, TId id)
         {
             var existsEntity = _context.Set<Entity>().Find(id);
             if (existsEntity == null) return false;
@@ -60,5 +53,9 @@ namespace Infra.Data.Repositories.Base
             return _context.SaveChanges() > 0;
         }
 
+        public bool DeleteById(TId Id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

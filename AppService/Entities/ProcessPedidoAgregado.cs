@@ -1,14 +1,16 @@
 ﻿using AppService.UseCases.Interfaces;
 using AppService.Mappers;
-using Infra.Data.Repositories.Interfaces;
 using Contracts.VModels.Pedido;
+using Domain.Core.Entities;
+using Infra.Data.Repositories;
+using Infra.Data.Repositories.Interfaces;
 
 namespace AppService.UseCases
 {
-    public class ProcessPedido : IProcessPedido
+    public class ProcessPedidoAgregado : IProcessPedido
     {
-        private readonly ICrudBase<Domain.Core.Entities.> _CrudPedido;
-        public ProcessPedido(ICrudBase<Domain.Core.Entities.Pedido> crud)
+        private readonly ICrudBase<Domain.Core.Entities.Pedido, Id, Name> _CrudPedido;
+        public ProcessPedidoAgregado(ICrudBase<Domain.Core.Entities.Pedido, Id, Name> crud)
         {
             this._CrudPedido = crud;
         }
@@ -16,7 +18,7 @@ namespace AppService.UseCases
         {
             pedido.Data = DateTime.UtcNow;
             PedidoHelper.Normalizar(pedido.Name);
-            return _CrudPedido.Create(PedidoMapper.FromPedidoRequest(pedido));
+            var data = _CrudPedido.Create(PedidoMapper.FromPedidoRequest(pedido));
         }
         public PedidoResponse? PegarPedidoById(int id)
         {
@@ -39,7 +41,7 @@ namespace AppService.UseCases
 
         public PedidoResponse? PegarPedidoByNome(string nome)
         {
-            throw new NotImplementedException();
+            _CrudPedido.ReadByString(name: nome);
         }
 
         public bool? AtualizarPedidoById(PedidoRequest Atualizado, int id)
@@ -49,6 +51,7 @@ namespace AppService.UseCases
         }
         public bool RemoverPedidoById(int id)
         {
+
             return _CrudPedido.DeleteById(id);
         }
 

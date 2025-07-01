@@ -26,11 +26,6 @@ namespace Infra.Data.Repositories.Base
             (
                 PedidoFields => PedidoFields.HasKey(p => p.Id)
             );
-            /* ESTABELECIMENTO */
-            modelBuilder.Entity<Estabelecimento>
-            (
-                EstabelecimentoFields => EstabelecimentoFields.HasKey(e => e.Id)
-            );
         }
         #endregion
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
