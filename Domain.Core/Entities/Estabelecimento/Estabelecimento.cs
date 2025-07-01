@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities
 {
-    public class Estabelecimento : IEntityBase
+    public class Estabelecimento : IAggregateBase
     {
         [Key]
         public long Id { get; set; }

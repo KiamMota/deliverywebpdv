@@ -8,26 +8,24 @@ namespace AppService.Mappers
         /* dto -> domínio converte pedidorequest para pedido -> dominio */
         public static Pedido FromPedidoRequest(PedidoRequest pedidoRq)
         {
-            return new Pedido
-            {
-                pedidoData = pedidoRq.Data,
-                Name = pedidoRq.Name,
-                pedidoValor = pedidoRq.Valor.Value,
-                pedidoQuantidade = pedidoRq.Quantidade.Value,
-            };
+            
+            var pedido = new Pedido(
+                nome:       pedidoRq.Name,
+                quantidade: pedidoRq.Quantidade,
+                valor:      pedidoRq.Valor);
+            
+            return pedido;
         }
 
         /* dto -> domínio (de response para domínio real) */
         public static Pedido FromPedidoResponse(PedidoResponse pedidoRs)
         {
-            return new Pedido
-            {
-                Id = pedidoRs.id,
-                Name = pedidoRs.nome,
-                pedidoData = pedidoRs.data,
-                pedidoValor = pedidoRs.valor,
-                pedidoQuantidade = pedidoRs.quantidade
-            };
+            var pedido = new Pedido(
+                nome: pedidoRs.Nome,
+                quantidade: pedidoRs.Quantidade,
+                valor: pedidoRs.Valor);
+
+            return pedido;
         }
 
         /* domínio -> dto; de pedido para pedidorequest */
@@ -36,9 +34,9 @@ namespace AppService.Mappers
             if (pedido == null) return null;
             return new PedidoRequest
             {
-                Name = pedido.Name,
-                Valor = pedido.pedidoValor,
-                Quantidade = pedido.pedidoQuantidade
+                Name = pedido.Nome._Name,
+                Valor = pedido.Valor._Valor,
+                Quantidade = pedido.Quantidade._Quantidade
             };
         }
 
@@ -50,11 +48,11 @@ namespace AppService.Mappers
 
             return new PedidoResponse
             {
-                id = pedido.Id,
-                nome = pedido.Name,
-                data = pedido.pedidoData,
-                valor = pedido.pedidoValor,
-                quantidade = pedido.pedidoQuantidade
+                Id         = pedido.Id,
+                Nome       = pedido.Nome._Name,
+                Data       = pedido.Data.Date,
+                Valor      = pedido.Valor._Valor,
+                Quantidade = pedido.Quantidade._Quantidade
             };
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace Domain.Core.Entities.Pedido
+﻿namespace Domain.Core.Entities.Shared
 {
     public class Nome
     {

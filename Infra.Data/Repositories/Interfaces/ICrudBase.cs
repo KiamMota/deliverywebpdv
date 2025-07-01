@@ -3,7 +3,7 @@ using Domain.Core.Entities.Interfaces;
 
 namespace Infra.Data.Repositories.Interfaces
 {
-    public interface ICrudBase<Entity> where Entity : class, IEntityBase
+    public interface ICrudBase<Entity> where Entity : class
     {
         public long? Create(Entity entity);
         public Entity? ReadById(long id);

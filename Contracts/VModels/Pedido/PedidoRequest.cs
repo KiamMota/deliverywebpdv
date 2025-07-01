@@ -8,8 +8,8 @@ namespace Contracts.VModels.Pedido
         [Required]
         public string Name { get; set; } = "";
         [Required]
-        public decimal? Valor { get; set; }
+        public decimal Valor { get; set; }
         [Required]
-        public int? Quantidade { get; set; }
+        public short Quantidade { get; set; }
     }
 }

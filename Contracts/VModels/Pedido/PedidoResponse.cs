@@ -4,10 +4,10 @@ namespace Contracts.VModels.Pedido
 {
     public class PedidoResponse
     {
-        public long id { get; set; }
-        public DateTime data { get; set; }
-        public string nome { get; set; } = "";
-        public decimal valor { get; set; }
-        public int quantidade { get; set; }
+        public long Id { get; set; }
+        public DateTime Data { get; set; }
+        public string Nome { get; set; } = "";
+        public decimal Valor { get; set; }
+        public short Quantidade { get; set; }
     }
 }

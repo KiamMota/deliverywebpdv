@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jVfZBGfgxaM=",
+  "dgSpecHash": "mw3fox1zAj0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj",
+  "projectFilePath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\somen\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.13\\microsoft.entityframeworkcore.8.0.13.nupkg.sha512",
     "C:\\Users\\somen\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512",

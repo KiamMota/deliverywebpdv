@@ -3,7 +3,7 @@ using Infra.Data.Repositories.Interfaces;
 
 namespace Infra.Data.Repositories.Base
 {
-    public class CrudBase<Entity> : ICrudBase<Entity> where Entity : class, IEntityBase
+    public class CrudBase<Entity> : ICrudBase<Entity> where Entity : class
     {
         private readonly AppDbContext _context;
         public CrudBase(AppDbContext _context)

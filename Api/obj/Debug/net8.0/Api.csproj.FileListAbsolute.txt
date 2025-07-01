@@ -49,3 +49,13 @@ C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Contracts.pdb
 C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Domain.Core.pdb
 C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Infra.Data.pdb
 C:\Users\somen\Desktop\kprojetos\Api\obj\Debug\net8.0\Api.csproj.Up2Date
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.csproj.AssemblyReference.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.AssemblyInfoInputs.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.AssemblyInfo.cs
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.csproj.CoreCompileInputs.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.sourcelink.json
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.dll
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\refint\Api.dll
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.pdb

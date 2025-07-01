@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\somen\\Desktop\\kprojetos\\Api\\Api.csproj": {}
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\somen\\Desktop\\kprojetos\\Api\\Api.csproj": {
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\somen\\Desktop\\kprojetos\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\somen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Api\\obj\\",
+        "outputPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\somen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +25,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -34,17 +32,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj"
               },
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
               },
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj"
               }
             }
           }
@@ -59,7 +57,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -83,25 +81,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj": {
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj",
+        "projectUniqueName": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj",
         "projectName": "AppService",
-        "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\AppService.csproj",
+        "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\AppService.csproj",
         "packagesPath": "C:\\Users\\somen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\somen\\Desktop\\kprojetos\\AppService\\obj\\",
+        "outputPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\AppService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\somen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,7 +106,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -117,14 +113,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
               },
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj"
               }
             }
           }
@@ -139,7 +135,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -160,25 +156,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\somen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\somen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -186,7 +181,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -194,8 +188,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
               }
             }
           }
@@ -210,7 +204,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -231,25 +225,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj",
+        "projectUniqueName": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj",
         "projectName": "Domain.Core",
-        "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj",
+        "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj",
         "packagesPath": "C:\\Users\\somen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\obj\\",
+        "outputPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\somen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -257,7 +250,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -277,7 +269,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -298,25 +290,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj": {
+    "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
         "projectName": "Infra.Data",
-        "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\Infra.Data.csproj",
+        "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\Infra.Data.csproj",
         "packagesPath": "C:\\Users\\somen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Infra.Data\\obj\\",
+        "outputPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\somen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -324,7 +315,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -332,8 +322,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\somen\\Desktop\\kprojetos\\Domain.Core\\Domain.Core.csproj"
+              "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\somen\\OneDrive\\Desktop\\DWP\\deliverywebpdv\\Domain.Core\\Domain.Core.csproj"
               }
             }
           }
@@ -348,7 +338,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -385,7 +375,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

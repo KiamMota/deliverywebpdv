@@ -1,6 +1,5 @@
 ﻿using AppService.UseCases.Interfaces;
 using AppService.Mappers;
-using Domain.Core.Entities;
 using Infra.Data.Repositories.Interfaces;
 using Contracts.VModels.Pedido;
 
@@ -8,8 +7,8 @@ namespace AppService.UseCases
 {
     public class ProcessPedido : IProcessPedido
     {
-        private readonly ICrudBase<Pedido> _CrudPedido;
-        public ProcessPedido(ICrudBase<Pedido> crud)
+        private readonly ICrudBase<Domain.Core.Entities.> _CrudPedido;
+        public ProcessPedido(ICrudBase<Domain.Core.Entities.Pedido> crud)
         {
             this._CrudPedido = crud;
         }

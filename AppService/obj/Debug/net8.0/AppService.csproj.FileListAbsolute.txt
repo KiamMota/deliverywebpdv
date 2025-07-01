@@ -24,3 +24,12 @@ C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.dll
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\refint\AppService.dll
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\AppService.pdb
 C:\Users\somen\Desktop\kprojetos\AppService\obj\Debug\net8.0\ref\AppService.dll
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.csproj.AssemblyReference.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.AssemblyInfoInputs.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.AssemblyInfo.cs
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.csproj.CoreCompileInputs.cache
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.sourcelink.json
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.dll
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\refint\AppService.dll
+C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\AppService\obj\Debug\net8.0\AppService.pdb
