@@ -6,7 +6,7 @@ namespace Domain.Core.Entities.Produto
     [Table("produto")]
     public class Produto : IEntity<Guid>
     {
-        public Guid Id { get; private set; }
+        public long Id { get; private set; }
         public Domain.Core.Entities.Produto.Vo.Nome Nome { get; private set; }
         public Vo.Preco Preco{ get; private set; }
         public Vo.EhDisponivel Disponivel { get; private set; }

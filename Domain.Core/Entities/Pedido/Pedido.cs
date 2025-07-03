@@ -5,12 +5,11 @@ namespace Domain.Core.Entities.Pedido
 {
     public class Pedido : IAggregateRoot
     {
-        [Key]
         public long Id { get; set; }
-        public Guid ProdutoId { get; private set; }
-        public Guid ClienteId { get; private set; }
+        public long ProdutoId { get; private set; }
+        public long ClienteId { get; private set; }
 
-        public Pedido(Guid ProdutoId, Guid ClienteId)
+        public Pedido(long ProdutoId, long ClienteId)
         {
             this.ProdutoId = ProdutoId;
             this.ClienteId = ClienteId;

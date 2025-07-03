@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.DataModels
+namespace Infra.Data.DataModels
 {
     [Table("cliente")]
     public class Cliente
