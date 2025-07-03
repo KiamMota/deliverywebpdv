@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="Enums\**" />
-    <Compile Remove="Entities\Interfaces\Repository\**" />
+    <Compile Remove="Models\Interfaces\Repository\**" />
     <EmbeddedResource Remove="Enums\**" />
-    <EmbeddedResource Remove="Entities\Interfaces\Repository\**" />
+    <EmbeddedResource Remove="Models\Interfaces\Repository\**" />
     <None Remove="Enums\**" />
-    <None Remove="Entities\Interfaces\Repository\**" />
+    <None Remove="Models\Interfaces\Repository\**" />
   </ItemGroup>
 
 </Project>

@@ -1,16 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using Domain.Core.Entities.Interfaces;
 
 namespace Domain.Core.Entities.Cliente
 {
-    [Table("cliente")]
-    public class Cliente
+    public class Cliente : IEntity<Guid>
     {
-        [Key]
-        public int Id { get; private set; }
-        public string Nome { get; private set; }
-        public string Email { get; private set; }
-        public string CPF { get; private set; }
+        public Guid Id { get; private set; }
+        public Vo.Nome Nome { get; private set; }
+        public Vo.Email Email { get; private set; }
+        public Vo.CPF CPF { get; private set; }
+        public Guid EnderecoId { get; private set; }
         public string Senha { get; private set; }
+
+        public Cliente(string nome, Guid EnderecoId, string email, string cpf, string senha)
+        {
+            Id = Guid.NewGuid();
+            Email = new Vo.Email(email);
+            CPF = new Vo.CPF(cpf);
+            Nome = new Vo.Nome(nome);
+            this.EnderecoId = EnderecoId;
+            Senha = senha;
+        }
     }
 }

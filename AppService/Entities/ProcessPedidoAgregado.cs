@@ -17,7 +17,7 @@ namespace AppService.UseCases
         public long? SalvarPedido(PedidoRequest pedido)
         {
             pedido.Data = DateTime.UtcNow;
-            PedidoHelper.Normalizar(pedido.Name);
+            EmailHelper.Normalizar(pedido.Name);
             var data = _CrudPedido.Create(PedidoMapper.FromPedidoRequest(pedido));
         }
         public PedidoResponse? PegarPedidoById(int id)
