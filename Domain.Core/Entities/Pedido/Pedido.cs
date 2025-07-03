@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities.Pedido
 {
-    public class Pedido : IAggregateRoot
+    public sealed class Pedido : IAggregateRoot
     {
         public long Id { get; set; }
         public long ProdutoId { get; private set; }

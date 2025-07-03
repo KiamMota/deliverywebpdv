@@ -3,7 +3,7 @@ using Domain.Core.Entities.Endereco.Vo;
 
 namespace Domain.Core.Entities.Endereco
 {
-    public class Endereco : IEntity<long>
+    public sealed class Endereco : IEntity<long>
     {
         public long Id { get; private set; }
         public Rua Rua { get; private set; }

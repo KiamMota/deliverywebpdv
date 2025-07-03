@@ -2,7 +2,7 @@
 
 namespace Domain.Core.Entities.Cliente
 {
-    public class Cliente : IEntity<long>
+    public sealed class Cliente : IEntity<long>
     {
         public long Id { get; private set; }
         public Vo.Nome Nome { get; private set; }
@@ -13,7 +13,6 @@ namespace Domain.Core.Entities.Cliente
 
         public Cliente(string nome, long EnderecoId, string email, string cpf, string senha)
         {
-            Id = Guid.NewGuid();
             Email = new Vo.Email(email);
             CPF = new Vo.CPF(cpf);
             Nome = new Vo.Nome(nome);

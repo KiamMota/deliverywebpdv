@@ -3,8 +3,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Core.Entities.Produto
 {
-    [Table("produto")]
-    public class Produto : IEntity<Guid>
+    public sealed class Produto : IEntity<long>
     {
         public long Id { get; private set; }
         public Domain.Core.Entities.Produto.Vo.Nome Nome { get; private set; }

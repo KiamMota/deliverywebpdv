@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Infra.Data.DataModels
 {
     [Table("cliente")]
-    public class Cliente
+    public class DataCliente
     {
         [Key] public long Id { get; set; }
         [ForeignKey("EnderecoId")] public long EnderecoId { get; set; }
