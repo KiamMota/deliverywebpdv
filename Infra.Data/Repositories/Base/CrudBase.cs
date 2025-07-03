@@ -27,16 +27,19 @@ namespace Infra.Data.Repositories.Base
             return _context.Set<Entity>().ToList();
         }
 
-        public Entity ReadById(TId id)
+        public Entity? ReadById(TId id)
         {
-            var result = _context.Set<Entity>().Entry(ReadById(id));
-            if (result is null) return Entity;
-            return Entity;
+            var result = _context.Set<Entity>().FirstOrDefault(e => e.Id.Equals(id));
+            if (result is null) return null;
+            return result;
         }
 
         public bool UpdateById(Entity newEntity, TId id)
         {
-            throw new NotImplementedException();
+            var entity = _context.Set<Entity>().FirstOrDefault(e => e.Id.Equals(id));
+            if (entity == null) return false;
+            _context.Entry(entity).CurrentValues.SetValues(newEntity);
+            _context.SaveChanges(); return true;
         }
     }
 }

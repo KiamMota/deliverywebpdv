@@ -5,6 +5,7 @@ namespace AppService.Entities
 {
     public class ProcessData<TRequest> : IProcessData<TRequest> where TRequest : class
     {
+        private readonly 
         public bool DeleteById(long id)
         {
             

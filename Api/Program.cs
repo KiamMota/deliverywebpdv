@@ -9,7 +9,6 @@ using System;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<IProcessPedido, ProcessPedidoAgregado>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseMySql(
@@ -18,8 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
         )
 );
 
-builder.Services.AddScoped(typeof(ICrudBase<,,>), typeof(CrudBase<,,>));
-
+builder.Services.AddScoped(typeof(ICrudBase<,>), typeof(CrudBase<,>));
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
