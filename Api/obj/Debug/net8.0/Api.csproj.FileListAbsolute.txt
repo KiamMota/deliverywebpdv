@@ -59,3 +59,9 @@ C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.sour
 C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.dll
 C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\refint\Api.dll
 C:\Users\somen\OneDrive\Desktop\DWP\deliverywebpdv\Api\obj\Debug\net8.0\Api.pdb
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\somen\Desktop\kprojetos\Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll

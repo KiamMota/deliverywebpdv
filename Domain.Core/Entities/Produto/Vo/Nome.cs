@@ -1,4 +1,4 @@
-﻿using AppService.UseCases;
+﻿using Domain.Entities.Helpers;
 
 namespace Domain.Core.Entities.Produto.Vo
 {

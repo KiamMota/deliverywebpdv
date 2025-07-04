@@ -11,7 +11,6 @@ namespace Domain.Core.Entities.Endereco.Vo
             {
                 this.Nome = cidade;
             }
-            throw new ArgumentException("Nome da cidade inválido.");
         }
     }
 }

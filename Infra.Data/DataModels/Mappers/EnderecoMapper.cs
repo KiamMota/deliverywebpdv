@@ -13,7 +13,7 @@ namespace Infra.Data.Mappers
                 Rua = domain.Rua.Nome,
                 Estado = domain.Estado.Nome,
                 Bairro = domain.Bairro.Nome,
-                Numero = endereco.Numero,
+                Numero = domain.Numero,
                 Cidade = domain.Cidade.Nome,
                 Id = domain.Id
             }; 

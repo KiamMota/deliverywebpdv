@@ -1,10 +1,13 @@
 
 using Microsoft.EntityFrameworkCore;
-using AppService.UseCases.Interfaces;
-using AppService.UseCases;
 using Infra.Data.Repositories.Base;
 using Infra.Data.Repositories.Interfaces;
 using System;
+using Infra.Data.Repositories;
+using Infra.Data.DataModels;
+using Infra.Data.Mappers;
+using AppService.Interfaces;
+using AppService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,11 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 );
 
 builder.Services.AddScoped(typeof(ICrudBase<,>), typeof(CrudBase<,>));
+builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Endereco.Endereco, DataEndereco>, EnderecoMapper>();
+builder.Services.AddScoped<IEnderecoGravar, EnderecoGravar>();
+
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),

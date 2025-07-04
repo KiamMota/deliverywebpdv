@@ -42,6 +42,19 @@ namespace AppService.Mappers
             );
         }
 
+        public static Contracts.ResponseModels.EnderecoResponse DomainToResponse(Endereco endereco)
+        {
+            if (endereco == null) return null;
+            return new Contracts.ResponseModels.EnderecoResponse
+            {
+                Rua = endereco.Rua.Nome,
+                Bairro = endereco.Bairro.Nome,
+                Estado = endereco.Estado.Nome,
+                Cidade = endereco.Cidade.Nome,
+                Numero = endereco.Numero
+            };
+        }   
+
 
 
 

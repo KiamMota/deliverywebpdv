@@ -1,4 +1,4 @@
-﻿using Domain.Core.Helpers;
+﻿using Domain.Entities.Helpers;
 
 namespace Domain.Core.Entities.Produto.Vo
 {

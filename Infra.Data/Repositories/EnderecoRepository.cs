@@ -5,18 +5,35 @@ using Infra.Data.Mappers;
 
 namespace Infra.Data.Repositories
 {
-    public class EnderecoRepository
+    public class EnderecoRepository : IEnderecoRepository
     {
-        private readonly ICrudBase<DataEndereco, EnderecoMapper> _crudBase;
-        public EnderecoRepository(ICrudBase<DataEndereco, EnderecoMapper> _crudEndereco)
-        {
-            _crudBase = _crudEndereco;
-        }
+            private readonly ICrudBase<Endereco, DataEndereco> _crudBase;
+            public EnderecoRepository(ICrudBase<Endereco, DataEndereco> crudBase)
+            {
+                _crudBase = crudBase;
+            }
 
-        public long Salvar(Endereco entity)
-        {
-            return _crudBase.Create(entity);
-        }
+            public long Salvar(Endereco endereco)
+            {
+                return _crudBase.Create(endereco);
+            }
+            public Endereco? GetById(long id)
+            {
+                return _crudBase.ReadById(id);
+            }
+            public bool PutById(Endereco entity, long id)
+            {
+                return _crudBase.UpdateById(entity, id);
+            }
+            public bool DeleteById(long id)
+            {
+                return _crudBase.DeleteById(id);
+            }
+            public IList<Endereco> ReadAll()
+            {
+            return _crudBase.ReadAll();
+            }
 
     }
+
 }
