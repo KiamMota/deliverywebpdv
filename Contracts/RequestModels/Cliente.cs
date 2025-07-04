@@ -1,6 +1,6 @@
 ﻿namespace Contracts.RequestModels
 {
-    public class Cliente
+    public class ClienteRequest
     {
         public string Nome { get; set; }
         public string Email { get; set; }

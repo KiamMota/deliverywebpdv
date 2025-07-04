@@ -1,6 +1,6 @@
 ﻿namespace Contracts.RequestModels
 {
-    public class Pedido
+    public class PedidoRequest
     {
         public string NomePedido { get; set; }
         public string Cliente { get; set; }

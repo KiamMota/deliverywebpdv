@@ -1,6 +1,6 @@
 ﻿namespace Contracts.VModels
 {
-    public class Produto
+    public class ProdutoRequest
     {
         public string Nome { get; set; }
         public decimal Preco { get; set; }

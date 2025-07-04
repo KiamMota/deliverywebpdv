@@ -1,14 +1,15 @@
 ﻿using Domain.Core.Entities;
+using Domain.Core.Entities.Endereco;
 using Domain.Core.Entities.Interfaces;
 
 namespace Infra.Data.Repositories.Interfaces
 {
-    public interface ICrudBase<TEntity, TId> where TEntity : IEntity<TId>
+    public interface ICrudBase<TEntity, TData>
     {
-        TId Create(TEntity entity);
-        TEntity?     ReadById(TId id);
+        long Create(TEntity entity);
+        TEntity?     ReadById(long id);
         IList<TEntity> ReadAll();
-        bool UpdateById(TEntity newEntity, TId id);
-        bool DeleteById(TId id);
+        bool UpdateById(TEntity newEntity, long id);
+        bool DeleteById(long id);
     }
 }

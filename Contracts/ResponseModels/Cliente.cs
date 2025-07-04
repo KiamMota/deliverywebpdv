@@ -1,6 +1,6 @@
 ﻿namespace Contracts.ResponseModels
 {
-    public class Cliente
+    public class ClienteResponse
     {
         public long Id { get; }
         public string Nome { get; set; }
