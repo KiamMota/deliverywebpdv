@@ -4,9 +4,9 @@ using Domain.Core.Entities.Endereco;
 
 namespace AppService.Mappers
 {
-    public class EnderecoRQ
+    public class EnderecoAppMap
     {
-        public static EnderecoResponse RqToRp(EnderecoRequest enderecoRequest)
+        public static EnderecoResponse RpToRq(EnderecoRequest enderecoRequest)
         {
             if (enderecoRequest == null) return null;
             return new EnderecoResponse

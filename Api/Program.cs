@@ -1,13 +1,14 @@
 
 using Microsoft.EntityFrameworkCore;
 using Infra.Data.Repositories.Base;
-using Infra.Data.Repositories.Interfaces;
 using System;
 using Infra.Data.Repositories;
 using Infra.Data.DataModels;
 using Infra.Data.Mappers;
 using AppService.Interfaces;
 using AppService;
+using Infra.Data.Repositories.Interfaces;
+using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,9 +22,21 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 );
 
 builder.Services.AddScoped(typeof(ICrudBase<,>), typeof(CrudBase<,>));
-builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
-builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Endereco.Endereco, DataEndereco>, EnderecoMapper>();
+
+builder.Services.AddScoped<IEnderecoRepo, EnderecoRepo>();
+builder.Services.AddScoped<IPedidoRepo, PedidoRepo>();
+builder.Services.AddScoped<IClienteRepo, ClienteRepo>();
+builder.Services.AddScoped<IProdutoRepo, ProdutoRepo>();
+
 builder.Services.AddScoped<IEnderecoGravar, EnderecoGravar>();
+
+builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Endereco.Endereco, EnderecoDb>, EnderecoMapper>();
+builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Cliente.Cliente, ClienteDb>, ClienteMapper>();
+builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Pedido.Pedido, PedidoDb>, PedidoMapper>();
+builder.Services.AddScoped<IMapperBase<Domain.Core.Entities.Produto.Produto, ProdutoDb>, ProdutoMapper>();
+
+
+
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>

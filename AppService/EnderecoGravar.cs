@@ -8,8 +8,8 @@ namespace AppService
 {
     public class EnderecoGravar : IEnderecoGravar
     {
-        private readonly IEnderecoRepository _estabelecimentorepo;
-        public EnderecoGravar(IEnderecoRepository _estabelecimento)
+        private readonly IEnderecoRepo _estabelecimentorepo;
+        public EnderecoGravar(IEnderecoRepo _estabelecimento)
         {
             _estabelecimentorepo = _estabelecimento;
         }
@@ -31,17 +31,17 @@ namespace AppService
         public EnderecoResponse GetById(long id)
         {
             var endereco = _estabelecimentorepo.GetById(id);
-            return EnderecoRQ.DomainToResponse(endereco);
+            return EnderecoAppMap.DomainToResponse(endereco);
         }
 
         public bool PutById(EnderecoRequest entity, long id)
         {
-            return _estabelecimentorepo.PutById(EnderecoRQ.RequestToDomain(entity), id);
+            return _estabelecimentorepo.PutById(EnderecoAppMap.RequestToDomain(entity), id);
         }
 
         public long Salvar(EnderecoRequest entity)
         {
-            var endereco = EnderecoRQ.RequestToDomain(entity);
+            var endereco = EnderecoAppMap.RequestToDomain(entity);
             return _estabelecimentorepo.    Salvar(endereco);
         }
     }

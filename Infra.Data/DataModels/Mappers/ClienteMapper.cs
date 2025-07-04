@@ -1,16 +1,16 @@
 ﻿using Domain.Core.Entities.Cliente;
 using Domain.Core.Kel;
 using Infra.Data.DataModels;
-using Infra.Data.Repositories.Interfaces;
+using Infra.Data.Repositories.Base;
 
 namespace Infra.Data.Mappers
 {
-    public class ClienteMapper : IMapperBase<Domain.Core.Entities.Cliente.Cliente, DataModels.DataCliente>
+    public class ClienteMapper : IMapperBase<Domain.Core.Entities.Cliente.Cliente, DataModels.ClienteDb>
     {
 
-        public DataCliente ToData(Domain.Core.Entities.Cliente.Cliente domain)
+        public ClienteDb ToData(Domain.Core.Entities.Cliente.Cliente domain)
         {
-            return new DataModels.DataCliente
+            return new DataModels.ClienteDb
             {
                 Nome = domain.Nome.nome,
                 Email = domain.Email.email,
@@ -20,7 +20,7 @@ namespace Infra.Data.Mappers
             };
         }
 
-        public Domain.Core.Entities.Cliente.Cliente ToDomain(DataCliente data)
+        public Domain.Core.Entities.Cliente.Cliente ToDomain(ClienteDb data)
         {
             throw new NotImplementedException();
         }

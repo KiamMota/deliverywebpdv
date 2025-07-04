@@ -1,14 +1,14 @@
 ﻿using Domain.Core.Entities.Endereco;
-using Infra.Data.Repositories.Interfaces;
 using Infra.Data.DataModels;
 using Infra.Data.Mappers;
+using Infra.Data.Repositories.Base;
 
 namespace Infra.Data.Repositories
 {
-    public class EnderecoRepository : IEnderecoRepository
+    public class EnderecoRepo : IEnderecoRepo
     {
-            private readonly ICrudBase<Endereco, DataEndereco> _crudBase;
-            public EnderecoRepository(ICrudBase<Endereco, DataEndereco> crudBase)
+            private readonly ICrudBase<Endereco, EnderecoDb> _crudBase;
+            public EnderecoRepo(ICrudBase<Endereco, EnderecoDb> crudBase)
             {
                 _crudBase = crudBase;
             }

@@ -1,17 +1,25 @@
-﻿namespace Infra.Data.Mappers
+﻿using Domain.Core.Entities.Pedido;
+using Infra.Data.DataModels;
+using Infra.Data.Repositories.Base;
+
+namespace Infra.Data.Mappers
 {
-    public class PedidoMapper
+    public class PedidoMapper : IMapperBase<Pedido, PedidoDb>
     {
-        public static DataModels.DataPedido PedidoData(Domain.Core.Entities.Pedido.Pedido pedido)
+
+        public PedidoDb ToData(Pedido domain)
         {
-            return new DataModels.DataPedido
+            return new DataModels.PedidoDb
             {
-                Id = pedido.Id,
-                ClienteId = pedido.ClienteId,
-                ProdutoId = pedido.ProdutoId,
+                Id = domain.Id,
+                ClienteId = domain.ClienteId,
+                ProdutoId = domain.ProdutoId,
             };
         }
 
-
+        public Pedido ToDomain(PedidoDb data)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

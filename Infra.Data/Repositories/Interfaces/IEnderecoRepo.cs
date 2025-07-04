@@ -5,7 +5,7 @@ using Infra.Data.Mappers;
 
 namespace Infra.Data.Repositories
 {
-    public interface IEnderecoRepository
+    public interface IEnderecoRepo
     {
         long Salvar(Endereco entity);
         Endereco? GetById(long id);

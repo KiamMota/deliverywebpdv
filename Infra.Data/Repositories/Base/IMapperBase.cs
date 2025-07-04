@@ -1,4 +1,4 @@
-﻿namespace Infra.Data.Repositories.Interfaces
+﻿namespace Infra.Data.Repositories.Base
 {
     public interface IMapperBase<TDomain, TData>
     {

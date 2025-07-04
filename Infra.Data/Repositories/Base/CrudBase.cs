@@ -1,19 +1,20 @@
 ﻿using Domain.Core.Entities.Interfaces;
-using Infra.Data.Repositories.Interfaces;
 using System.Linq.Expressions;
 
 namespace Infra.Data.Repositories.Base
 {
-    public class CrudBase<TEntity, TData> : ICrudBase<TEntity, TData> where TData : class, new() where TEntity : class, IEntity<long>
+    public class CrudBase<TDomain, TData> : ICrudBase<TDomain, TData> 
+        where TData : class, new() 
+        where TDomain : class, IEntity<long>
     {
         private readonly AppDbContext _context;
-        private readonly IMapperBase<TEntity, TData> _mapper;   
-        public CrudBase(IMapperBase<TEntity, TData> mapper, AppDbContext _context)
+        private readonly IMapperBase<TDomain, TData> _mapper;   
+        public CrudBase(IMapperBase<TDomain, TData> mapper, AppDbContext _context)
         {
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             this._context = _context ?? throw new ArgumentNullException(nameof(_context), "O contexto não pode ser nulo.");
         }
-        public long Create(TEntity entity)
+        public long Create(TDomain entity)
         {
             TData dataEntity = _mapper.ToData(entity) ?? throw new ArgumentNullException(nameof(entity), "A entidade não pode ser nula.");
             _context.Set<TData>().Add(dataEntity);
@@ -39,44 +40,37 @@ namespace Infra.Data.Repositories.Base
             return _context.SaveChanges() > 0;
         }
 
-        public IList<TEntity> ReadAll()
+        public IList<TDomain> ReadAll()
         {
-            /* aqui ele pega todos os dados do banco e converte para a entidade de dominio */
             var dataEntities = _context.Set<TData>().ToList();
-            return dataEntities.Select(_mapper.ToDomain).ToList() ?? new List<TEntity>();
+            return dataEntities.Select(_mapper.ToDomain).ToList() ?? new List<TDomain>();
         }
-        public TEntity? ReadById(long id)
+        public TDomain? ReadById(long id)
         {
-            /* a varProp.. recebe o valor da chaveprimaria da entidade com base na entidade, e retorna a primeira ou a padrão*/
-            var keyProperty = _context.Model.FindEntityType(typeof(TEntity))?
+            var keyProperty = _context.Model.FindEntityType(typeof(TDomain))?
                 .FindPrimaryKey()?.Properties.FirstOrDefault();
 
             if (keyProperty == null) throw new Exception("A chave primária não foi encontrada para a entidade.");
 
-            var parameter = Expression.Parameter(typeof(TEntity), "e");
+            var parameter = Expression.Parameter(typeof(TDomain), "e");
             var property = Expression.Property(parameter, keyProperty.Name);
             var constant = Expression.Constant(id);
             var equals = Expression.Equal(property, constant);
-            var lambda = Expression.Lambda<Func<TEntity, bool>>(equals, parameter);
+            var lambda = Expression.Lambda<Func<TDomain, bool>>(equals, parameter);
 
-            return _context.Set<TEntity>().FirstOrDefault(lambda);
+            return _context.Set<TDomain>().FirstOrDefault(lambda);
         }
-        public bool UpdateById(TEntity newEntity, long id)
+        public bool UpdateById(TDomain newEntity, long id)
         {
-            /*obtem a chave primaria da entidade*/
             var keyProperty = _context.Model.FindEntityType(typeof(TData))?
                 .FindPrimaryKey()?.Properties.FirstOrDefault();
 
             if (keyProperty == null)
                 throw new Exception("A chave primária não foi encontrada para a entidade.");
 
-            /* vê se a entidade existe com base no id*/
             var existingData = _context.Set<TData>().Find(id);
             if (existingData == null)
-                return false; // Retorna falso se a entidade não for encontrada
-
-            /* aqui ele passa os valores do newentity para o existing entity*/
-
+                return false;
             var updateToData = _mapper.ToData(newEntity) ?? throw new ArgumentNullException(nameof(newEntity), "A nova entidade não pode ser nula.");
             _context.Entry(existingData).CurrentValues.SetValues(updateToData);
 

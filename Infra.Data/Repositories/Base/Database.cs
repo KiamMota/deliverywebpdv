@@ -19,6 +19,6 @@ namespace Infra.Data.Repositories.Base
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        public DbSet<DataEndereco> Enderecos { get; set; }
+        public DbSet<EnderecoDb> Enderecos { get; set; }
     }
 }

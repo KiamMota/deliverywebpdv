@@ -6,7 +6,7 @@ using Infra.Data.Repositories.Interfaces;
 namespace Infra.Data.DataModels
 {
     [Table("endereco")]
-    public class DataEndereco
+    public class EnderecoDb
     {
         [Key] public long Id { get; set; }
         [Column("Rua")] public string Rua { get; set; }

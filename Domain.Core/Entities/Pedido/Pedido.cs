@@ -1,9 +1,8 @@
 ﻿using Domain.Core.Entities.Interfaces;
-using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Core.Entities.Pedido
 {
-    public sealed class Pedido : IAggregateRoot
+    public sealed class Pedido : IAggregateRoot, IEntity<long>
     {
         public long Id { get; set; }
         public long ProdutoId { get; private set; }

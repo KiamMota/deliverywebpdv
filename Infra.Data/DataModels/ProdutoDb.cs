@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Infra.Data.DataModels
 {
     [Table("produto")]
-    public class DataProduto
+    public class ProdutoDb
     {
         [Key] public long Id { get; set; }    
         [Column("Nome")] public string Nome { get; set; }
